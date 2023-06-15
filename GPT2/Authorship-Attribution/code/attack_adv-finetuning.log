@@ -1,0 +1,43 @@
+132
+132
+LABEL_0 LABEL_0
+>> ACC! count => size (0.99735 => 0.99164)
+>> ACC! number => address (0.99164 => 0.98967)
+>> ACC! x => t (0.98967 => 0.98685)
+>> ACC! max => call (0.98685 => 0.98439)
+>> ACC! numbers => lNumbers (0.98439 => 0.98093)
+>> ACC! numCases => nbRecase (0.98093 => 0.98087)
+>> ACC! min => key (0.98087 => 0.98006)
+>> ACC! num_str => numinglen (0.98006 => 0.97174)
+>> ACC! rev_end => re_len (0.97174 => 0.96675)
+>> ACC! num_len => half__val (0.96675 => 0.96087)
+>> ACC! half_len => half33den (0.96087 => 0.95742)
+>> ACC! equal => all (0.95742 => 0.94540)
+>> ACC! end => ord (0.94540 => 0.93251)
+>> NOACC! start => step (0.93240 => 0.93251)
+>> NOSNT!
+>> ACC! f => sf (0.93251 => 0.91568)
+>> ACC! case => label (0.91568 => 0.83931)
+Example time cost:  0.99 min
+ALL examples time cost:  0.99 min
+Query times in this attack:  2812
+Greedy query times: 251
+Ga query times: 2561
+All Query times:  2812
+Success rate:  0.0
+Successful items count:  0
+Total count:  1
+Index:  0
+
+LABEL_0 LABEL_0
+>> ACC! table => td (0.99277 => 0.99162)
+>> ACC! numPass => numRun (0.99162 => 0.99046)
+>> ACC! num_surprises => num_urprisingly (0.99046 => 0.98661)
+>> ACC! num_cases => numxcases (0.98661 => 0.97950)
+>> ACC! x => t (0.97950 => 0.96300)
+>> ACC! scores_raw => scorer_raw (0.96300 => 0.95817)
+>> ACC! y => n (0.95817 => 0.95615)
+>> ACC! score_needed => core_important (0.95615 => 0.93578)
+>> ACC! line => input (0.93578 => 0.91680)
+>> ACC! scores =>  Scors (0.91680 => 0.87238)
+>> ACC! i => ih (0.87238 => 0.83668)

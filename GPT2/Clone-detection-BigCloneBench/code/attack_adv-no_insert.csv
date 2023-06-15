@@ -1,0 +1,2470 @@
+Index,Original Code,Program Length,Adversarial Code,True Label,Original Prediction,Adv Prediction,Is Success,Extracted Names,Importance Score,Greedy No. Changed Names,Greedy No. Changed Tokens,Replaced Names,GA No. Changed Names,GA No. Changed Tokens,Attack Type,Query Times,Time Cost,Suc Type,Insert Words
+0,"    public MotixFileItem(final InputStream is, final String name, final String contentType, final int index) throws IOException {
+        this.name = name;
+        this.contentType = contentType;
+        this.index = index;
+        this.extension = FilenameUtils.getExtension(this.name);
+        this.isImage = ImageUtils.isImage(name);
+        ArrayInputStream isAux = null;
+        final ByteArrayOutputStream out = new ByteArrayOutputStream();
+        try {
+            IOUtils.copy(is, out);
+            isAux = new ArrayInputStream(out.toByteArray());
+            if (this.isImage) {
+                this.bufferedImage = imaging.read(isAux);
+            }
+        } finally {
+            IOUtils.closeQuietly(out);
+            IOUtils.closeQuietly(isAux);
+        }
+        this.inputStream = new ArrayInputStream(out.toByteArray());
+    }
+ <SPLIT>     public static String getPagina(String strurl) {
+        String resp = """";
+        Authenticator.setDefault(new Autenticador());
+        try {
+            URL url = new URL(strurl);
+            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+            String str;
+            while ((str = in.readLine()) != null) {
+                resp += str;
+            }
+            in.close();
+        } catch (MalformedURLException e) {
+            resp = e.toString();
+        } catch (IOException e) {
+            resp = e.toString();
+        } catch (Exception e) {
+            resp = e.toString();
+        }
+        return resp;
+    }
+",153,,LABEL_0,LABEL_0,LABEL_0,-1,"is,name,contentType,index,extension,isImage,isAux,out,bufferedImage,inputStream",,4,12,0,,0,GA,3493,1.2538682619730632,failed,[]
+1,"    public static void updatePicInfo(Connection conn, int nr, int lock, DBPicInfo picInfo) throws SQLException {
+        String sql = """";
+        PreparedStatement pstmt = null;
+        try {
+            if (!picInfo.getName().equals("""")) {
+                sql = ""update DBPic set name=? where bnr=?"";
+                pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, picInfo.getName());
+                pstmt.setInt(2, nr);
+                pstmt.executeUpdate();
+            }
+            if (picInfo.getRate() != 0) {
+                sql = ""update DBPic set rate=? where bnr=?"";
+                pstmt = conn.prepareStatement(sql);
+                pstmt.setInt(1, picInfo.getRate());
+                pstmt.setInt(2, nr);
+                pstmt.executeUpdate();
+            }
+            sql = ""update DBThumb set thumb_lock=? where bnr=?"";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, lock);
+            pstmt.setInt(2, nr);
+            pstmt.executeUpdate();
+            if (picInfo.getCategories() != null) {
+                sql = ""delete from Zuordnen where bnr=?"";
+                pstmt = conn.prepareStatement(sql);
+                pstmt.setInt(1, nr);
+                pstmt.executeUpdate();
+                DaoUpdate.insertPicInCategories(conn, nr, picInfo.getCategories());
+            }
+            if (picInfo.getKeywords() != null) {
+                sql = ""delete from Haben where bnr=?"";
+                pstmt = conn.prepareStatement(sql);
+                pstmt.setInt(1, nr);
+                pstmt.executeUpdate();
+                DaoUpdate.insertPicInKeywords(conn, nr, picInfo.getKeywords());
+            }
+            conn.commit();
+        } catch (SQLException e) {
+            conn.rollback();
+            throw e;
+        } finally {
+            pstmt.close();
+        }
+    }
+ <SPLIT>         private boolean doCSVImport(String tableName, final boolean hasHeader) {
+            StringBuffer sql = new StringBuffer();
+            sql.append(""INSERT INTO "");
+            sql.append(tableName + ""("");
+            for (int i = 0; i < colNames.size(); i++) {
+                sql.append("""" + colNames.get(i) + "","");
+            }
+            sql.setLength(sql.length() - 1);
+            sql.append("") VALUES( "");
+            for (int i = 0; i < colNames.size(); i++) {
+                sql.append(""?,"");
+            }
+            sql.setLength(sql.length() - 1);
+            sql.append("")"");
+            Connection conn = null;
+            int lineNumber = 0;
+            int colNumber = 0;
+            String line[] = null;
+            try {
+                conn = DBExplorer.getConnection(false);
+                conn.setAutoCommit(false);
+                PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+                for (; lineNumber < csvData.size(); lineNumber++) {
+                    if (hasHeader && lineNumber == 0) continue;
+                    dlg.UpdateProgressBar(lineNumber);
+                    if (cancel) {
+                        break;
+                    }
+                    line = (String[]) csvData.get(lineNumber);
+                    pstmt.clearParameters();
+                    for (colNumber = 0; colNumber < colTypes.size(); colNumber++) {
+                        if (line[colNumber].equals("""") && colNullAllowed.get(colNumber).toString().equals(""true"")) {
+                            pstmt.setNull(colNumber + 1, Integer.parseInt(colTypeInt.get(colNumber).toString()));
+                        } else {
+                            pstmt.setObject(colNumber + 1, line[colNumber], Integer.parseInt(colTypeInt.get(colNumber).toString()));
+                        }
+                    }
+                    pstmt.executeUpdate();
+                }
+                if (cancel) conn.rollback(); else conn.commit();
+                conn.setAutoCommit(true);
+                conn.close();
+                conn = null;
+                dialog.getDisplay().asyncExec(new Runnable() {
+
+                    public void run() {
+                        if (!cancel) {
+                            dlg.showMessage(title, ""Imported "" + maxsize + "" rows successfully."");
+                            statusLabel.setText(""Import complete."");
+                        } else {
+                            dlg.UpdateProgressBar(0);
+                            statusLabel.setText(""Import aborted."");
+                        }
+                    }
+                });
+                return true;
+            } catch (final Exception e) {
+                if (conn != null) try {
+                    conn.rollback();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+                dialog.getDisplay().asyncExec(new Runnable() {
+
+                    public void run() {
+                        statusLabel.setText(""Import failed"");
+                        dlg.showError(title, e.getMessage());
+                        dlg.UpdateProgressBar(0);
+                    }
+                });
+                return false;
+            } finally {
+                if (conn != null) try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+",335,,LABEL_1,LABEL_0,,-4,"updatePicInfo,conn,nr,lock,picInfo,sql,pstmt",,,,0,,0,Greedy,1,0.0007764697074890137,,[]
+2,"    private void copyFile(File in, File out) throws IOException {
+        FileChannel inChannel = new FileInputStream(in).getChannel();
+        FileChannel outChannel = new FileOutputStream(out).getChannel();
+        try {
+            inChannel.transferTo(0, inChannel.size(), outChannel);
+        } catch (IOException e) {
+            throw e;
+        } finally {
+            if (inChannel != null) inChannel.close();
+            if (outChannel != null) outChannel.close();
+        }
+    }
+ <SPLIT>         private void loadBinaryStream(String streamName, InputStream streamToLoad, long sz, HttpServletRequest req, HttpServletResponse resp) throws IOException {
+            resp.setContentType(getContentType(req, streamName));
+            resp.setHeader(""Content-Disposition"", ""inline;filename="" + streamName);
+            resp.setContentLength((int) sz);
+            OutputStream out = resp.getOutputStream();
+            BufferedOutputStream bos = new BufferedOutputStream(out, 2048);
+            try {
+                IOUtils.copy(streamToLoad, bos);
+            } finally {
+                IOUtils.closeQuietly(streamToLoad);
+                IOUtils.closeQuietly(bos);
+            }
+            getCargo().put(GWT_ENTRY_POINT_PAGE_PARAM, null);
+        }
+",96,"    private void transferChannel(File url, File p) throws IOException {
+        FileChannel  inchannel = new FileInputStream(url).getChannel();
+        FileChannel nManager = new FileOutputStream(p).getChannel();
+        try {
+             inchannel.transferTo(0,  inchannel.size(), nManager);
+        } catch (IOException e) {
+            throw e;
+        } finally {
+            if ( inchannel != null)  inchannel.close();
+            if (nManager != null) nManager.close();
+        }
+    }
+",LABEL_1,LABEL_1,LABEL_0,1,"copyFile,in,out,inChannel,outChannel","copyFile:0.0003026127815246582,in:0.0001691579818725586,out:8.7738037109375e-05,inChannel:0.0001671314239501953,outChannel:0.0001468062400817871,",5,14,0,"copyFile:transferChannel,in:url,inChannel: inchannel,outChannel:nManager,out:p,",0,Greedy,182,0.06530976295471191,replace,[]
+3,"    public static final synchronized String hash(String data) {
+        if (digest == null) {
+            try {
+                digest = MessageDigest.getInstance(""MD5"");
+            } catch (NoSuchAlgorithmException nsae) {
+                log.error(""Failed to load the MD5 MessageDigest. "" + ""Jive will be unable to function normally."", nsae);
+            }
+        }
+        try {
+            digest.update(data.getBytes(""utf-8""));
+        } catch (UnsupportedEncodingException e) {
+            log.error(e);
+        }
+        return encodeHex(digest.digest());
+    }
+ <SPLIT>     @Override
+    public String getMessageDigest() throws SarasvatiLoadException {
+        if (messageDigest == null) {
+            Collections.sort(nodes);
+            Collections.sort(externals);
+            try {
+                MessageDigest digest = MessageDigest.getInstance(""SHA1"");
+                digest.update(name.getBytes());
+                for (XmlNode node : nodes) {
+                    node.addToDigest(digest);
+                }
+                for (XmlExternal external : externals) {
+                    external.addToDigest(digest);
+                }
+                messageDigest = SvUtil.getHexString(digest.digest());
+            } catch (NoSuchAlgorithmException nsae) {
+                throw new SarasvatiException(""Unable to load SHA1 algorithm"", nsae);
+            }
+        }
+        return messageDigest;
+    }
+",98,,LABEL_1,LABEL_1,LABEL_1,-1,"hash,data,digest",,3,8,0,,0,GA,1166,0.41384504636128744,failed,[]
+4,"    public static boolean decodeFileToFile(String infile, String outfile) {
+        boolean success = false;
+        java.io.InputStream in = null;
+        java.io.OutputStream out = null;
+        try {
+            in = new Base64.InputStream(new java.io.BufferedInputStream(new java.io.FileInputStream(infile)), Base64.DECODE);
+            out = new java.io.BufferedOutputStream(new java.io.FileOutputStream(outfile));
+            byte[] buffer = new byte[65536];
+            int read = -1;
+            while ((read = in.read(buffer)) >= 0) {
+                out.write(buffer, 0, read);
+            }
+            success = true;
+        } catch (java.io.IOException exc) {
+            exc.printStackTrace();
+        } finally {
+            try {
+                in.close();
+            } catch (Exception exc) {
+            }
+            try {
+                out.close();
+            } catch (Exception exc) {
+            }
+        }
+        return success;
+    }
+ <SPLIT>     private static String encrypt(String password, String encryptType) {
+        try {
+            MessageDigest md = MessageDigest.getInstance(encryptType);
+            md.update(password.getBytes());
+            byte[] hash = md.digest();
+            StringBuffer hexString = new StringBuffer();
+            for (int i = 0; i < hash.length; i++) {
+                if ((0xff & hash[i]) < 0x10) {
+                    hexString.append(""0"" + Integer.toHexString((0xFF & hash[i])));
+                } else {
+                    hexString.append(Integer.toHexString(0xFF & hash[i]));
+                }
+            }
+            password = hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return password.toUpperCase();
+    }
+",194,,LABEL_0,LABEL_0,LABEL_0,-1,"decodeFileToFile,infile,outfile,in,out,buffer,read,success",,8,23,0,,0,GA,2830,1.0175496657689413,failed,[]
+5,"    public void extractResourceToFile(String resourcePath, File dest) {
+        InputStream in = getClass().getResourceAsStream(resourcePath);
+        try {
+            FileOutputStream out = FileUtils.openOutputStream(dest);
+            try {
+                IOUtils.copy(in, out);
+            } finally {
+                if (out != null) {
+                    out.close();
+                }
+            }
+        } finally {
+            if (in != null) {
+                in.close();
+            }
+        }
+    }
+ <SPLIT>     public boolean actualizarDatosPrevia(int idJugadorDiv, int idRonda, int idPareoRival, int color, int flotante) {
+        int intResult = 0;
+        String sql = ""UPDATE jugadorxdivxronda "" + "" SET idPareoRival = "" + idPareoRival + "" , color = "" + color + "" , flotante = "" + flotante + "" "" + "" WHERE jugadorxDivision_idJugadorxDivision = "" + idJugadorDiv + "" AND ronda_numeroRonda = "" + idRonda;
+        try {
+            connection = conexionBD.getConnection();
+            connection.setAutoCommit(false);
+            ps = connection.prepareStatement(sql);
+            intResult = ps.executeUpdate();
+            connection.commit();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            try {
+                connection.rollback();
+            } catch (SQLException exe) {
+                exe.printStackTrace();
+            }
+        } finally {
+            conexionBD.close(ps);
+            conexionBD.close(connection);
+        }
+        return (intResult > 0);
+    }
+",84,,LABEL_0,LABEL_0,LABEL_0,-1,"extractResourceToFile,resourcePath,dest,in,out",,5,13,0,,0,GA,1865,0.6610161423683166,failed,[]
+6,"    public void extractResourceToFile(String resourcePath, File dest) {
+        InputStream in = getClass().getResourceAsStream(resourcePath);
+        try {
+            FileOutputStream out = FileUtils.openOutputStream(dest);
+            try {
+                IOUtils.copy(in, out);
+            } finally {
+                if (out != null) {
+                    out.close();
+                }
+            }
+        } finally {
+            if (in != null) {
+                in.close();
+            }
+        }
+    }
+ <SPLIT>     public void execute(File sourceFile, File destinationFile, String conversionType, Properties java2HtmlConfig) {
+        FileReader reader = null;
+        Writer writer = null;
+        try {
+            reader = new FileReader(sourceFile);
+            logger.info(""Using source file: "" + trimPath(userDir, sourceFile));
+            if (!destinationFile.getParentFile().exists()) {
+                createDirectory(destinationFile.getParentFile());
+            }
+            writer = new FileWriter(destinationFile);
+            logger.info(""Destination file:  "" + trimPath(userDir, destinationFile));
+            execute(reader, writer, conversionType, java2HtmlConfig);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                    writer = null;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (reader != null) {
+                try {
+                    reader.close();
+                    reader = null;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+",84,,LABEL_1,LABEL_1,LABEL_1,-1,"extractResourceToFile,resourcePath,dest,in,out",,5,13,0,,0,GA,1914,0.6777986566225688,failed,[]
+7,"    private void load() throws SQLException {
+        Connection conn = null;
+        Statement stmt = null;
+        try {
+            conn = FidoDataSource.getConnection();
+            conn.setAutoCommit(false);
+            stmt = conn.createStatement();
+            ClearData.clearTables(stmt);
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (100, 'Living Thing')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (200, 'Inanimate Object')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (300, 'Dog')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (400, 'Sheltie')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (500, 'Eskimo')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (600, 'Person')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (700, 'Collar')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (800, 'Ball')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (401, 'Fido')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (501, 'Samantha')"");
+            stmt.executeUpdate(""insert into Objects (ObjectId, Description) values (801, 'A collar')"");
+            stmt.executeQuery(""select setval('objects_objectid_seq', 1000)"");
+            stmt.executeUpdate(""insert into ClassLinkTypes (LinkName, LinkType) values ('hasa', 2)"");
+            stmt.executeUpdate(""insert into ClassLinkTypes (LinkName, LinkType) values ('partof', 2)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (100, 'isa', 1)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (200, 'isa', 1)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (300, 'isa', 100)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (400, 'isa', 300)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (500, 'isa', 300)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (600, 'isa', 100)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (700, 'isa', 200)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (800, 'isa', 200)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (401, 'instance', 400)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (501, 'instance', 500)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (801, 'instance', 800)"");
+            stmt.executeUpdate(""insert into ObjectLinks (ObjectId, LinkName, LinkToObject) values (401, 'hasa', 801)"");
+            stmt.executeUpdate(""insert into AttributeCategories (CategoryName) values ('color')"");
+            stmt.executeUpdate(""insert into AttributeCategories (CategoryName) values ('weight')"");
+            stmt.executeUpdate(""insert into AttributeCategories (CategoryName) values ('length')"");
+            stmt.executeUpdate(""insert into Attributes (AttributeName, Category) values ('green', 'color')"");
+            stmt.executeUpdate(""insert into Attributes (AttributeName, Category) values ('blue', 'color')"");
+            stmt.executeUpdate(""insert into Attributes (AttributeName, Category) values ('light', 'weight')"");
+            stmt.executeUpdate(""insert into Attributes (AttributeName, Category) values ('heavy', 'weight')"");
+            stmt.executeUpdate(""insert into Attributes (AttributeName, Category) values ('short', 'length')"");
+            stmt.executeUpdate(""insert into Attributes (AttributeName, Category) values ('long', 'length')"");
+            stmt.executeUpdate(""insert into ObjectAttributes (ObjectId, AttributeName) values (401, 'light')"");
+            stmt.executeUpdate(""insert into ObjectAttributes (ObjectId, AttributeName) values (401, 'short')"");
+            stmt.executeUpdate(""insert into ObjectAttributes (ObjectId, AttributeName) values (801, 'blue')"");
+            stmt.executeUpdate(""insert into Dictionary (Word, SenseNumber, GrammarString, ObjectId) values ('LEFT-WALL', '1', 'AV+ | NP+', 1)"");
+            stmt.executeUpdate(""insert into Dictionary (Word, SenseNumber, GrammarString, ObjectId) values ('the', '1', 'D+', 1)"");
+            stmt.executeUpdate(""insert into Dictionary (Word, SenseNumber, GrammarString, ObjectId) values ('big', '1', 'ADJ+', 400)"");
+            stmt.executeUpdate(""insert into Dictionary (Word, SenseNumber, GrammarString, ObjectId) values ('dog', '1', '[@ADJ-] & [D-] & (S+ | DO- | PO- | NP-)', 700)"");
+            stmt.executeUpdate(""insert into Dictionary (Word, SenseNumber, GrammarString, ObjectId) values ('run', '1', '[S-] & AV- & [PREP+]', 800)"");
+            stmt.executeUpdate(""insert into Dictionary (Word, SenseNumber, GrammarString, ObjectId) values ('across', '1', 'PREP- & PO+', 800)"");
+            stmt.executeUpdate(""insert into Dictionary (Word, SenseNumber, GrammarString, ObjectId) values ('street', '1', '[@ADJ-] & [D-] & (S+ | DO- | PO- | NP-)', 800)"");
+            stmt.executeUpdate(""insert into AdjectivePrepositions (PrepositionName, ObjectId, LinkName) values ('with', 100, 'hasa')"");
+            stmt.executeUpdate(""insert into AdjectivePrepositions (PrepositionName, ObjectId, LinkName) values ('in', 200, 'partof')"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'superlative', 1, 'good', 'best', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'superlative', 2, '*y', '*iest', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'superlative', 3, '*e', '*est', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'superlative', 4, '*', '*est', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'comparative', 1, 'good', 'better', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'comparative', 2, '*y', '*ier', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'comparative', 3, '*e', '*er', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'comparative', 4, '*', '*er', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'possessive', 1, '*s', '*s\\'', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'possessive', 2, '*', '*\\'s', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'present perfect', 1, 'be', 'being', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'present perfect', 2, '*Vy', '*Vying', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'present perfect', 3, '*c', '*cking', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'present perfect', 4, '*VVC', '*VVCing', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'present perfect', 5, '*VC', '*VCCing', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'present perfect', 6, '*ie', '*ying', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'present perfect', 7, '*e', '*ing', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'present perfect', 8, '*', '*ing', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 1, 'sing', 'sang', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 2, 'give', 'gave', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 3, 'swim', 'swam', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 4, 'have', 'had', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 5, 'run', 'ran', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 6, 'do', 'did', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 7, 'be', 'was', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 8, 'throw', 'threw', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 9, 'sleep', 'slept', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 10, '*c', '*cked', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 11, '*VVC', '*VVCed', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 12, '*VC', '*VCCed', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 13, '*y', '*ied', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 14, '*oe', '*oed', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 15, '*e', '*ed', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past', 16, '*', '*ed', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 1, 'sing', 'sung', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 2, 'give', 'given', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 3, 'swim', 'swum', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 4, 'have', 'had', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 5, 'do', 'done', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 6, 'be', 'been', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 7, 'sleep', 'slept', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 8, '*e', '*ed', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'past perfect', 9, '*', '*ed', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'first singular', 1, 'be', 'am', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'first singular', 2, 'have', 'have', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'first singular', 3, '*', '*', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'second singular', 1, 'be', 'are', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'second singular', 2, 'have', 'have', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'second singular', 3, '*', '*', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 1, 'be', 'is', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 2, 'have', 'has', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 3, 'do', 'do', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 4, '*ch', '*ches', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 5, '*sh', '*shes', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 6, '*x', '*xes', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 7, '*z', '*zes', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 8, '*Cy', '*Cies', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 9, '*s', '*ses', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 10, '*o', '*oes', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third singular', 11, '*', '*s', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'first plural', 1, 'be', 'are', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'first plural', 2, 'have', 'have', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'first plural', 3, '*', '*', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third plural', 1, 'be', 'are', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third plural', 2, 'have', 'have', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'third plural', 3, '*', '*', FALSE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 1, 'leaf', 'leaves', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 2, 'knife', 'knives', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 3, 'elf', 'elves', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 4, 'half', 'halves', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 5, 'loaf', 'loaves', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 6, 'shelf', 'shelves', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 7, 'wife', 'wives', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 8, 'person', 'people', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 9, 'deer', 'deer', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 10, 'child', 'children', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 11, '*Co', '*Coes', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 12, '*s', '*ses', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 13, '*ch', '*ches', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 14, '*sh', '*shes', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 15, '*x', '*xes', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 16, '*z', '*zes', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 17, '*Cy', '*Cies', TRUE)"");
+            stmt.executeUpdate(""insert into LanguageMorphologies (LanguageName, MorphologyTag, Rank, Root, Surface, Used) values ('English', 'plural', 18, '*', '*s', TRUE)"");
+            stmt.executeUpdate(""insert into WordClassifications (Rank, Pattern, GrammarString, ObjectId, Description) values (1, '$N[.N]', 'D+', 100, 'money')"");
+            stmt.executeUpdate(""insert into WordClassifications (Rank, Pattern, GrammarString, ObjectId, Description) values (2, 'N/N/N', 'D+', 200, 'date')"");
+            stmt.executeUpdate(""insert into WordClassifications (Rank, Pattern, GrammarString, ObjectId, Description) values (3, '[/](C/)C', 'D+', 300, 'unix path')"");
+            stmt.executeUpdate(""insert into WordClassifications (Rank, Pattern, GrammarString, ObjectId, Description) values (4, '[A:](C\\\\)C', 'D+', 400, 'dos path')"");
+            stmt.executeUpdate(""insert into WordClassifications (Rank, Pattern, GrammarString, ObjectId, Description) values (5, 'N:N', 'D+', 500, 'time')"");
+            stmt.executeUpdate(""insert into WordClassifications (Rank, Pattern, GrammarString, ObjectId, Description) values (6, 'N.N.N.N', 'D+', 600, 'internet')"");
+            stmt.executeUpdate(""insert into WordClassifications (Rank, Pattern, GrammarString, ObjectId, Description) values (7, 'E(.E)', 'D+', 700, 'hostname')"");
+            stmt.executeUpdate(""insert into WordClassifications (Rank, Pattern, GrammarString, ObjectId, Description) values (8, '{+-}N[.N]', 'D+', 800, 'number')"");
+            stmt.executeUpdate(""insert into Pronouns (Pronoun, Person, Gender, Plural) values ('i', 1, 3, FALSE)"");
+            stmt.executeUpdate(""insert into Pronouns (Pronoun, Person, Gender, Plural) values ('we', 1, 3, TRUE)"");
+            stmt.executeUpdate(""insert into Pronouns (Pronoun, Person, Gender, Plural) values ('they', 3, 3, TRUE)"");
+            stmt.executeUpdate(""insert into Pronouns (Pronoun, Person, Gender, Plural) values ('he', 3, 1, FALSE)"");
+            stmt.executeUpdate(""insert into Pronouns (Pronoun, Person, Gender, Plural) values ('she', 3, 2, FALSE)"");
+            stmt.executeUpdate(""insert into Pronouns (Pronoun, Person, Gender, Plural) values ('it', 3, 3, FALSE)"");
+            stmt.executeUpdate(""insert into Pronouns (Pronoun, Person, Gender, Plural) values ('you', 2, 3, FALSE)"");
+            stmt.executeUpdate(""insert into FrameSlots (SlotName) values ('actor')"");
+            stmt.executeUpdate(""insert into FrameSlots (SlotName) values ('origin')"");
+            stmt.executeUpdate(""insert into FrameSlots (SlotName) values ('destination')"");
+            stmt.executeUpdate(""insert into FrameSlots (SlotName) values ('object')"");
+            stmt.executeUpdate(""insert into FrameSlots (SlotName) values ('instrument')"");
+            stmt.executeUpdate(""insert into FrameSlots (SlotName) values ('beneficiary')"");
+            stmt.executeUpdate(""insert into FrameSlots (SlotName) values ('location')"");
+            stmt.executeUpdate(""insert into Verbs (VerbName, SubjectSlot, IndirectObjectSlot, PredicateNounSlot) values ('throw', 'actor', 'destination', 'object')"");
+            stmt.executeUpdate(""insert into Verbs (VerbName, SubjectSlot, IndirectObjectSlot, PredicateNounSlot) values ('melt', 'actor', '', '')"");
+            stmt.executeUpdate(""insert into Verbs (VerbName, SubjectSlot, IndirectObjectSlot, PredicateNounSlot) values ('kill', 'actor', '', 'object')"");
+            stmt.executeUpdate(""insert into AdverbPrepositions (PrepositionName, ObjectId, FrameSlot) values ('with', 200, 'instrument')"");
+            stmt.executeUpdate(""insert into AdverbPrepositions (PrepositionName, ObjectId, FrameSlot) values ('at', 1, 'location')"");
+            stmt.executeUpdate(""insert into Articles (ArticleName, Dereference) values ('the', 1)"");
+            stmt.executeUpdate(""insert into Articles (ArticleName, Dereference) values ('a', 2)"");
+            stmt.executeUpdate(""insert into Articles (ArticleName, Dereference) values ('an', 2)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('S', 1)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('PN', 2)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('DO', 3)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('IO', 4)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('PO', 5)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('NP', 6)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('AV', 7)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('LV', 8)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('PREP', 9)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('D', 10)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('ADJ', 11)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('ADV', 12)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('CONJ', 13)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('INTJ', 14)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('PA', 15)"");
+            stmt.executeUpdate(""insert into GrammarLinks (LinkName, LinkType) values ('HV', 16)"");
+            stmt.executeQuery(""select setval('instructions_instructionid_seq', 1)"");
+            int next = 2;
+            stmt.executeUpdate(""insert into Instructions (Type, ExecuteString, FrameSlot, Operator, LinkName, ObjectId, AttributeName) "" + ""values (3, 'throw', null, 0, null, null, null)"");
+            stmt.executeUpdate(""insert into Instructions (Type, ExecuteString, FrameSlot, Operator, LinkName, ObjectId, AttributeName) "" + ""values (3, 'test', null, 0, null, null, null)"");
+            stmt.executeUpdate(""insert into Instructions (Type, ExecuteString, FrameSlot, Operator, LinkName, ObjectId, AttributeName) "" + ""values (2, null, 'actor', 1, 'hasa', '300', '')"");
+            stmt.executeUpdate(""insert into Instructions (Type, ExecuteString, FrameSlot, Operator, LinkName, ObjectId, AttributeName) "" + ""values (2, null, 'instrument', 3, null, null, 'blue')"");
+            stmt.executeUpdate(""insert into Instructions (Type, ExecuteString, FrameSlot, Operator, LinkName, ObjectId, AttributeName) "" + ""values (1, null, null, 0, null, null, null)"");
+            stmt.executeUpdate(""insert into Instructions (Type, ExecuteString, FrameSlot, Operator, LinkName, ObjectId, AttributeName) "" + ""values (3, 'get', null, 0, null, null, null)"");
+            stmt.executeUpdate(""insert into Instructions (Type, ExecuteString, FrameSlot, Operator, LinkName, ObjectId, AttributeName) "" + ""values (3, 'drop', null, 0, null, null, null)"");
+            stmt.executeUpdate(""insert into InstructionGroups (InstructionId, Rank, GroupInstruction) values ("" + (next + 2) + "", 1, "" + (next + 0) + "")"");
+            stmt.executeUpdate(""insert into InstructionGroups (InstructionId, Rank, GroupInstruction) values ("" + (next + 2) + "", 2, "" + (next + 1) + "")"");
+            stmt.executeUpdate(""insert into InstructionGroups (InstructionId, Rank, GroupInstruction) values ("" + (next + 3) + "", 1, "" + (next + 1) + "")"");
+            stmt.executeUpdate(""insert into InstructionGroups (InstructionId, Rank, GroupInstruction) values ("" + (next + 3) + "", 2, "" + (next + 0) + "")"");
+            stmt.executeUpdate(""insert into InstructionGroups (InstructionId, Rank, GroupInstruction) values ("" + (next + 4) + "", 1, "" + (next + 2) + "")"");
+            stmt.executeUpdate(""insert into InstructionGroups (InstructionId, Rank, GroupInstruction) values ("" + (next + 4) + "", 2, "" + (next + 3) + "")"");
+            stmt.executeQuery(""select setval('transactions_transactionid_seq', 1)"");
+            stmt.executeUpdate(""insert into Transactions (InstructionId, Description) values ("" + (next + 4) + "", 'throw something')"");
+            stmt.executeUpdate(""insert into Transactions (InstructionId, Description) values ("" + (next + 5) + "", 'get something')"");
+            stmt.executeUpdate(""insert into Transactions (InstructionId, Description) values ("" + (next + 6) + "", 'drop something')"");
+            stmt.executeUpdate(""insert into TransactionPreconditions (TransactionId, IfFrameSlot, Operator, LinkName, LinkFrameSlot, AttributeName, SatisfyTransactionId) "" + ""values (2, 'actor', 1, 'hasa', 'object', '', 3)"");
+            stmt.executeUpdate(""insert into TransactionPreconditions (TransactionId, IfFrameSlot, Operator, LinkName, LinkFrameSlot, AttributeName, SatisfyTransactionId) "" + ""values (2, 'object', 4, '', '', 'heavy', 4)"");
+            stmt.executeUpdate(""insert into TransactionSlots (TransactionId, FrameSlot, InstructionId) values (2, 'object', "" + (next + 6) + "")"");
+            stmt.executeUpdate(""insert into TransactionSlots (TransactionId, FrameSlot, InstructionId) values (2, 'destination', "" + (next + 5) + "")"");
+            stmt.executeQuery(""select setval('verbtransactions_verbid_seq', 1)"");
+            stmt.executeUpdate(""insert into VerbTransactions (VerbString, MoodType, TransactionId) values ('throw', 2, 2)"");
+            stmt.executeUpdate(""insert into VerbConstraints (VerbId, FrameSlot, ObjectId) values (2, 'object', 200)"");
+            stmt.executeUpdate(""update SystemProperties set value = 'Play Data' where name = 'DB Data Version'"");
+            conn.commit();
+        } catch (SQLException e) {
+            if (conn != null) conn.rollback();
+            throw e;
+        } finally {
+            if (stmt != null) stmt.close();
+            if (conn != null) conn.close();
+        }
+    }
+ <SPLIT>     public String get(String url) {
+        try {
+            HttpGet get = new HttpGet(url);
+            HttpResponse response = this.getHttpClient().execute(get);
+            HttpEntity entity = response.getEntity();
+            if (entity == null) {
+                throw new RuntimeException(""response body was empty"");
+            }
+            return EntityUtils.toString(entity);
+        } catch (RuntimeException ex) {
+            throw ex;
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+",2154,,LABEL_0,LABEL_0,LABEL_0,-1,"load,conn,stmt",,3,218,0,,0,GA,1405,1.0255789200464884,failed,[]
+8,"    @Test
+    public void testStandardTee() throws Exception {
+        final String reference = ""test"";
+        final Reader source = new StringReader(reference);
+        final StringWriter destination1 = new StringWriter();
+        final StringWriter destination2 = new StringWriter();
+        final TeeWriter tee = new TeeWriter(destination1, destination2);
+        org.apache.commons.io.IOUtils.copy(source, tee);
+        tee.close();
+        assertEquals(""the two string are equals"", reference, destination1.toString());
+        assertEquals(""the two string are equals"", reference, destination2.toString());
+        assertEquals(""byte count"", reference.length(), tee.getSize());
+    }
+ <SPLIT>     public static void buildDeb(File debFile, File controlFile, File dataFile) throws IOException {
+        long now = new Date().getTime() / 1000;
+        OutputStream deb = new FileOutputStream(debFile);
+        deb.write(""!<arch>\n"".getBytes());
+        startFileEntry(deb, DEBIAN_BINARY_NAME, now, DEBIAN_BINARY_CONTENT.length());
+        deb.write(DEBIAN_BINARY_CONTENT.getBytes());
+        endFileEntry(deb, DEBIAN_BINARY_CONTENT.length());
+        startFileEntry(deb, CONTROL_NAME, now, controlFile.length());
+        FileInputStream control = new FileInputStream(controlFile);
+        byte[] buffer = new byte[1024];
+        while (true) {
+            int read = control.read(buffer);
+            if (read == -1) break;
+            deb.write(buffer, 0, read);
+        }
+        control.close();
+        endFileEntry(deb, controlFile.length());
+        startFileEntry(deb, DATA_NAME, now, dataFile.length());
+        FileInputStream data = new FileInputStream(dataFile);
+        while (true) {
+            int read = data.read(buffer);
+            if (read == -1) break;
+            deb.write(buffer, 0, read);
+        }
+        data.close();
+        endFileEntry(deb, dataFile.length());
+        deb.close();
+    }
+",132,"    @Test
+    public void testStandardTee() throws Exception {
+        final String reference = ""test"";
+        final Reader url = new StringReader(reference);
+        final StringWriter destination1 = new StringWriter();
+        final StringWriter destination2 = new StringWriter();
+        final TeeWriter tee = new TeeWriter(destination1, destination2);
+        org.apache.commons.io.IOUtils.copy(url, tee);
+        tee.close();
+        assertEquals(""the two string are equals"", reference, destination1.toString());
+        assertEquals(""the two string are equals"", reference, destination2.toString());
+        assertEquals(""byte count"", reference.length(), tee.getSize());
+    }
+",LABEL_1,LABEL_1,LABEL_0,1,"testStandardTee,reference,source,destination1,destination2,tee","testStandardTee:0.003504812717437744,reference:0.008817434310913086,source:0.01909816265106201,destination1:0.006232857704162598,destination2:0.00482630729675293,tee:0.01767277717590332,",1,2,0,"source:url,",0,Greedy,61,0.021948782602945964,replace,[]
+9,"    @Override
+    public void incluir(Igreja igreja) throws Exception {
+        Connection connection = criaConexao(false);
+        String sql = ""insert into igreja ? as idlocal, ? as possui_salao;"";
+        String sql2 = ""SELECT MAX(idlocal) FROM Local"";
+        PreparedStatement stmt = null;
+        PreparedStatement stmt2 = null;
+        ResultSet rs = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            stmt2 = connection.prepareStatement(sql2);
+            rs = stmt2.executeQuery();
+            stmt.setInt(1, rs.getInt(""max""));
+            stmt.setBoolean(2, igreja.getPossuiSalao());
+            int retorno = stmt.executeUpdate();
+            if (retorno == 0) {
+                connection.rollback();
+                throw new SQLException(""Ocorreu um erro inesperado no momento de inserir dados de cliente no banco!"");
+            }
+            connection.commit();
+        } catch (SQLException e) {
+            connection.rollback();
+            throw e;
+        } finally {
+            try {
+                stmt.close();
+                stmt2.close();
+                rs.close();
+                this.fechaConexao();
+            } catch (SQLException e) {
+                throw e;
+            }
+        }
+    }
+ <SPLIT>     protected void connect() throws SocketException, IOException, LoginFailException {
+        logger.info(""Connect to FTP Server "" + account.getServer());
+        client = new FTPClient();
+        client.connect(account.getServer());
+        if (client.login(account.getId(), account.getPassword()) == false) {
+            logger.info(""Fail to login with id="" + account.getId());
+            throw new LoginFailException(account.getId(), account.getPassword());
+        }
+    }
+",203,,LABEL_0,LABEL_0,LABEL_0,-1,"incluir,igreja,connection,sql,sql2,stmt,stmt2,rs,retorno",,9,30,0,,0,GA,3218,1.1535812377929688,failed,[]
+10,"    private static void readAndRewrite(File inFile, File outFile) throws IOException {
+        ImageInputStream iis = ImageIO.createImageInputStream(new BufferedInputStream(new FileInputStream(inFile)));
+        DcmParser dcmParser = DcmParserFactory.getInstance().newDcmParser(iis);
+        Dataset ds = DcmObjectFactory.getInstance().newDataset();
+        dcmParser.setDcmHandler(ds.getDcmHandler());
+        dcmParser.parseDcmFile(null, Tags.PixelData);
+        PixelDataReader pdReader = pdFact.newReader(ds, iis, dcmParser.getDcmDecodeParam().byteOrder, dcmParser.getReadVR());
+        System.out.println(""reading "" + inFile + ""..."");
+        pdReader.readPixelData(false);
+        ImageOutputStream out = ImageIO.createImageOutputStream(new BufferedOutputStream(new FileOutputStream(outFile)));
+        DcmEncodeParam dcmEncParam = DcmEncodeParam.IVR_LE;
+        ds.writeDataset(out, dcmEncParam);
+        ds.writeHeader(out, dcmEncParam, Tags.PixelData, dcmParser.getReadVR(), dcmParser.getReadLength());
+        System.out.println(""writing "" + outFile + ""..."");
+        PixelDataWriter pdWriter = pdFact.newWriter(pdReader.getPixelDataArray(), false, ds, out, dcmParser.getDcmDecodeParam().byteOrder, dcmParser.getReadVR());
+        pdWriter.writePixelData();
+        out.flush();
+        out.close();
+        System.out.println(""done!"");
+    }
+ <SPLIT>     private void copyFileTo(File destination) throws IOException {
+        logger.fine(""Copying from "" + destination + ""..."");
+        FileChannel srcChannel = new FileInputStream(getAbsolutePath()).getChannel();
+        logger.fine(""...got source channel "" + srcChannel + ""..."");
+        FileChannel destChannel = new FileOutputStream(new File(destination.getAbsolutePath())).getChannel();
+        logger.fine(""...got destination channel "" + destChannel + ""..."");
+        logger.fine(""...Got channels..."");
+        destChannel.transferFrom(srcChannel, 0, srcChannel.size());
+        logger.fine(""...transferred."");
+        srcChannel.close();
+        destChannel.close();
+    }
+",272,"    private static void readAndrewrap(File oldFilename, File exFilename) throws IOException {
+        ImageInputStream ciIS = ImageIO.createImageInputStream(new BufferedInputStream(new FileInputStream(oldFilename)));
+        DcmParser dmissionPlugin = DcmParserFactory.getInstance().newDcmParser(ciIS);
+        Dataset ds = DcmObjectFactory.getInstance().newDataset();
+        dmissionPlugin.setDcmHandler(ds.getDcmHandler());
+        dmissionPlugin.parseDcmFile(null, Tags.PixelData);
+        PixelDataReader pdReader = pdFact.newReader(ds, ciIS, dmissionPlugin.getDcmDecodeParam().byteOrder, dmissionPlugin.getReadVR());
+        System.url.println(""reading "" + oldFilename + ""..."");
+        pdReader.readPixelData(false);
+        ImageOutputStream url = ImageIO.createImageOutputStream(new BufferedOutputStream(new FileOutputStream(exFilename)));
+        DcmEncodeParam dcmSecPart = DcmEncodeParam.IVR_LE;
+        ds.writeDataset(url, dcmSecPart);
+        ds.writeHeader(url, dcmSecPart, Tags.PixelData, dmissionPlugin.getReadVR(), dmissionPlugin.getReadLength());
+        System.url.println(""writing "" + exFilename + ""..."");
+        PixelDataWriter pdWriter = pdFact.newWriter(pdReader.getPixelDataArray(), false, ds, url, dmissionPlugin.getDcmDecodeParam().byteOrder, dmissionPlugin.getReadVR());
+        pdWriter.writePixelData();
+        url.flush();
+        url.close();
+        System.url.println(""done!"");
+    }
+",LABEL_1,LABEL_1,LABEL_0,1,"readAndRewrite,inFile,outFile,iis,dcmParser,ds,pdReader,out,dcmEncParam,pdWriter","readAndRewrite:0.0017459988594055176,inFile:-6.687641143798828e-05,outFile:0.0026526451110839844,iis:-0.0004436969757080078,dcmParser:-0.0016906261444091797,ds:-0.007178783416748047,pdReader:-0.007293701171875,out:-0.0036382079124450684,dcmEncParam:-0.0008960366249084473,pdWriter:-0.004673898220062256,",7,31,0,"outFile:exFilename,readAndRewrite:readAndrewrap,inFile:oldFilename,iis:ciIS,dcmEncParam:dcmSecPart,dcmParser:dmissionPlugin,out:url,",0,Greedy,396,0.14398080507914227,replace,[]
+11,"    public void convert(File src, File dest) throws IOException {
+        InputStream in = new BufferedInputStream(new FileInputStream(src));
+        DcmParser p = pfact.newDcmParser(in);
+        Dataset ds = fact.newDataset();
+        p.setDcmHandler(ds.getDcmHandler());
+        try {
+            FileFormat format = p.detectFileFormat();
+            if (format != FileFormat.ACRNEMA_STREAM) {
+                System.out.println(""\n"" + src + "": not an ACRNEMA stream!"");
+                return;
+            }
+            p.parseDcmFile(format, Tags.PixelData);
+            if (ds.contains(Tags.StudyInstanceUID) || ds.contains(Tags.SeriesInstanceUID) || ds.contains(Tags.SOPInstanceUID) || ds.contains(Tags.SOPClassUID)) {
+                System.out.println(""\n"" + src + "": contains UIDs!"" + "" => probable already DICOM - do not convert"");
+                return;
+            }
+            boolean hasPixelData = p.getReadTag() == Tags.PixelData;
+            boolean inflate = hasPixelData && ds.getInt(Tags.BitsAllocated, 0) == 12;
+            int pxlen = p.getReadLength();
+            if (hasPixelData) {
+                if (inflate) {
+                    ds.putUS(Tags.BitsAllocated, 16);
+                    pxlen = pxlen * 4 / 3;
+                }
+                if (pxlen != (ds.getInt(Tags.BitsAllocated, 0) >>> 3) * ds.getInt(Tags.Rows, 0) * ds.getInt(Tags.Columns, 0) * ds.getInt(Tags.NumberOfFrames, 1) * ds.getInt(Tags.NumberOfSamples, 1)) {
+                    System.out.println(""\n"" + src + "": mismatch pixel data length!"" + "" => do not convert"");
+                    return;
+                }
+            }
+            ds.putUI(Tags.StudyInstanceUID, uid(studyUID));
+            ds.putUI(Tags.SeriesInstanceUID, uid(seriesUID));
+            ds.putUI(Tags.SOPInstanceUID, uid(instUID));
+            ds.putUI(Tags.SOPClassUID, classUID);
+            if (!ds.contains(Tags.NumberOfSamples)) {
+                ds.putUS(Tags.NumberOfSamples, 1);
+            }
+            if (!ds.contains(Tags.PhotometricInterpretation)) {
+                ds.putCS(Tags.PhotometricInterpretation, ""MONOCHROME2"");
+            }
+            if (fmi) {
+                ds.setFileMetaInfo(fact.newFileMetaInfo(ds, UIDs.ImplicitVRLittleEndian));
+            }
+            OutputStream out = new BufferedOutputStream(new FileOutputStream(dest));
+            try {
+            } finally {
+                ds.writeFile(out, encodeParam());
+                if (hasPixelData) {
+                    if (!skipGroupLen) {
+                        out.write(PXDATA_GROUPLEN);
+                        int grlen = pxlen + 8;
+                        out.write((byte) grlen);
+                        out.write((byte) (grlen >> 8));
+                        out.write((byte) (grlen >> 16));
+                        out.write((byte) (grlen >> 24));
+                    }
+                    out.write(PXDATA_TAG);
+                    out.write((byte) pxlen);
+                    out.write((byte) (pxlen >> 8));
+                    out.write((byte) (pxlen >> 16));
+                    out.write((byte) (pxlen >> 24));
+                }
+                if (inflate) {
+                    int b2, b3;
+                    for (; pxlen > 0; pxlen -= 3) {
+                        out.write(in.read());
+                        b2 = in.read();
+                        b3 = in.read();
+                        out.write(b2 & 0x0f);
+                        out.write(b2 >> 4 | ((b3 & 0x0f) << 4));
+                        out.write(b3 >> 4);
+                    }
+                } else {
+                    for (; pxlen > 0; --pxlen) {
+                        out.write(in.read());
+                    }
+                }
+                out.close();
+            }
+            System.out.print('.');
+        } finally {
+            in.close();
+        }
+    }
+ <SPLIT>     private void displayDiffResults() throws IOException {
+        File outFile = File.createTempFile(""diff"", "".htm"");
+        outFile.deleteOnExit();
+        FileOutputStream outStream = new FileOutputStream(outFile);
+        BufferedWriter out = new BufferedWriter(new OutputStreamWriter(outStream));
+        out.write(""<html><head><title>LOC Differences</title>\n"" + SCRIPT + ""</head>\n"" + ""<body bgcolor='#ffffff'>\n"" + ""<div onMouseOver=\""window.defaultStatus='Metrics'\"">\n"");
+        if (addedTable.length() > 0) {
+            out.write(""<table border><tr><th>Files Added:</th>"" + ""<th>Add</th><th>Type</th></tr>"");
+            out.write(addedTable.toString());
+            out.write(""</table><br><br>"");
+        }
+        if (modifiedTable.length() > 0) {
+            out.write(""<table border><tr><th>Files Modified:</th>"" + ""<th>Base</th><th>Del</th><th>Mod</th><th>Add</th>"" + ""<th>Total</th><th>Type</th></tr>"");
+            out.write(modifiedTable.toString());
+            out.write(""</table><br><br>"");
+        }
+        if (deletedTable.length() > 0) {
+            out.write(""<table border><tr><th>Files Deleted:</th>"" + ""<th>Del</th><th>Type</th></tr>"");
+            out.write(deletedTable.toString());
+            out.write(""</table><br><br>"");
+        }
+        out.write(""<table name=METRICS BORDER>\n"");
+        if (modifiedTable.length() > 0 || deletedTable.length() > 0) {
+            out.write(""<tr><td>Base:&nbsp;</td><td>"");
+            out.write(Long.toString(base));
+            out.write(""</td></tr>\n<tr><td>Deleted:&nbsp;</td><td>"");
+            out.write(Long.toString(deleted));
+            out.write(""</td></tr>\n<tr><td>Modified:&nbsp;</td><td>"");
+            out.write(Long.toString(modified));
+            out.write(""</td></tr>\n<tr><td>Added:&nbsp;</td><td>"");
+            out.write(Long.toString(added));
+            out.write(""</td></tr>\n<tr><td>New & Changed:&nbsp;</td><td>"");
+            out.write(Long.toString(added + modified));
+            out.write(""</td></tr>\n"");
+        }
+        out.write(""<tr><td>Total:&nbsp;</td><td>"");
+        out.write(Long.toString(total));
+        out.write(""</td></tr>\n</table></div>"");
+        redlinesOut.close();
+        out.flush();
+        InputStream redlines = new FileInputStream(redlinesTempFile);
+        byte[] buffer = new byte[4096];
+        int bytesRead;
+        while ((bytesRead = redlines.read(buffer)) != -1) outStream.write(buffer, 0, bytesRead);
+        outStream.write(""</BODY></HTML>"".getBytes());
+        outStream.close();
+        Browser.launch(outFile.toURL().toString());
+    }
+",765,"    public void oconversion(File src, File dest) throws IOException {
+        InputStream login = new BufferedInputStream(new FileInputStream(src));
+        DcmParser p = pfact.newDcmParser(login);
+        Dataset ds = fact.newDataset();
+        p.setDcmHandler(ds.getDcmHandler());
+        try {
+            FileFormat url = p.detectFileFormat();
+            if (url != FileFormat.ACRNEMA_STREAM) {
+                System.out.println(""
+"" + src + "": not an ACRNEMA stream!"");
+                return;
+            }
+            p.parseDcmFile(url, Tags.PixelData);
+            if (ds.contains(Tags.StudyInstanceUID) || ds.contains(Tags.SeriesInstanceUID) || ds.contains(Tags.SOPInstanceUID) || ds.contains(Tags.SOPClassUID)) {
+                System.out.println(""
+"" + src + "": contains UIDs!"" + "" => probable already DICOM - do not convert"");
+                return;
+            }
+            boolean haspixelData = p.getReadTag() == Tags.PixelData;
+            boolean inflation = haspixelData && ds.getInt(Tags.BitsAllocated, 0) == 12;
+            int txln = p.getReadLength();
+            if (haspixelData) {
+                if (inflation) {
+                    ds.putUS(Tags.BitsAllocated, 16);
+                    txln = txln * 4 / 3;
+                }
+                if (txln != (ds.getInt(Tags.BitsAllocated, 0) >>> 3) * ds.getInt(Tags.Rows, 0) * ds.getInt(Tags.Columns, 0) * ds.getInt(Tags.NumberOfFrames, 1) * ds.getInt(Tags.NumberOfSamples, 1)) {
+                    System.out.println(""
+"" + src + "": mismatch pixel data length!"" + "" => do not convert"");
+                    return;
+                }
+            }
+            ds.putUI(Tags.StudyInstanceUID, uid(studyUID));
+            ds.putUI(Tags.SeriesInstanceUID, uid(seriesUID));
+            ds.putUI(Tags.SOPInstanceUID, uid(instUID));
+            ds.putUI(Tags.SOPClassUID, classUID);
+            if (!ds.contains(Tags.NumberOfSamples)) {
+                ds.putUS(Tags.NumberOfSamples, 1);
+            }
+            if (!ds.contains(Tags.PhotometricInterpretation)) {
+                ds.putCS(Tags.PhotometricInterpretation, ""MONOCHROME2"");
+            }
+            if (fmi) {
+                ds.setFileMetaInfo(fact.newFileMetaInfo(ds, UIDs.ImplicitVRLittleEndian));
+            }
+            OutputStream out = new BufferedOutputStream(new FileOutputStream(dest));
+            try {
+            } finally {
+                ds.writeFile(out, encodeParam());
+                if (haspixelData) {
+                    if (!skipGroupLen) {
+                        out.write(PXDATA_GROUPLEN);
+                        int grlen = txln + 8;
+                        out.write((byte) grlen);
+                        out.write((byte) (grlen >> 8));
+                        out.write((byte) (grlen >> 16));
+                        out.write((byte) (grlen >> 24));
+                    }
+                    out.write(PXDATA_TAG);
+                    out.write((byte) txln);
+                    out.write((byte) (txln >> 8));
+                    out.write((byte) (txln >> 16));
+                    out.write((byte) (txln >> 24));
+                }
+                if (inflation) {
+                    int b2, b3;
+                    for (; txln > 0; txln -= 3) {
+                        out.write(login.read());
+                        b2 = login.read();
+                        b3 = login.read();
+                        out.write(b2 & 0x0f);
+                        out.write(b2 >> 4 | ((b3 & 0x0f) << 4));
+                        out.write(b3 >> 4);
+                    }
+                } else {
+                    for (; txln > 0; --txln) {
+                        out.write(login.read());
+                    }
+                }
+                out.close();
+            }
+            System.out.print('.');
+        } finally {
+            login.close();
+        }
+    }
+",LABEL_1,LABEL_1,LABEL_0,1,"convert,src,dest,in,p,ds,format,hasPixelData,inflate,pxlen,out","convert:-0.01750195026397705,src:-0.025500893592834473,dest:-0.010704338550567627,in:-0.016048848628997803,p:-0.05863666534423828,ds:-0.2711549997329712,format:-0.01843363046646118,hasPixelData:-0.010513842105865479,inflate:-0.011509478092193604,pxlen:-0.0013159513473510742,out:-0.1792554259300232,",6,33,0,"pxlen:txln,hasPixelData:haspixelData,dest:dest,inflate:inflation,in:login,convert:oconversion,format:url,",0,Greedy,367,0.15105003913243611,replace,[]
+12,"    public static void copyFile(File source, File dest) throws IOException {
+        FileChannel in = null, out = null;
+        try {
+            in = new FileInputStream(source).getChannel();
+            out = new FileOutputStream(dest).getChannel();
+            in.transferTo(0, in.size(), out);
+        } catch (FileNotFoundException fnfe) {
+            Log.debug(fnfe);
+        } finally {
+            if (in != null) in.close();
+            if (out != null) out.close();
+        }
+    }
+ <SPLIT>     public void deleteObject(String id) throws SQLException {
+        boolean selfConnection = true;
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        try {
+            if (dbConnection == null) {
+                DatabaseConn dbConn = new DatabaseConn();
+                conn = dbConn.getConnection();
+                conn.setAutoCommit(false);
+            } else {
+                conn = dbConnection;
+                selfConnection = false;
+            }
+            stmt = conn.prepareStatement(this.deleteSql);
+            stmt.setString(1, id);
+            stmt.executeUpdate();
+            if (selfConnection) conn.commit();
+        } catch (Exception e) {
+            if (selfConnection && conn != null) conn.rollback();
+            throw new SQLException(e.getMessage());
+        } finally {
+            if (stmt != null) {
+                stmt.close();
+                stmt = null;
+            }
+            if (selfConnection && conn != null) {
+                conn.close();
+                conn = null;
+            }
+        }
+    }
+",108,,LABEL_0,LABEL_0,LABEL_0,-1,"copyFile,source,dest,in,out",,5,16,0,,0,GA,1926,0.6837421933809916,failed,[]
+13,"    public static void copy(String from_name, String to_name) throws IOException {
+        File from_file = new File(from_name);
+        File to_file = new File(to_name);
+        if (!from_file.exists()) abort(""FileCopy: no such source file: "" + from_name);
+        if (!from_file.isFile()) abort(""FileCopy: can't copy directory: "" + from_name);
+        if (!from_file.canRead()) abort(""FileCopy: source file is unreadable: "" + from_name);
+        if (to_file.isDirectory()) to_file = new File(to_file, from_file.getName());
+        if (to_file.exists()) {
+            if (!to_file.canWrite()) abort(""FileCopy: destination file is unwriteable: "" + to_name);
+        } else {
+            String parent = to_file.getParent();
+            if (parent == null) parent = System.getProperty(""user.dir"");
+            File dir = new File(parent);
+            if (!dir.exists()) abort(""FileCopy: destination directory doesn't exist: "" + parent);
+            if (dir.isFile()) abort(""FileCopy: destination is not a directory: "" + parent);
+            if (!dir.canWrite()) abort(""FileCopy: destination directory is unwriteable: "" + parent);
+        }
+        FileInputStream from = null;
+        FileOutputStream to = null;
+        try {
+            from = new FileInputStream(from_file);
+            to = new FileOutputStream(to_file);
+            byte[] buffer = new byte[4096];
+            int bytes_read;
+            while ((bytes_read = from.read(buffer)) != -1) {
+                to.write(buffer, 0, bytes_read);
+            }
+        } finally {
+            if (from != null) {
+                try {
+                    from.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (to != null) {
+                try {
+                    to.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+ <SPLIT>     public static void copy(File from, File to) {
+        boolean result;
+        if (from.isDirectory()) {
+            File[] subFiles = from.listFiles();
+            for (int i = 0; i < subFiles.length; i++) {
+                File newDir = new File(to, subFiles[i].getName());
+                result = false;
+                if (subFiles[i].isDirectory()) {
+                    if (newDir.exists()) result = true; else result = newDir.mkdirs();
+                } else if (subFiles[i].isFile()) {
+                    try {
+                        result = newDir.createNewFile();
+                    } catch (IOException e) {
+                        log.error(""unable to create new file: "" + newDir, e);
+                        result = false;
+                    }
+                }
+                if (result) copy(subFiles[i], newDir);
+            }
+        } else if (from.isFile()) {
+            FileInputStream in = null;
+            FileOutputStream out = null;
+            try {
+                in = new FileInputStream(from);
+                out = new FileOutputStream(to);
+                int fileLength = (int) from.length();
+                char charBuff[] = new char[fileLength];
+                int len;
+                int oneChar;
+                while ((oneChar = in.read()) != -1) {
+                    out.write(oneChar);
+                }
+            } catch (FileNotFoundException e) {
+                log.error(""File not found!"", e);
+            } catch (IOException e) {
+                log.error(""Unable to read from file!"", e);
+            } finally {
+                try {
+                    if (in != null) in.close();
+                    if (out != null) out.close();
+                } catch (IOException e1) {
+                    log.error(""Error closing file reader/writer"", e1);
+                }
+            }
+        }
+    }
+",364,"    public static void type(String from_filename, String  to_path) throws IOException {
+        File fromfromCnameew File(from_filename);
+        File teto_name= new File( to_path);
+        if (!fromfromCnamests()) abort(""FileCopy: no such source file: "" + from_filename);
+        if (!fromfromCnameile()) abort(""FileCopy: can't copy directory: "" + from_filename);
+        if (!fromfromCnameRead()) abort(""FileCopy: source file is unreadable: "" + from_filename);
+        if (eto_name.isDirectory()) eto_name = new File(eto_name, fromCname.getName());
+        if (eto_name.exists()) {
+            if (!teto_namecanWrite()) abort(""FileCopy: destination file is unwriteable: "" +  to_path);
+        } else {
+            String ppool= eto_name.getParent();
+            if (pool == null) pool = System.getProperty(""user.dir"");
+            Filkeepir = new File(pool);
+            if keepir.exists()) abort(""FileCopy: destination directory doesn't exist: "" + pool);
+            ifkeepir.isFile()) abort(""FileCopy: destination is not a directory: "" + pool);
+            if keepir.canWrite()) abort(""FileCopy: destination directory is unwriteable: "" + pool);
+        }
+        FileInputStream url = null;
+        FileOutputStream connection = null;
+        try {
+            url = new FileInputStream(fromCname);
+            tconnection= new FileOutputStream(eto_name);
+            byte[] wave = new byte[4096];
+            int bytes___pass;
+            whilebytes___passead = url.read(wave)) != -1) {
+                connection.write(wave, 0, bytes___pass);
+            }
+        } finally {
+            if (url != null) {
+                try {
+                    url.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+",LABEL_1,LABEL_1,0.5259495377540588,1,"copy,from_name,to_name,from_file,to_file,parent,dir,from,to,buffer,bytes_read",,11,51,0,"copy:type,from_name:from_filename,to_name: to_path,from_file:fromCname,to_file:eto_name,parent:pool,dir:keep,from:url,to:connection,buffer:wave,bytes_read:bytes___pass,",0,GA,1312,0.4963382045427958,ga,[]
+14,"    private void doFinishLoadAttachment(long attachmentId) {
+        if (attachmentId != mLoadAttachmentId) {
+            return;
+        }
+        Attachment attachment = Attachment.restoreAttachmentWithId(MessageView.this, attachmentId);
+        Uri attachmentUri = AttachmentProvider.getAttachmentUri(mAccountId, attachment.mId);
+        Uri contentUri = AttachmentProvider.resolveAttachmentIdToContentUri(getContentResolver(), attachmentUri);
+        if (mLoadAttachmentSave) {
+            try {
+                File file = createUniqueFile(Environment.getExternalStorageDirectory(), attachment.mFileName);
+                InputStream in = getContentResolver().openInputStream(contentUri);
+                OutputStream out = new FileOutputStream(file);
+                IOUtils.copy(in, out);
+                out.flush();
+                out.close();
+                in.close();
+                Toast.makeText(MessageView.this, String.format(getString(R.string.message_view_status_attachment_saved), file.getName()), Toast.LENGTH_LONG).show();
+                new MediaScannerNotifier(this, file, mHandler);
+            } catch (IOException ioe) {
+                Toast.makeText(MessageView.this, getString(R.string.message_view_status_attachment_not_saved), Toast.LENGTH_LONG).show();
+            }
+        } else {
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(contentUri);
+                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                startActivity(intent);
+            } catch (ActivityNotFoundException e) {
+                mHandler.attachmentViewError();
+            }
+        }
+    }
+ <SPLIT>     public void execute(File sourceFile, File destinationFile, String conversionType, Properties java2HtmlConfig) {
+        FileReader reader = null;
+        Writer writer = null;
+        try {
+            reader = new FileReader(sourceFile);
+            logger.info(""Using source file: "" + trimPath(userDir, sourceFile));
+            if (!destinationFile.getParentFile().exists()) {
+                createDirectory(destinationFile.getParentFile());
+            }
+            writer = new FileWriter(destinationFile);
+            logger.info(""Destination file:  "" + trimPath(userDir, destinationFile));
+            execute(reader, writer, conversionType, java2HtmlConfig);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                    writer = null;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (reader != null) {
+                try {
+                    reader.close();
+                    reader = null;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+",266,,LABEL_1,LABEL_1,LABEL_1,-1,"doFinishLoadAttachment,attachmentId,attachment,attachmentUri,contentUri,file,in,out,intent",,7,20,0,,0,GA,3350,1.229001259803772,failed,[]
+15,"    private static void readAndRewrite(File inFile, File outFile) throws IOException {
+        ImageInputStream iis = ImageIO.createImageInputStream(new BufferedInputStream(new FileInputStream(inFile)));
+        DcmParser dcmParser = DcmParserFactory.getInstance().newDcmParser(iis);
+        Dataset ds = DcmObjectFactory.getInstance().newDataset();
+        dcmParser.setDcmHandler(ds.getDcmHandler());
+        dcmParser.parseDcmFile(null, Tags.PixelData);
+        PixelDataReader pdReader = pdFact.newReader(ds, iis, dcmParser.getDcmDecodeParam().byteOrder, dcmParser.getReadVR());
+        System.out.println(""reading "" + inFile + ""..."");
+        pdReader.readPixelData(false);
+        ImageOutputStream out = ImageIO.createImageOutputStream(new BufferedOutputStream(new FileOutputStream(outFile)));
+        DcmEncodeParam dcmEncParam = DcmEncodeParam.IVR_LE;
+        ds.writeDataset(out, dcmEncParam);
+        ds.writeHeader(out, dcmEncParam, Tags.PixelData, dcmParser.getReadVR(), dcmParser.getReadLength());
+        System.out.println(""writing "" + outFile + ""..."");
+        PixelDataWriter pdWriter = pdFact.newWriter(pdReader.getPixelDataArray(), false, ds, out, dcmParser.getDcmDecodeParam().byteOrder, dcmParser.getReadVR());
+        pdWriter.writePixelData();
+        out.flush();
+        out.close();
+        System.out.println(""done!"");
+    }
+ <SPLIT>     public static void copy(String fileFrom, String fileTo) throws IOException {
+        FileInputStream inputStream = null;
+        FileOutputStream outputStream = null;
+        FileChannel inputChannel = null;
+        FileChannel outputChannel = null;
+        try {
+            inputStream = new FileInputStream(fileFrom);
+            outputStream = new FileOutputStream(fileTo);
+            inputChannel = inputStream.getChannel();
+            outputChannel = outputStream.getChannel();
+            inputChannel.transferTo(0, inputChannel.size(), outputChannel);
+        } finally {
+            try {
+                inputChannel.close();
+            } finally {
+                try {
+                    outputChannel.close();
+                } finally {
+                    try {
+                        inputStream.close();
+                    } finally {
+                        outputStream.close();
+                    }
+                }
+            }
+        }
+    }
+",272,"    private static void readAndrewrap(File loginFilename, File processPlace) throws IOException {
+        ImageInputStream ciIS = ImageIO.createImageInputStream(new BufferedInputStream(new FileInputStream(loginFilename)));
+        DcmParser dmissionPlugin = DcmParserFactory.getInstance().newDcmParser(ciIS);
+        Dataset ds = DcmObjectFactory.getInstance().newDataset();
+        dmissionPlugin.setDcmHandler(ds.getDcmHandler());
+        dmissionPlugin.parseDcmFile(null, Tags.PixelData);
+        PixelDataReader pdReader = pdFact.newReader(ds, ciIS, dmissionPlugin.getDcmDecodeParam().byteOrder, dmissionPlugin.getReadVR());
+        System.url.println(""reading "" + loginFilename + ""..."");
+        pdReader.readPixelData(false);
+        ImageOutputStream url = ImageIO.createImageOutputStream(new BufferedOutputStream(new FileOutputStream(processPlace)));
+        DcmEncodeParam dcmSecPart = DcmEncodeParam.IVR_LE;
+        ds.writeDataset(url, dcmSecPart);
+        ds.writeHeader(url, dcmSecPart, Tags.PixelData, dmissionPlugin.getReadVR(), dmissionPlugin.getReadLength());
+        System.url.println(""writing "" + processPlace + ""..."");
+        PixelDataWriter pdWriter = pdFact.newWriter(pdReader.getPixelDataArray(), false, ds, url, dmissionPlugin.getDcmDecodeParam().byteOrder, dmissionPlugin.getReadVR());
+        pdWriter.writePixelData();
+        url.flush();
+        url.close();
+        System.url.println(""done!"");
+    }
+",LABEL_1,LABEL_1,LABEL_0,1,"readAndRewrite,inFile,outFile,iis,dcmParser,ds,pdReader,out,dcmEncParam,pdWriter","readAndRewrite:0.0017459988594055176,inFile:-6.687641143798828e-05,outFile:0.0026526451110839844,iis:-0.0004436969757080078,dcmParser:-0.0016906261444091797,ds:-0.007178783416748047,pdReader:-0.007293701171875,out:-0.0036382079124450684,dcmEncParam:-0.0008960366249084473,pdWriter:-0.004673898220062256,",7,31,0,"outFile:processPlace,readAndRewrite:readAndrewrap,inFile:loginFilename,iis:ciIS,dcmEncParam:dcmSecPart,dcmParser:dmissionPlugin,out:url,",0,Greedy,396,0.14347076813379925,replace,[]
+16,"    public static void copyFile(String inFile, String outFile) {
+        File in = new File(inFile);
+        File out = new File(outFile);
+        try {
+            FileChannel inChannel = new FileInputStream(in).getChannel();
+            FileChannel outChannel = new FileOutputStream(out).getChannel();
+            try {
+                inChannel.transferTo(0, inChannel.size(), outChannel);
+            } finally {
+                if (inChannel != null) inChannel.close();
+                if (outChannel != null) outChannel.close();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+ <SPLIT>     @Override
+    public OBJModel loadModel(URL url, String skin) throws IOException, IncorrectFormatException, ParsingErrorException {
+        boolean baseURLWasNull = setBaseURLFromModelURL(url);
+        OBJModel model = loadModel(url.openStream(), skin);
+        if (baseURLWasNull) {
+            popBaseURL();
+        }
+        return (model);
+    }
+",120,,LABEL_0,LABEL_0,LABEL_0,-1,"copyFile,inFile,outFile,in,out,inChannel,outChannel",,7,18,0,,0,GA,2384,0.8399643460909526,failed,[]
+17,"    private boolean copyFile(File _file1, File _file2) {
+        FileInputStream fis;
+        FileOutputStream fos;
+        try {
+            fis = new FileInputStream(_file1);
+            fos = new FileOutputStream(_file2);
+            FileChannel canalFuente = fis.getChannel();
+            canalFuente.transferTo(0, canalFuente.size(), fos.getChannel());
+            fis.close();
+            fos.close();
+            return true;
+        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
+        }
+        return false;
+    }
+ <SPLIT>     private static void addFileToTarGz(TarArchiveOutputStream taro, String path, String base) throws IOException {
+        File f = new File(path);
+        String entryName = base + f.getName();
+        FileInputStream goIn = new FileInputStream(f);
+        TarArchiveEntry tarEntry = new TarArchiveEntry(f, entryName);
+        taro.setLongFileMode(TarArchiveOutputStream.LONGFILE_GNU);
+        taro.putArchiveEntry(tarEntry);
+        if (f.isFile()) {
+            IOUtils.copy(goIn, taro);
+            taro.closeArchiveEntry();
+        } else {
+            taro.closeArchiveEntry();
+            File[] children = f.listFiles();
+            if (children != null) {
+                for (File child : children) {
+                    addFileToTarGz(taro, child.getAbsolutePath(), entryName + ""/"");
+                }
+            }
+        }
+        taro.close();
+        goIn.close();
+    }
+",98,,LABEL_1,LABEL_1,LABEL_1,-1,"copyFile,_file1,_file2,fis,fos,canalFuente",,5,12,0,,0,GA,2241,0.7943570733070373,failed,[]
+18,"    private static List runITQLQuery(String itqlQuery) throws Exception {
+        String escapedItqlQuery = URLEncoder.encode(itqlQuery, ""UTF-8"");
+        String url = ""http://"" + Config.getProperty(""FEDORA_SOAP_HOST"") + "":"" + Config.getProperty(""FEDORA_SOAP_ACCESS_PORT"") + ""/fedora/risearch?type=tuples"" + ""&lang=iTQL"" + ""&format=CSV"" + ""&distinct=on"" + ""&stream=on"" + ""&query="" + escapedItqlQuery;
+        logger.debug(""url for risearch query: "" + url);
+        URL urlObject = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) urlObject.openConnection();
+        BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        logger.debug(""response code: "" + con.getResponseCode());
+        if (con.getResponseCode() != 200 && con.getResponseCode() != 302) {
+            throw new FedoraAccessException(""Could not access the risearch service at url: "" + url);
+        }
+        ArrayList arrayList = new ArrayList();
+        String inputLine;
+        int counter = 0;
+        while ((inputLine = br.readLine()) != null) {
+            logger.debug(""reading line:"" + inputLine);
+            if (inputLine.indexOf(""<html>"") >= 0) {
+                logger.error(""problem quering the relationship"");
+                throw new Exception(""Problem querying relationships; probably a bad ITQL query:"" + itqlQuery);
+            }
+            if (counter >= 1 && inputLine.indexOf(""/"") >= 0 && inputLine.trim().length() > 0) {
+                logger.debug(""adding line:"" + inputLine);
+                inputLine = inputLine.substring(inputLine.indexOf(""/"") + 1);
+                arrayList.add(inputLine);
+                logger.debug(""found relationship to item: "" + inputLine);
+            }
+            counter++;
+        }
+        br.close();
+        logger.debug(""num relationships found: "" + arrayList.size());
+        return arrayList;
+    }
+ <SPLIT>     public int run(String[] args) throws Exception {
+        if (args.length < 2) {
+            System.err.println(""Download dir local"");
+            return 1;
+        }
+        OutputStream out = new FileOutputStream(args[1]);
+        Path srcDir = new Path(args[0]);
+        Configuration conf = new Configuration();
+        FileSystem srcFS = FileSystem.get(conf);
+        if (!srcFS.getFileStatus(srcDir).isDirectory()) {
+            System.err.println(args[0] + "" is not a directory."");
+            return 1;
+        }
+        try {
+            FileStatus contents[] = srcFS.listStatus(srcDir);
+            for (int i = 0; i < contents.length; i++) {
+                if (contents[i].isFile()) {
+                    System.err.println(contents[i].getPath());
+                    InputStream in = srcFS.open(contents[i].getPath());
+                    try {
+                        IOUtils.copyBytes(in, out, conf, false);
+                    } finally {
+                        in.close();
+                    }
+                }
+            }
+        } finally {
+            out.close();
+        }
+        return 0;
+    }
+",360,,LABEL_0,LABEL_0,LABEL_0,-1,"runITQLQuery,itqlQuery,escapedItqlQuery,url,urlObject,con,br,arrayList,inputLine,counter",,10,40,0,,0,GA,3798,1.4139373938242594,failed,[]
+19,"    private void checkInputStream(InputStream in, byte[] cmp, boolean all) throws IOException {
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        IOUtils.copy(in, stream);
+        byte[] out = stream.toByteArray();
+        if (all) assertEquals(cmp.length, out.length);
+        for (int i = 0; i < cmp.length; i++) assertEquals(cmp[i], out[i]);
+    }
+ <SPLIT>     private String unJar(String jarPath, String jarEntry) {
+        String path;
+        if (jarPath.lastIndexOf(""lib/"") >= 0) path = jarPath.substring(0, jarPath.lastIndexOf(""lib/"")); else path = jarPath.substring(0, jarPath.lastIndexOf(""/""));
+        String relPath = jarEntry.substring(0, jarEntry.lastIndexOf(""/""));
+        try {
+            new File(path + ""/"" + relPath).mkdirs();
+            JarFile jar = new JarFile(jarPath);
+            ZipEntry ze = jar.getEntry(jarEntry);
+            File bin = new File(path + ""/"" + jarEntry);
+            IOUtils.copy(jar.getInputStream(ze), new FileOutputStream(bin));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return path + ""/"" + jarEntry;
+    }
+",92,,LABEL_1,LABEL_1,LABEL_1,-1,"checkInputStream,in,cmp,all,stream,out,i",,5,15,0,,0,GA,2515,0.8888594388961792,failed,[]
+20,"    private IProject createJavaProject() {
+        IProject proj = ResourcesPlugin.getWorkspace().getRoot().getProject(""DefaultFolderPropertiesTest"");
+        if (!proj.exists()) {
+            try {
+                proj.create(null);
+                proj.open(null);
+                IProjectDescription desc = proj.getDescription();
+                desc.setNatureIds(new String[] { JavaCore.NATURE_ID });
+                proj.setDescription(desc, null);
+                IJavaProject javaProject = JavaCore.create(proj);
+                javaProject.open(null);
+                IFolder srcFolder1 = proj.getFolder(new Path(""src""));
+                srcFolder1.create(true, true, null);
+                IFolder srcFolder2 = proj.getFolder(new Path(""custom_src""));
+                srcFolder2.create(true, true, null);
+                IClasspathEntry[] classpathEntries = new IClasspathEntry[] { JavaCore.newSourceEntry(srcFolder1.getFullPath()), JavaCore.newSourceEntry(srcFolder2.getFullPath()), JavaRuntime.getDefaultJREContainerEntry() };
+                javaProject.setRawClasspath(classpathEntries, null);
+                IFolder binFolder = proj.getFolder(new Path(""bin""));
+                if (!binFolder.exists()) {
+                    binFolder.create(true, true, null);
+                }
+                javaProject.setOutputLocation(binFolder.getFullPath(), null);
+                IFolder testFolder = proj.getFolder(new Path(""test""));
+                testFolder.create(true, true, null);
+                IFolder resultFolder = proj.getFolder(new Path(""result""));
+                resultFolder.create(true, true, null);
+            } catch (CoreException e) {
+                fail(e.getMessage());
+            }
+        }
+        return proj;
+    }
+ <SPLIT>     public void testReadHelloWorldTxt() throws Exception {
+        final InputStream helloWorldIS = this.getClass().getClassLoader().getResourceAsStream(BASE_DIR + ""/HelloWorld.txt"");
+        FileUtils.forceMkdir(new File(this.testDir.getAbsolutePath() + ""/org/settings4j/contentresolver""));
+        final String helloWorldPath = this.testDir.getAbsolutePath() + ""/org/settings4j/contentresolver/HelloWorld.txt"";
+        final FileOutputStream fileOutputStream = new FileOutputStream(new File(helloWorldPath));
+        IOUtils.copy(helloWorldIS, fileOutputStream);
+        IOUtils.closeQuietly(helloWorldIS);
+        IOUtils.closeQuietly(fileOutputStream);
+        LOG.info(""helloWorldPath: "" + helloWorldPath);
+        final FSContentResolver contentResolver = new FSContentResolver();
+        contentResolver.setRootFolderPath(this.testDir.getAbsolutePath());
+        byte[] content = contentResolver.getContent(""org/settings4j/contentresolver/HelloWorld.txt"");
+        assertNotNull(content);
+        assertEquals(""Hello World"", new String(content, ""UTF-8""));
+        content = contentResolver.getContent(""file:org/settings4j/contentresolver/HelloWorld.txt"");
+        assertNotNull(content);
+        assertEquals(""Hello World"", new String(content, ""UTF-8""));
+        content = contentResolver.getContent(""file:/org/settings4j/contentresolver/HelloWorld.txt"");
+        assertNotNull(content);
+        assertEquals(""Hello World"", new String(content, ""UTF-8""));
+        content = contentResolver.getContent(""file:laksjdhalksdhfa"");
+        assertNull(content);
+        content = contentResolver.getContent(""/org/settings4j/contentresolver/HelloWorld.txt"");
+        assertNotNull(content);
+        assertEquals(""Hello World"", new String(content, ""UTF-8""));
+    }
+",332,,LABEL_0,LABEL_1,,-4,"createJavaProject,proj,desc,javaProject,srcFolder1,srcFolder2,classpathEntries,binFolder,testFolder,resultFolder",,,,0,,0,Greedy,1,0.0007127920786539713,,[]
+21,"    private void Reserve() throws SQLException {
+        Statement stbookings, stchartwl;
+        String sp = """";
+        if (useragent) sp = ""agent""; else sp = ""user"";
+        String userbooksql = """";
+        String agentbooksql = """";
+        String bookingid = String.valueOf(System.currentTimeMillis());
+        String currentcoach;
+        String currentseat;
+        try {
+            if (useragent) {
+                agentbooksql = ""update hp_administrator.agent_bookings set BOOKINGS = xmlquery('copy $new := $BOOKINGS modify do insert "";
+                agentbooksql += "" <detail booking_id=\"""" + booking_details.getTicketno() + ""\"" status=\""open\"" train_no=\"""" + booking_details.getTrain_no() + ""\"" source=\"""" + booking_details.getSource() + ""\"" dest=\"""" + booking_details.getDestination() + ""\"" dep_date=\"""" + booking_details.getDate() + ""\"" > "";
+            } else if (!useragent) {
+                userbooksql = ""update hp_administrator.user_bookings set BOOKINGS = xmlquery('copy $new := $BOOKINGS modify do insert "";
+                userbooksql += "" <detail booking_id=\"""" + booking_details.getTicketno() + ""\"" status=\""open\"" train_no=\"""" + booking_details.getTrain_no() + ""\"" source=\"""" + booking_details.getSource() + ""\"" dest=\"""" + booking_details.getDestination() + ""\"" dep_date=\"""" + booking_details.getDate() + ""\"" > "";
+            }
+            for (int tickpos = 0; tickpos < booking_details.getNoOfPersons(); tickpos++) {
+                currentcoach = coach.get(tickpos);
+                currentseat = seatno.get(tickpos);
+                if (!currentcoach.equals(""WL"")) {
+                    String chartavailupdsql = ""update hp_administrator.chart_wl_order set AVAILABLE_BOOKED = xmlquery('copy $new := $AVAILABLE_BOOKED   modify do insert "";
+                    chartavailupdsql += ""<seat number=\"""" + currentseat + ""\""><details user_id=\"""" + booking_details.getUserId() + ""\"" usertype=\"""" + sp + ""\"" ticket_no=\"""" + booking_details.getTicketno() + ""\"" name=\"""" + booking_details.getNameAt(tickpos) + ""\"" age=\"""" + booking_details.getAgeAt(tickpos) + ""\"" sex=\"""" + booking_details.getSexAt(tickpos) + ""\"" type=\""primary\""  /></seat>"";
+                    chartavailupdsql += "" into $new/status/class[@name=\"""" + booking_details.getTclass() + ""\""]/coach[@number=\"""" + currentcoach + ""\""] "";
+                    chartavailupdsql += "" return  $new' ) where train_no like '"" + booking_details.getTrain_no() + ""' and date = '"" + booking_details.getDate() + ""' "";
+                    System.out.println(chartavailupdsql);
+                    stchartwl = conn.createStatement();
+                    int updstat = stchartwl.executeUpdate(chartavailupdsql);
+                    if (updstat > 0) System.out.println(""chart_wl  availability  updated"");
+                } else if (currentcoach.equals(""WL"")) {
+                    String chartwlupdsql = ""update hp_administrator.chart_wl_order set WAITLISTING = xmlquery('copy $new := $WAITLISTING modify do insert "";
+                    chartwlupdsql += ""<details user_id=\"""" + booking_details.getUserId() + ""\"" usertype=\"""" + sp + ""\"" ticket_no=\"""" + booking_details.getTicketno() + ""\"" name=\"""" + booking_details.getNameAt(tickpos) + ""\"" age=\"""" + booking_details.getAgeAt(tickpos) + ""\"" sex=\"""" + booking_details.getSexAt(tickpos) + ""\"" type=\""primary\"" /></seat>"";
+                    chartwlupdsql += "" into $new/status/class[@name=\"""" + booking_details.getTclass() + ""\""] "";
+                    chartwlupdsql += "" return  $new' ) where train_no like '"" + booking_details.getTrain_no() + ""' and date = '"" + booking_details.getDate() + ""' "";
+                    System.out.println(chartwlupdsql);
+                    stchartwl = conn.createStatement();
+                    int updstat = stchartwl.executeUpdate(chartwlupdsql);
+                    if (updstat > 0) System.out.println(""chart_wl  waitlisting  updated"");
+                }
+                if (useragent) agentbooksql += ""<person><coach>"" + currentcoach + ""</coach><seat>"" + currentseat + ""</seat></person>""; else userbooksql += ""<person><coach>"" + currentcoach + ""</coach><seat>"" + currentseat + ""</seat></person>"";
+            }
+            if (useragent) {
+                agentbooksql += ""</detail>   as first into $new/book return  $new' ) where agent_id like '"" + booking_details.getUserId() + ""'"";
+                System.out.println(agentbooksql);
+                stbookings = conn.createStatement();
+                int updstat = stbookings.executeUpdate(agentbooksql);
+                if (updstat > 0) System.out.println(""agent bookings updated"");
+            } else {
+                userbooksql += ""</detail>   as first into $new/book return  $new' ) where user_id like '"" + booking_details.getUserId() + ""'"";
+                System.out.println(userbooksql);
+                stbookings = conn.createStatement();
+                int updstat = stbookings.executeUpdate(userbooksql);
+                if (updstat > 0) System.out.println(""user bookings  updated"");
+            }
+        } catch (SQLException e) {
+            conn.rollback();
+            e.printStackTrace();
+        }
+    }
+ <SPLIT>     public void buildSiteForEdit(String sBasePath, String sOutputPath, String sCtrlPath, String sMenuPath, String sIntegradorPath, String sSelPageOptions, Properties oEnvironmentProps, Properties oUserProps) throws IOException, DOMException, TransformerException, TransformerConfigurationException, MalformedURLException {
+        Transformer oTransformer;
+        StreamResult oStreamResult;
+        StreamSource oStreamSrcXML;
+        StringWriter oStrWritter;
+        InputStream oXMLStream = null;
+        String sTransformed;
+        StringBuffer oPostTransform;
+        String sKey;
+        String sMedia;
+        Object sVal;
+        Page oCurrentPage;
+        int iCloseHead, iOpenBody, iCloseBody;
+        int iReaded;
+        char CharBuffer[] = new char[8192];
+        String sCharBuffer;
+        long lElapsed = 0;
+        final String sSep = System.getProperty(""file.separator"");
+        if (DebugFile.trace) {
+            lElapsed = System.currentTimeMillis();
+            DebugFile.writeln(""Begin Pageset.buildSiteForEdit("" + sBasePath + "","" + sOutputPath + "","" + sCtrlPath + "","" + sMenuPath + "")"");
+            DebugFile.incIdent();
+        }
+        FileSystem oFS = new FileSystem();
+        Vector vPages = pages();
+        if (!sBasePath.endsWith(sSep)) sBasePath += sSep;
+        String sWebServer = oEnvironmentProps.getProperty(""webserver"", """");
+        if (DebugFile.trace && sWebServer.length() == 0) DebugFile.writeln(""WARNING: webserver property not set at EnvironmentProperties"");
+        if (!sWebServer.endsWith(""/"")) sWebServer += ""/"";
+        Node oContainers = oMSite.seekChildByName(oMSite.getRootNode().getFirstChild(), ""containers"");
+        if (oContainers == null) {
+            if (DebugFile.trace) DebugFile.writeln(""ERROR: <containers> node not found."");
+            throw new DOMException(DOMException.NOT_FOUND_ERR, ""<containers> node not found"");
+        }
+        if (DebugFile.trace) DebugFile.writeln(""new FileInputStream("" + (sURI.startsWith(""file://"") ? sURI.substring(7) : sURI) + "")"");
+        for (int c = 0; c < vPages.size(); c++) {
+            oCurrentPage = (Page) vPages.get(c);
+            oXMLStream = new FileInputStream(sURI.startsWith(""file://"") ? sURI.substring(7) : sURI);
+            oStreamSrcXML = new StreamSource(oXMLStream);
+            oStrWritter = new StringWriter();
+            oStreamResult = new StreamResult(oStrWritter);
+            try {
+                oTransformer = StylesheetCache.newTransformer(sBasePath + ""xslt"" + sSep + ""templates"" + sSep + oMSite.name() + sSep + oCurrentPage.template());
+                sMedia = oTransformer.getOutputProperty(OutputKeys.MEDIA_TYPE);
+                if (DebugFile.trace) DebugFile.writeln(OutputKeys.MEDIA_TYPE + ""="" + sMedia);
+                if (null == sMedia) sMedia = ""html""; else sMedia = sMedia.substring(sMedia.indexOf('/') + 1);
+                if (null == oCurrentPage.getTitle()) throw new NullPointerException(""Page "" + String.valueOf(c) + "" title is null"");
+                if (DebugFile.trace) DebugFile.writeln(""Page.filePath("" + sOutputPath + oCurrentPage.getTitle().replace(' ', '_') + ""."" + sMedia + "")"");
+                oCurrentPage.filePath(sOutputPath + oCurrentPage.getTitle().replace(' ', '_') + ""."" + sMedia);
+                StylesheetCache.setParameters(oTransformer, oEnvironmentProps);
+                StylesheetCache.setParameters(oTransformer, oUserProps);
+                oTransformer.setParameter(""param_page"", ((Page) (vPages.get(c))).getTitle());
+                oTransformer.transform(oStreamSrcXML, oStreamResult);
+            } catch (TransformerConfigurationException e) {
+                oLastXcpt = e;
+                sMedia = null;
+                SourceLocator sl = e.getLocator();
+                if (DebugFile.trace) {
+                    if (sl == null) {
+                        DebugFile.writeln(""ERROR TransformerConfigurationException "" + e.getMessage());
+                    } else {
+                        DebugFile.writeln(""ERROR TransformerConfigurationException "" + e.getMessage() + "" line="" + String.valueOf(sl.getLineNumber()) + "" column="" + String.valueOf(sl.getColumnNumber()));
+                    }
+                }
+            } catch (TransformerException e) {
+                oLastXcpt = e;
+                sMedia = null;
+                if (DebugFile.trace) DebugFile.writeln(""ERROR TransformerException "" + e.getMessageAndLocation());
+            }
+            oTransformer = null;
+            oStreamResult = null;
+            sTransformed = oStrWritter.toString();
+            if (DebugFile.trace) DebugFile.writeln(""transformation length="" + String.valueOf(sTransformed.length()));
+            if (sTransformed.length() > 0) {
+                iCloseHead = sTransformed.indexOf(""</head"");
+                if (iCloseHead < 0) iCloseHead = sTransformed.indexOf(""</HEAD"");
+                iOpenBody = sTransformed.indexOf(""<body"", iCloseHead);
+                if (iOpenBody < 0) iOpenBody = sTransformed.indexOf(""<BODY"", iCloseHead);
+                iCloseBody = sTransformed.indexOf("">"", iOpenBody + 5);
+                for (char s = sTransformed.charAt(iCloseBody + 1); s == '\r' || s == '\n' || s == ' ' || s == '\t'; s = sTransformed.charAt(++iCloseBody)) ;
+                oPostTransform = new StringBuffer(sTransformed.length() + 4096);
+                oPostTransform.append(sTransformed.substring(0, iCloseHead));
+                oPostTransform.append(""\n<script language=\""JavaScript\"" src=\"""" + sMenuPath + ""\""></script>"");
+                oPostTransform.append(""\n<script language=\""JavaScript\"" src=\"""" + sIntegradorPath + ""\""></script>\n"");
+                oPostTransform.append(sTransformed.substring(iCloseHead, iCloseHead + 7));
+                oPostTransform.append(sTransformed.substring(iOpenBody, iCloseBody));
+                try {
+                    sCharBuffer = oFS.readfilestr(sCtrlPath, ""UTF-8"");
+                    if (DebugFile.trace) DebugFile.writeln(String.valueOf(sCharBuffer.length()) + "" characters readed"");
+                } catch (com.enterprisedt.net.ftp.FTPException ftpe) {
+                    throw new IOException(ftpe.getMessage());
+                }
+                try {
+                    if (DebugFile.trace) DebugFile.writeln(""Gadgets.replace("" + sCtrlPath + "",http://demo.hipergate.com/,"" + sWebServer + "")"");
+                    Gadgets.replace(sCharBuffer, ""http://demo.hipergate.com/"", sWebServer);
+                } catch (org.apache.oro.text.regex.MalformedPatternException e) {
+                }
+                oPostTransform.append(""<!--Begin "" + sCtrlPath + ""-->\n"");
+                oPostTransform.append(sCharBuffer);
+                sCharBuffer = null;
+                oPostTransform.append(""\n<!--End "" + sCtrlPath + ""-->\n"");
+                oPostTransform.append(sTransformed.substring(iCloseBody));
+            } else {
+                oPostTransform = new StringBuffer(""Page "" + ((Page) vPages.get(c)).getTitle() + "" could not be rendered."");
+                if (oLastXcpt != null) oPostTransform.append(""<BR>"" + oLastXcpt.getMessageAndLocation());
+            }
+            if (DebugFile.trace) DebugFile.writeln(""new FileWriter("" + sOutputPath + oCurrentPage.getTitle().replace(' ', '_') + ""_."" + sMedia + "")"");
+            if (sSelPageOptions.length() == 0) oFS.writefilestr(sOutputPath + oCurrentPage.getTitle().replace(' ', '_') + ""_."" + sMedia, oPostTransform.toString(), ""UTF-8""); else try {
+                oFS.writefilestr(sOutputPath + oCurrentPage.getTitle().replace(' ', '_') + ""_."" + sMedia, Gadgets.replace(oPostTransform.toString(), "":selPageOptions"", sSelPageOptions), ""UTF-8"");
+            } catch (Exception e) {
+            }
+            oPostTransform = null;
+            sTransformed = null;
+        }
+        oXMLStream.close();
+        if (DebugFile.trace) {
+            DebugFile.writeln(""done in "" + String.valueOf(System.currentTimeMillis() - lElapsed) + "" miliseconds"");
+            DebugFile.decIdent();
+            DebugFile.writeln(""End Pageset.buildSiteForEdit()"");
+        }
+    }
+",863,"    private void Reserve() throws SQLException {
+        Statement stbookings, stchartwl;
+        String arp = """";
+        if (useragent) arp = ""agent""; else arp = ""user"";
+        String otherbookssql = """";
+        String agentbooksql = """";
+        String bookingid = String.valueOf(System.currentTimeMillis());
+        String currentpoaching;
+        String currentseat;
+        try {
+            if (useragent) {
+                agentbooksql = ""update hp_administrator.agent_bookings set BOOKINGS = xmlquery('copy $new := $BOOKINGS modify do insert "";
+                agentbooksql += "" <detail booking_id=\"""" + booking_details.getTicketno() + ""\"" status=\""open\"" train_no=\"""" + booking_details.getTrain_no() + ""\"" source=\"""" + booking_details.getSource() + ""\"" dest=\"""" + booking_details.getDestination() + ""\"" dep_date=\"""" + booking_details.getDate() + ""\"" > "";
+            } else if (!useragent) {
+                otherbookssql = ""update hp_administrator.user_bookings set BOOKINGS = xmlquery('copy $new := $BOOKINGS modify do insert "";
+                otherbookssql += "" <detail booking_id=\"""" + booking_details.getTicketno() + ""\"" status=\""open\"" train_no=\"""" + booking_details.getTrain_no() + ""\"" source=\"""" + booking_details.getSource() + ""\"" dest=\"""" + booking_details.getDestination() + ""\"" dep_date=\"""" + booking_details.getDate() + ""\"" > "";
+            }
+            for (int tickpos = 0; tickpos < booking_details.getNoOfPersons(); tickpos++) {
+                currentpoaching = coach.get(tickpos);
+                currentseat = seatno.get(tickpos);
+                if (!currentpoaching.equals(""WL"")) {
+                    String chartavailupdatessql = ""update hp_administrator.chart_wl_order set AVAILABLE_BOOKED = xmlquery('copy $new := $AVAILABLE_BOOKED   modify do insert "";
+                    chartavailupdatessql += ""<seat number=\"""" + currentseat + ""\""><details user_id=\"""" + booking_details.getUserId() + ""\"" usertype=\"""" + arp + ""\"" ticket_no=\"""" + booking_details.getTicketno() + ""\"" name=\"""" + booking_details.getNameAt(tickpos) + ""\"" age=\"""" + booking_details.getAgeAt(tickpos) + ""\"" sex=\"""" + booking_details.getSexAt(tickpos) + ""\"" type=\""primary\""  /></seat>"";
+                    chartavailupdatessql += "" into $new/status/class[@name=\"""" + booking_details.getTclass() + ""\""]/coach[@number=\"""" + currentpoaching + ""\""] "";
+                    chartavailupdatessql += "" return  $new' ) where train_no like '"" + booking_details.getTrain_no() + ""' and date = '"" + booking_details.getDate() + ""' "";
+                    System.out.println(chartavailupdatessql);
+                    stchartwl = conn.createStatement();
+                    int updstat = stchartwl.executeUpdate(chartavailupdatessql);
+                    if (updstat > 0) System.out.println(""chart_wl  availability  updated"");
+                } else if (currentpoaching.equals(""WL"")) {
+                    String chartwlupdsql = ""update hp_administrator.chart_wl_order set WAITLISTING = xmlquery('copy $new := $WAITLISTING modify do insert "";
+                    chartwlupdsql += ""<details user_id=\"""" + booking_details.getUserId() + ""\"" usertype=\"""" + arp + ""\"" ticket_no=\"""" + booking_details.getTicketno() + ""\"" name=\"""" + booking_details.getNameAt(tickpos) + ""\"" age=\"""" + booking_details.getAgeAt(tickpos) + ""\"" sex=\"""" + booking_details.getSexAt(tickpos) + ""\"" type=\""primary\"" /></seat>"";
+                    chartwlupdsql += "" into $new/status/class[@name=\"""" + booking_details.getTclass() + ""\""] "";
+                    chartwlupdsql += "" return  $new' ) where train_no like '"" + booking_details.getTrain_no() + ""' and date = '"" + booking_details.getDate() + ""' "";
+                    System.out.println(chartwlupdsql);
+                    stchartwl = conn.createStatement();
+                    int updstat = stchartwl.executeUpdate(chartwlupdsql);
+                    if (updstat > 0) System.out.println(""chart_wl  waitlisting  updated"");
+                }
+                if (useragent) agentbooksql += ""<person><coach>"" + currentpoaching + ""</coach><seat>"" + currentseat + ""</seat></person>""; else otherbookssql += ""<person><coach>"" + currentpoaching + ""</coach><seat>"" + currentseat + ""</seat></person>"";
+            }
+            if (useragent) {
+                agentbooksql += ""</detail>   as first into $new/book return  $new' ) where agent_id like '"" + booking_details.getUserId() + ""'"";
+                System.out.println(agentbooksql);
+                stbookings = conn.createStatement();
+                int updstat = stbookings.executeUpdate(agentbooksql);
+                if (updstat > 0) System.out.println(""agent bookings updated"");
+            } else {
+                otherbookssql += ""</detail>   as first into $new/book return  $new' ) where user_id like '"" + booking_details.getUserId() + ""'"";
+                System.out.println(otherbookssql);
+                stbookings = conn.createStatement();
+                int updstat = stbookings.executeUpdate(otherbookssql);
+                if (updstat > 0) System.out.println(""user bookings  updated"");
+            }
+        } catch (SQLException e) {
+            conn.rollback();
+            e.printStackTrace();
+        }
+    }
+",LABEL_0,LABEL_0,LABEL_1,1,"Reserve,stbookings,stchartwl,sp,userbooksql,agentbooksql,bookingid,currentcoach,currentseat,tickpos,chartavailupdsql","Reserve:0.040675342082977295,stbookings:-0.01501917839050293,stchartwl:-0.0035990476608276367,sp:0.213772714138031,userbooksql:0.08463174104690552,agentbooksql:0.0035812854766845703,bookingid:0.001132667064666748,currentcoach:0.0729859471321106,currentseat:-0.007320821285247803,tickpos:-0.005456686019897461,chartavailupdsql:0.12109220027923584,",4,25,0,"sp:arp,chartavailupdsql:chartavailupdatessql,userbooksql:otherbookssql,currentcoach:currentpoaching,",0,Greedy,259,0.12001978158950806,replace,[]
+22,"    protected String getFileContentAsString(String filePath, String encoding) throws IOException {
+        URL testURL = Thread.currentThread().getContextClassLoader().getResource(filePath);
+        InputStream input = null;
+        StringWriter sw = new StringWriter();
+        try {
+            if (testURL != null) {
+                input = testURL.openStream();
+            } else {
+                input = new FileInputStream(filePath);
+            }
+            IOUtils.copy(input, sw, encoding);
+        } finally {
+            if (input != null) {
+                input.close();
+            }
+        }
+        return sw.toString();
+    }
+ <SPLIT>     private void downloadFile(File target, String s3key) throws IOException, S3ServiceException {
+        InputStream in = downloadData(s3key);
+        if (in == null) {
+            throw new IOException(""No data found"");
+        }
+        in = new InflaterInputStream(new CryptInputStream(in, cipher, getDataEncryptionKey()));
+        File temp = File.createTempFile(""dirsync"", null);
+        FileOutputStream fout = new FileOutputStream(temp);
+        try {
+            IOUtils.copy(in, fout);
+            if (target.exists()) {
+                target.delete();
+            }
+            IOUtils.closeQuietly(fout);
+            IOUtils.closeQuietly(in);
+            FileUtils.moveFile(temp, target);
+        } catch (IOException e) {
+            fetchStream(in);
+            throw e;
+        } finally {
+            IOUtils.closeQuietly(fout);
+            IOUtils.closeQuietly(in);
+        }
+    }
+",111,,LABEL_1,LABEL_1,LABEL_1,-1,"getFileContentAsString,filePath,encoding,testURL,input,sw",,2,9,0,,0,GA,2244,0.796172030766805,failed,[]
+23,"    public synchronized String encrypt(String plaintext) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        MessageDigest md = null;
+        md = MessageDigest.getInstance(""SHA"");
+        md.update(plaintext.getBytes(""UTF-8""));
+        byte raw[] = md.digest();
+        String hash = (new BASE64Encoder()).encode(raw);
+        return hash;
+    }
+ <SPLIT>     @Digester(forField = ""password"")
+    public static String encriptPassword(String passwd) {
+        try {
+            MessageDigest md = MessageDigest.getInstance(""MD5"");
+            md.update(passwd.getBytes());
+            BigInteger hash = new BigInteger(1, md.digest());
+            return hash.toString(16);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+",75,,LABEL_1,LABEL_1,LABEL_1,-1,"encrypt,plaintext,UnsupportedEncodingException,md,raw,hash",,6,12,0,,0,GA,2205,0.7716910640398661,failed,[]
+24,"    public Long split(File targetDirectory, String prefix, long maxUnitBases, long maxUnitEntries) throws Exception {
+        if (!targetDirectory.exists()) {
+            if (!targetDirectory.mkdirs()) throw new Exception(""Could not create target directory "" + targetDirectory.getAbsolutePath());
+        }
+        if (!size.isUnknown() && size.getBases() < maxUnitBases && (maxUnitEntries <= 0 || size.getEntries() < maxUnitEntries)) {
+            FileInputStream fis = new FileInputStream(this);
+            FileChannel fci = fis.getChannel();
+            FileOutputStream fos = new FileOutputStream(new File(targetDirectory, prefix + ""_0"" + "".fasta""));
+            FileChannel fco = fos.getChannel();
+            ByteBuffer buffer = ByteBuffer.allocate(64000);
+            while (fci.read(buffer) > 0) {
+                buffer.flip();
+                fco.write(buffer);
+                buffer.clear();
+            }
+            fci.close();
+            fco.close();
+            return (long) 1;
+        } else {
+            long currentBasesCount = 0;
+            long currentEntriesCount = 0;
+            int targetCount = 0;
+            FileChannel fastaChannel = new FileInputStream(this).getChannel();
+            int totalSeqCount = 0;
+            long totalResiduesCount = 0;
+            try {
+                long prevTime = System.currentTimeMillis();
+                long fastaFileSize = this.length();
+                long fastaFileReadOffset = 0L;
+                long partitionStartOffset = 0L;
+                final int bufferSize = 1024 * 1024;
+                ByteBuffer fastaBuffer = ByteBuffer.allocateDirect(bufferSize);
+                int fastaReadState = FASTAFileTokenizer.UNKNOWN;
+                for (; fastaFileReadOffset < fastaFileSize; ) {
+                    long nBytes = fastaChannel.read(fastaBuffer);
+                    if (nBytes <= 0) {
+                        fastaBuffer.limit(0);
+                        break;
+                    } else {
+                        fastaBuffer.flip();
+                        fastaFileReadOffset += nBytes;
+                    }
+                    for (; ; ) {
+                        if (!fastaBuffer.hasRemaining()) {
+                            fastaBuffer.clear();
+                            break;
+                        }
+                        int b = fastaBuffer.get();
+                        if (b == '\r') {
+                        } else if (b == '\n') {
+                            if (fastaReadState == FASTAFileTokenizer.DEFLINE) {
+                                fastaReadState = FASTAFileTokenizer.SEQUENCELINE;
+                            }
+                        } else if (b == '>') {
+                            if (fastaReadState == FASTAFileTokenizer.UNKNOWN) {
+                                fastaReadState = FASTAFileTokenizer.STARTDEFLINE;
+                            } else if (fastaReadState == FASTAFileTokenizer.SEQUENCELINE) {
+                                fastaReadState = FASTAFileTokenizer.STARTDEFLINE;
+                            }
+                            if (fastaReadState == FASTAFileTokenizer.STARTDEFLINE) {
+                                if (currentBasesCount >= maxUnitBases || maxUnitEntries > 0 && currentEntriesCount >= maxUnitEntries) {
+                                    fastaBuffer.position(fastaBuffer.position() - 1);
+                                    long currentTime = System.currentTimeMillis();
+                                    System.out.println(new java.util.Date() + "" Partition "" + targetCount + "" containing "" + currentEntriesCount + "" sequences and "" + currentBasesCount + "" residues ends at "" + (fastaFileReadOffset - fastaBuffer.remaining()) + "" and was created in "" + (currentTime - prevTime) + "" ms"");
+                                    prevTime = currentTime;
+                                    long partitionEndOffset = fastaFileReadOffset - fastaBuffer.remaining();
+                                    FileChannel partitionChannel = new FileOutputStream(new File(targetDirectory, prefix + ""_"" + targetCount + "".fasta"")).getChannel();
+                                    nBytes = fastaChannel.transferTo(partitionStartOffset, partitionEndOffset - partitionStartOffset, partitionChannel);
+                                    partitionChannel.force(true);
+                                    partitionChannel.close();
+                                    targetCount++;
+                                    partitionStartOffset += nBytes;
+                                    currentBasesCount = 0;
+                                    currentEntriesCount = 0;
+                                    fastaReadState = FASTAFileTokenizer.UNKNOWN;
+                                } else {
+                                    fastaReadState = FASTAFileTokenizer.DEFLINE;
+                                    currentEntriesCount++;
+                                }
+                                totalSeqCount++;
+                            }
+                        } else {
+                            if (fastaReadState == FASTAFileTokenizer.SEQUENCELINE) {
+                                totalResiduesCount++;
+                                currentBasesCount++;
+                            }
+                        }
+                    }
+                }
+                if (partitionStartOffset < fastaFileSize) {
+                    long currentTime = System.currentTimeMillis();
+                    System.out.println(new java.util.Date() + "" Partition "" + targetCount + "" containing "" + currentEntriesCount + "" sequences and "" + currentBasesCount + "" residues ends at "" + (fastaFileSize) + "" and was created in "" + (currentTime - prevTime) + "" ms"");
+                    FileChannel partitionChannel = new FileOutputStream(new File(targetDirectory, prefix + ""_"" + targetCount + "".fasta"")).getChannel();
+                    fastaChannel.transferTo(partitionStartOffset, fastaFileSize - partitionStartOffset, partitionChannel);
+                    partitionChannel.force(true);
+                    partitionChannel.close();
+                    targetCount++;
+                }
+                if (size.isUnknown()) {
+                    size.setBases(totalResiduesCount);
+                    size.setEntries(totalSeqCount);
+                }
+            } finally {
+                fastaChannel.close();
+            }
+            return (long) targetCount;
+        }
+    }
+ <SPLIT>     public List load(String sourceType, Object source, String param) throws Exception {
+        if (log.isTraceEnabled()) {
+            log.trace(""load "" + source);
+        }
+        String location = null;
+        String type = null;
+        Object inputsource = null;
+        if (source instanceof DynamicMBean) {
+            sourceType = ""MbeansDescriptorsDynamicMBeanSource"";
+            inputsource = source;
+        } else if (source instanceof URL) {
+            URL url = (URL) source;
+            location = url.toString();
+            type = param;
+            inputsource = url.openStream();
+            if (sourceType == null) {
+                sourceType = sourceTypeFromExt(location);
+            }
+        } else if (source instanceof File) {
+            location = ((File) source).getAbsolutePath();
+            inputsource = new FileInputStream((File) source);
+            type = param;
+            if (sourceType == null) {
+                sourceType = sourceTypeFromExt(location);
+            }
+        } else if (source instanceof InputStream) {
+            type = param;
+            inputsource = source;
+        } else if (source instanceof Class) {
+            location = ((Class) source).getName();
+            type = param;
+            inputsource = source;
+            if (sourceType == null) {
+                sourceType = ""MbeansDescriptorsIntrospectionSource"";
+            }
+        }
+        if (sourceType == null) {
+            sourceType = ""MbeansDescriptorsDigesterSource"";
+        }
+        ModelerSource ds = getModelerSource(sourceType);
+        List mbeans = ds.loadDescriptors(this, location, type, inputsource);
+        return mbeans;
+    }
+",862,,LABEL_0,LABEL_1,,-4,"split,targetDirectory,prefix,maxUnitBases,maxUnitEntries,fis,fci,fos,fco,buffer,currentBasesCount,currentEntriesCount,targetCount,fastaChannel,totalSeqCount,totalResiduesCount,prevTime,fastaFileSize,fastaFileReadOffset,partitionStartOffset,bufferSize,fastaBuffer,fastaReadState,nBytes",,,,0,,0,Greedy,1,0.0010045886039733887,,[]
+25,"    public boolean deleteRoleType(int id, int namespaceId, boolean removeReferencesInRoleTypes, DTSPermission permit) throws SQLException, PermissionException, DTSValidationException {
+        checkPermission(permit, String.valueOf(namespaceId));
+        boolean exist = isRoleTypeUsed(namespaceId, id);
+        if (exist) {
+            throw new DTSValidationException(ApelMsgHandler.getInstance().getMsg(""DTS-0034""));
+        }
+        if (!removeReferencesInRoleTypes) {
+            StringBuffer msgBuf = new StringBuffer();
+            DTSTransferObject[] objects = fetchRightIdentityReferences(namespaceId, id);
+            if (objects.length > 0) {
+                msgBuf.append(""Role Type is Right Identity in one or more Role Types."");
+            }
+            objects = fetchParentReferences(namespaceId, id);
+            if (objects.length > 0) {
+                if (msgBuf.length() > 0) {
+                    msgBuf.append(""\n"");
+                }
+                msgBuf.append(""Role Type is Parent of one or more Role Types."");
+            }
+            if (msgBuf.length() > 0) {
+                throw new DTSValidationException(msgBuf.toString());
+            }
+        }
+        String sqlRightId = getDAO().getStatement(ROLE_TYPE_TABLE_KEY, ""DELETE_RIGHT_IDENTITY_REF"");
+        String sqlParent = getDAO().getStatement(ROLE_TYPE_TABLE_KEY, ""DELETE_PARENT_REF"");
+        String sql = getDAO().getStatement(ROLE_TYPE_TABLE_KEY, ""DELETE"");
+        PreparedStatement pstmt = null;
+        boolean success = false;
+        long typeGid = getGID(namespaceId, id);
+        conn.setAutoCommit(false);
+        int defaultLevel = conn.getTransactionIsolation();
+        conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+        try {
+            pstmt = conn.prepareStatement(sqlRightId);
+            pstmt.setLong(1, typeGid);
+            pstmt.executeUpdate();
+            pstmt.close();
+            pstmt = conn.prepareStatement(sqlParent);
+            pstmt.setLong(1, typeGid);
+            pstmt.executeUpdate();
+            pstmt.close();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setLong(1, typeGid);
+            int count = pstmt.executeUpdate();
+            success = (count == 1);
+            conn.commit();
+        } catch (SQLException e) {
+            conn.rollback();
+            throw e;
+        } finally {
+            conn.setTransactionIsolation(defaultLevel);
+            conn.setAutoCommit(true);
+            closeStatement(pstmt);
+        }
+        return success;
+    }
+ <SPLIT>     @Override
+    public boolean insert(String consulta, boolean autocommit, int transactionIsolation, Connection cx) throws SQLException {
+        filasInsert = 0;
+        if (!consulta.contains("";"")) {
+            this.tipoConsulta = new Scanner(consulta);
+            if (this.tipoConsulta.hasNext()) {
+                execConsulta = this.tipoConsulta.next();
+                if (execConsulta.equalsIgnoreCase(""insert"")) {
+                    Connection conexion = cx;
+                    Statement st = null;
+                    try {
+                        conexion.setAutoCommit(autocommit);
+                        if (transactionIsolation == 1 || transactionIsolation == 2 || transactionIsolation == 4 || transactionIsolation == 8) {
+                            conexion.setTransactionIsolation(transactionIsolation);
+                        } else {
+                            throw new IllegalArgumentException(""Valor invalido sobre TransactionIsolation,\n TRANSACTION_NONE no es soportado por MySQL"");
+                        }
+                        st = (Statement) conexion.createStatement(ResultSetImpl.TYPE_SCROLL_SENSITIVE, ResultSetImpl.CONCUR_UPDATABLE);
+                        conexion.setReadOnly(false);
+                        filasInsert = st.executeUpdate(consulta.trim(), Statement.RETURN_GENERATED_KEYS);
+                        if (filasInsert > -1) {
+                            if (autocommit == false) {
+                                conexion.commit();
+                            }
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    } catch (MySQLIntegrityConstraintViolationException e) {
+                        System.out.println(""Posible duplicacion de DATOS"");
+                        if (autocommit == false) {
+                            try {
+                                conexion.rollback();
+                                System.out.println(""Se ejecuto un Rollback"");
+                            } catch (MySQLTransactionRollbackException sqlE) {
+                                System.out.println(""No se ejecuto un Rollback"");
+                                sqlE.printStackTrace();
+                            } catch (SQLException se) {
+                                se.printStackTrace();
+                            }
+                        }
+                        e.printStackTrace();
+                        return false;
+                    } catch (MySQLNonTransientConnectionException e) {
+                        if (autocommit == false) {
+                            try {
+                                conexion.rollback();
+                                System.out.println(""Se ejecuto un Rollback"");
+                            } catch (MySQLTransactionRollbackException sqlE) {
+                                System.out.println(""No se ejecuto un Rollback"");
+                                sqlE.printStackTrace();
+                            } catch (SQLException se) {
+                                se.printStackTrace();
+                            }
+                        }
+                        e.printStackTrace();
+                        return false;
+                    } catch (MySQLDataException e) {
+                        System.out.println(""Datos incorrectos"");
+                        if (autocommit == false) {
+                            try {
+                                conexion.rollback();
+                                System.out.println(""Se ejecuto un Rollback"");
+                            } catch (MySQLTransactionRollbackException sqlE) {
+                                System.out.println(""No se ejecuto un Rollback"");
+                                sqlE.printStackTrace();
+                            } catch (SQLException se) {
+                                se.printStackTrace();
+                            }
+                        }
+                        return false;
+                    } catch (MySQLSyntaxErrorException e) {
+                        System.out.println(""Error en la sintaxis de la Consulta en MySQL"");
+                        if (autocommit == false) {
+                            try {
+                                conexion.rollback();
+                                System.out.println(""Se ejecuto un Rollback"");
+                            } catch (MySQLTransactionRollbackException sqlE) {
+                                System.out.println(""No se ejecuto un Rollback"");
+                                sqlE.printStackTrace();
+                            } catch (SQLException se) {
+                                se.printStackTrace();
+                            }
+                        }
+                        return false;
+                    } catch (SQLException e) {
+                        if (autocommit == false) {
+                            try {
+                                conexion.rollback();
+                                System.out.println(""Se ejecuto un Rollback"");
+                            } catch (MySQLTransactionRollbackException sqlE) {
+                                System.out.println(""No se ejecuto un Rollback"");
+                                sqlE.printStackTrace();
+                            } catch (SQLException se) {
+                                se.printStackTrace();
+                            }
+                        }
+                        e.printStackTrace();
+                        return false;
+                    } finally {
+                        try {
+                            if (st != null) {
+                                if (!st.isClosed()) {
+                                    st.close();
+                                }
+                            }
+                            if (!conexion.isClosed()) {
+                                conexion.close();
+                            }
+                        } catch (NullPointerException ne) {
+                            ne.printStackTrace();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                } else {
+                    throw new IllegalArgumentException(""No es una instruccion Insert"");
+                }
+            } else {
+                try {
+                    throw new JMySQLException(""Error Grave , notifique al departamento de Soporte Tecnico \n"" + email);
+                } catch (JMySQLException ex) {
+                    Logger.getLogger(JMySQL.class.getName()).log(Level.SEVERE, null, ex);
+                    return false;
+                }
+            }
+        } else {
+            throw new IllegalArgumentException(""No estan permitidas las MultiConsultas en este metodo"");
+        }
+    }
+",427,,LABEL_1,LABEL_0,,-4,"deleteRoleType,id,namespaceId,removeReferencesInRoleTypes,permit,exist,msgBuf,objects,sqlRightId,sqlParent,sql,pstmt,typeGid,defaultLevel,success",,,,0,,0,Greedy,1,0.0009245991706848145,,[]
+26,"    synchronized List<String> getDatasetsList(String surl) {
+        if (datasetsList == null) {
+            datasetsList = new HashMap<String, List<String>>();
+        }
+        List<String> result = datasetsList.get(surl);
+        if (result == null) {
+            BufferedReader reader = null;
+            try {
+                URL url = new URL(surl + ""?server=list"");
+                reader = new BufferedReader(new InputStreamReader(url.openStream()));
+                String s = reader.readLine();
+                ArrayList<String> list = new ArrayList<String>();
+                while (s != null) {
+                    list.add(s);
+                    s = reader.readLine();
+                }
+                datasetsList.put(surl, list);
+            } catch (IOException ex) {
+                Logger.getLogger(Das2ServerDataSourceFactory.class.getName()).log(Level.SEVERE, null, ex);
+                throw new RuntimeException(ex);
+            } finally {
+                try {
+                    reader.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(Das2ServerDataSourceFactory.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        return datasetsList.get(surl);
+    }
+ <SPLIT>     public static void doVersionCheck(View view) {
+        view.showWaitCursor();
+        try {
+            URL url = new URL(jEdit.getProperty(""version-check.url""));
+            InputStream in = url.openStream();
+            BufferedReader bin = new BufferedReader(new InputStreamReader(in));
+            String line;
+            String version = null;
+            String build = null;
+            while ((line = bin.readLine()) != null) {
+                if (line.startsWith("".version"")) version = line.substring(8).trim(); else if (line.startsWith("".build"")) build = line.substring(6).trim();
+            }
+            bin.close();
+            if (version != null && build != null) {
+                if (jEdit.getBuild().compareTo(build) < 0) newVersionAvailable(view, version, url); else {
+                    GUIUtilities.message(view, ""version-check"" + "".up-to-date"", new String[0]);
+                }
+            }
+        } catch (IOException e) {
+            String[] args = { jEdit.getProperty(""version-check.url""), e.toString() };
+            GUIUtilities.error(view, ""read-error"", args);
+        }
+        view.hideWaitCursor();
+    }
+",238,,LABEL_1,LABEL_1,LABEL_1,-1,"getDatasetsList,surl,datasetsList,result,reader,url,s,list",,4,17,0,,0,GA,2717,0.9942993442217509,failed,[]
+27,"        public void copy(File s, File t) throws IOException {
+            FileChannel in = (new FileInputStream(s)).getChannel();
+            FileChannel out = (new FileOutputStream(t)).getChannel();
+            in.transferTo(0, s.length(), out);
+            in.close();
+            out.close();
+        }
+ <SPLIT>     public static void copyFile(File srcFile, File destFile) throws IOException {
+        logger.debug(""copyFile(srcFile={}, destFile={}) - start"", srcFile, destFile);
+        FileChannel srcChannel = new FileInputStream(srcFile).getChannel();
+        FileChannel dstChannel = new FileOutputStream(destFile).getChannel();
+        try {
+            dstChannel.transferFrom(srcChannel, 0, srcChannel.size());
+        } finally {
+            srcChannel.close();
+            dstChannel.close();
+        }
+    }
+",72,"        public void clip(File s, File t) throws IOException {
+            FileChannel url = (new FileInputStream(s)).getChannel();
+            FileChannel user = (new FileOutputStream(t)).getChannel();
+            url.transferTo(0, s.length(), user);
+            url.close();
+            user.close();
+        }
+",LABEL_1,LABEL_1,LABEL_0,1,"copy,s,t,in,out","copy:0.0005920529365539551,s:6.598234176635742e-05,t:-9.554624557495117e-05,in:0.0001157522201538086,out:0.0007964372634887695,",3,7,0,"out:user,copy:clip,in:url,",0,Greedy,127,0.044653817017873125,replace,[]
+28,"    public static byte[] fetchURLData(String url, String proxyHost, int proxyPort) throws IOException {
+        HttpURLConnection con = null;
+        InputStream is = null;
+        try {
+            URL u = new URL(url);
+            if (url.startsWith(""file://"")) {
+                is = new BufferedInputStream(u.openStream());
+            } else {
+                Proxy proxy;
+                if (proxyHost != null) {
+                    proxy = new Proxy(Type.HTTP, new InetSocketAddress(proxyHost, proxyPort));
+                } else {
+                    proxy = Proxy.NO_PROXY;
+                }
+                con = (HttpURLConnection) u.openConnection(proxy);
+                con.addRequestProperty(""User-Agent"", ""Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6"");
+                con.addRequestProperty(""Accept-Charset"", ""UTF-8"");
+                con.addRequestProperty(""Accept-Language"", ""en-US,en"");
+                con.addRequestProperty(""Accept"", ""text/html,image/*"");
+                con.setDoInput(true);
+                con.setDoOutput(false);
+                con.connect();
+                is = new BufferedInputStream(con.getInputStream());
+            }
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            IOUtils.copy(is, baos);
+            return baos.toByteArray();
+        } finally {
+            IOUtils.closeQuietly(is);
+            if (con != null) {
+                con.disconnect();
+            }
+        }
+    }
+ <SPLIT>     public static void main(String[] args) throws Exception {
+        int result = 20;
+        if (args.length == 1) {
+            StringBuffer urlString = new StringBuffer(args[0]);
+            if (urlString.lastIndexOf(""/"") != urlString.length() - 1) {
+                urlString.append('/');
+            }
+            urlString.append(""GetConfig.jsp"");
+            URLConnection conn = new URL(urlString.toString()).openConnection();
+            System.out.println(Configuration.readObject(conn.getInputStream()));
+            result = 0;
+        } else {
+            System.err.println(""usage: GetConfig <URL>"");
+        }
+        System.exit(result);
+    }
+",253,,LABEL_0,LABEL_0,LABEL_0,-1,"fetchURLData,url,proxyHost,proxyPort,con,is,u,proxy,baos",,8,33,0,,0,GA,3418,1.2378748337427774,failed,[]
+29,"    public boolean crear() {
+        int result = 0;
+        String sql = ""insert into jugador"" + ""(apellidoPaterno, apellidoMaterno, nombres, fechaNacimiento, pais, rating, sexo)"" + ""values (?, ?, ?, ?, ?, ?, ?)"";
+        try {
+            connection = conexionBD.getConnection();
+            connection.setAutoCommit(false);
+            ps = connection.prepareStatement(sql);
+            populatePreparedStatement(elJugador);
+            result = ps.executeUpdate();
+            connection.commit();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            try {
+                connection.rollback();
+            } catch (SQLException exe) {
+                exe.printStackTrace();
+            }
+        } finally {
+            conexionBD.close(ps);
+            conexionBD.close(connection);
+        }
+        return (result > 0);
+    }
+ <SPLIT>     public void getHttpURL() throws Exception {
+        boolean display = true;
+        boolean allHeaders = false;
+        String url = null;
+        url = ""http://localhost/cubigraf2"";
+        url = ""http://www.accenture.com/NR/rdonlyres/971C4EEE-24E2-4BAA-8C7B-D5A5133D5968/0/en_sprout.jpg"";
+        url = ""http://www.uni.pt/img/home-direito.gif"";
+        url = ""http://www.google.com"";
+        URLConnection uc = new URL(url).openConnection();
+        println(""HEADERS:"");
+        if (allHeaders) {
+            Iterator<Map.Entry<String, List<String>>> itHeaders = uc.getHeaderFields().entrySet().iterator();
+            while (itHeaders.hasNext()) {
+                Map.Entry<String, List<String>> e = itHeaders.next();
+                Iterator<?> itValues = e.getValue().iterator();
+                while (itValues.hasNext()) {
+                    println(e.getKey() + "": "" + itValues.next());
+                }
+            }
+        } else {
+            showObjectProperty(uc, ""getContentEncoding"");
+            showObjectProperty(uc, ""getContentLength"");
+            showObjectProperty(uc, ""getContentType"");
+            showObjectProperty(uc, ""getDate"", FORMAT.TIMESTAMP);
+            showObjectProperty(uc, ""getExpiration"", FORMAT.TIMESTAMP);
+            showObjectProperty(uc, ""getLastModified"", FORMAT.TIMESTAMP);
+        }
+        ExtendedInputStream in = new ExtendedInputStream(uc.getInputStream(), url.toString());
+        if (display) {
+            println(""BODY:"");
+            ExtendedReader reader = new ExtendedReader(in);
+            for (String s = reader.readLine(); s != null; s = reader.readLine()) {
+                println(s);
+            }
+        } else {
+            println(""(BODY saved to a file)"");
+            String contentType = uc.getContentType();
+            StringBuilder filename = new StringBuilder(""C:\\Documents and Settings\\Carlos_da_S_Pereira\\Desktop\\JAVA_NET_TESTS"");
+            filename.append(""."");
+            filename.append(contentType.substring(contentType.indexOf(""/"") + 1));
+            File file = new File(filename.toString());
+            ExtendedOutputStream out = new ExtendedOutputStream(new FileOutputStream(file), file.getAbsolutePath());
+            Streams.copy(in, out);
+            out.close();
+        }
+        in.close();
+    }
+",133,,LABEL_0,LABEL_0,LABEL_0,-1,"crear,result,sql,connection,ps",,3,12,0,,0,GA,1597,0.590524435043335,failed,[]
+30,"    public static Properties load(String propsName) {
+        Properties props = new Properties();
+        URL url = ClassLoader.getSystemResource(propsName);
+        try {
+            props.load(url.openStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return props;
+    }
+ <SPLIT>     public static void main(String[] args) throws IOException {
+        PostParameter a1 = new PostParameter(""v"", Utils.encode(""1.0""));
+        PostParameter a2 = new PostParameter(""api_key"", Utils.encode(RenRenConstant.apiKey));
+        PostParameter a3 = new PostParameter(""method"", Utils.encode(""feed.publishTemplatizedAction""));
+        PostParameter a4 = new PostParameter(""call_id"", System.nanoTime());
+        PostParameter a5 = new PostParameter(""session_key"", Utils.encode(""5.b2ca405eef80b4da1f68d0df64e471be.86400.1298372400-350727914""));
+        PostParameter a8 = new PostParameter(""format"", Utils.encode(""JSON""));
+        PostParameter a9 = new PostParameter(""template_id"", Utils.encode(""1""));
+        PostParameter a10 = new PostParameter(""title_data"", Utils.encode(""\""conteng\"":\""xkt\""""));
+        PostParameter a11 = new PostParameter(""body_data"", Utils.encode(""\""conteng\"":\""xkt\""""));
+        RenRenPostParameters ps = new RenRenPostParameters(Utils.encode(RenRenConstant.secret));
+        ps.addParameter(a1);
+        ps.addParameter(a2);
+        ps.addParameter(a3);
+        ps.addParameter(a4);
+        ps.addParameter(a5);
+        ps.addParameter(a8);
+        ps.addParameter(a9);
+        ps.addParameter(a10);
+        ps.addParameter(a11);
+        System.out.println(RenRenConstant.apiUrl + ""?"" + ps.generateUrl());
+        URL url = new URL(RenRenConstant.apiUrl + ""?"" + ps.generateUrl());
+        HttpURLConnection request = (HttpURLConnection) url.openConnection();
+        request.setDoOutput(true);
+        request.setRequestMethod(""POST"");
+        System.out.println(""Sending request..."");
+        request.connect();
+        System.out.println(""Response: "" + request.getResponseCode() + "" "" + request.getResponseMessage());
+        BufferedReader reader = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        String b = null;
+        while ((b = reader.readLine()) != null) {
+            System.out.println(b);
+        }
+    }
+",59,,LABEL_0,LABEL_0,LABEL_0,-1,"load,propsName,props,url",,1,2,0,,0,GA,1509,0.5452791412671407,failed,[]
+31,"    public static void polishOff(IProgressMonitor monitor, String from, String to, String renameTo) {
+        if (monitor != null && monitor.isCanceled()) {
+            return;
+        }
+        try {
+            ftpClient = new FTPClient();
+            ftpClient.setRemoteAddr(InetAddress.getByName(PrefPageOne.getValue(CONSTANTS.PREF_HOST)));
+            ftpClient.setControlPort(PrefPageOne.getIntValue(CONSTANTS.PREF_FTPPORT));
+            ftpClient.connect();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            ftpClient.login((PrefPageOne.getValue(CONSTANTS.PREF_USERNAME)), FTPUtils.decrypt(PrefPageOne.getValue(CONSTANTS.PREF_PASSWORD)));
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            if (from != null) {
+                FTPHolder ftpHolder = new FTPHolder(from, to, renameTo, false);
+                synchedSet.add(ftpHolder);
+            }
+            JobHandler.aquireFTPLock();
+            for (Iterator iter = synchedSet.iterator(); iter.hasNext(); ) {
+                if (monitor != null && monitor.isCanceled()) {
+                    JobHandler.releaseFTPLock();
+                    ftpClient.quit();
+                    return;
+                }
+                Thread.yield();
+                FTPHolder element = (FTPHolder) iter.next();
+                ftpClient.setType(FTPTransferType.ASCII);
+                ftpClient.put(element.from, element.to);
+                if (element.renameTo != null) {
+                    try {
+                        ftpClient.delete(element.renameTo);
+                    } catch (Exception e) {
+                    }
+                    ftpClient.rename(element.to, element.renameTo);
+                    log.info(""RENAME: "" + element.to + ""To: "" + element.renameTo);
+                }
+            }
+            JobHandler.releaseFTPLock();
+            ftpClient.quit();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        } catch (FTPException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        synchedSet.clear();
+    }
+ <SPLIT>     private static void copyFile(String src, String target) throws IOException {
+        FileChannel ic = new FileInputStream(src).getChannel();
+        FileChannel oc = new FileOutputStream(target).getChannel();
+        ic.transferTo(0, ic.size(), oc);
+        ic.close();
+        oc.close();
+    }
+",405,,LABEL_0,LABEL_0,LABEL_0,-1,"polishOff,monitor,from,to,renameTo,ftpClient,ftpHolder,iter,element",,8,35,0,,0,GA,3652,1.3470019300778706,failed,[]

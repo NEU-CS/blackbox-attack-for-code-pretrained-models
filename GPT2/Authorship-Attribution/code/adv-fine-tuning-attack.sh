@@ -1,0 +1,11 @@
+python attack.py \
+    --csv_store_path ./attack_adv-finetuning.csv \
+    --eval_data_file=../dataset/data_folder/processed_gcjpy/valid.csv \
+    --model_name_or_path=GPT2-ADV-FINE-TUNING \
+    --tokenizer_name=GPT2-ADV-FINE-TUNING \
+    --eval_batch_size 32 \
+    --use_replace\
+    --use_insert\
+    --use_ga\
+    --p 0.75 \
+    --seed 42| tee attack_adv-finetuning.log

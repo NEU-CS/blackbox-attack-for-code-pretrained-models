@@ -1,0 +1,2370 @@
+LABEL_0 LABEL_0
+>> ACC! INSERT ;number = 0 0.99517=>0.99035
+>> ACC! INSERT ;print(number) 0.99035=>0.97283
+>> ACC! INSERT ;num_str = 0 0.97283=>0.88937
+>> ACC! INSERT ;print(num_str) 0.88937=>0.78975
+>> ACC! INSERT ;num_len = 0 0.78975=>0.49233
+>> SUC! INSERT ;print(num_len)
+Example time cost:  0.03 min
+ALL examples time cost:  0.03 min
+Query times in this attack:  49
+Greedy query times: 49
+Ga query times: 0
+All Query times:  49
+Success rate:  1.0
+Successful items count:  1
+Total count:  1
+Index:  0
+
+LABEL_0 LABEL_0
+>> ACC! INSERT ;table = 0 0.98011=>0.91848
+>> ACC! INSERT ;print(table) 0.91848=>0.85445
+>> ACC! INSERT ;i = 0 0.85445=>0.80862
+>> ACC! INSERT ;x = 0 0.80862=>0.74461
+>> ACC! INSERT ;scores = 0 0.74461=>0.62971
+>> ACC! INSERT ;num_surprises = 0 0.62971=>0.55515
+>> ACC! INSERT ;line = 0 0.55515=>0.43896
+>> ACC! INSERT ;scores_raw = 0 0.43896=>0.40937
+>> ACC! INSERT ;y = 0 0.40937=>0.35332
+>> SUC! INSERT ;model = 0
+Example time cost:  0.03 min
+ALL examples time cost:  0.06 min
+Query times in this attack:  81
+Greedy query times: 81
+Ga query times: 0
+All Query times:  130
+Success rate:  1.0
+Successful items count:  2
+Total count:  2
+Index:  1
+
+LABEL_1 LABEL_1
+>> ACC! INSERT ;num = 0 0.99860=>0.98305
+>> ACC! INSERT ;end_idx = 0 0.98305=>0.97513
+>> ACC! INSERT ;print(end_idx) 0.97513=>0.96257
+>> ACC! INSERT ;i = 0 0.96257=>0.89068
+>> ACC! INSERT ;print(i) 0.89068=>0.85314
+>> ACC! INSERT ;lo = 0 0.85314=>0.85022
+>> ACC! INSERT ;print(lo) 0.85022=>0.74710
+>> ACC! INSERT ;hi = 0 0.74710=>0.71012
+>> ACC! INSERT ;print(hi) 0.71012=>0.57638
+>> ACC! INSERT ;base_lo = 0 0.57638=>0.48488
+>> ACC! INSERT ;print(base_lo) 0.48488=>0.34936
+>> SUC! INSERT ;lines = 0
+Example time cost:  0.03 min
+ALL examples time cost:  0.09 min
+Query times in this attack:  85
+Greedy query times: 85
+Ga query times: 0
+All Query times:  215
+Success rate:  1.0
+Successful items count:  3
+Total count:  3
+Index:  2
+
+LABEL_1 LABEL_1
+>> ACC! INSERT ;p = 0 0.99573=>0.98885
+>> ACC! INSERT ;maxdiff = 0 0.98885=>0.97375
+>> ACC! INSERT ;print(maxdiff) 0.97375=>0.95292
+>> ACC! INSERT ;minval = 0 0.95292=>0.89312
+>> ACC! INSERT ;print(minval) 0.89312=>0.82156
+>> ACC! INSERT ;numdata = 0 0.82156=>0.52902
+>> ACC! INSERT ;print(numdata) 0.52902=>0.39123
+>> ACC! INSERT ;scores = 0 0.39123=>0.33959
+>> SUC! INSERT ;print(scores)
+Example time cost:  0.03 min
+ALL examples time cost:  0.11 min
+Query times in this attack:  78
+Greedy query times: 78
+Ga query times: 0
+All Query times:  293
+Success rate:  1.0
+Successful items count:  4
+Total count:  4
+Index:  3
+
+LABEL_2 LABEL_2
+Example time cost:  0.02 min
+ALL examples time cost:  0.13 min
+Query times in this attack:  36
+Greedy query times: 36
+Ga query times: 0
+All Query times:  329
+Success rate:  0.8
+Successful items count:  4
+Total count:  5
+Index:  4
+
+LABEL_2 LABEL_2
+>> ACC! INSERT ;inf = 0 0.98370=>0.97052
+>> ACC! INSERT ;N = 0 0.97052=>0.95027
+>> ACC! INSERT ;magic = 0 0.95027=>0.94005
+>> ACC! INSERT ;exp = 0 0.94005=>0.91667
+>> ACC! INSERT ;Info = 0 0.91667=>0.88141
+>> ACC! INSERT ;feed = 0 0.88141=>0.84804
+>> ACC! INSERT ;print(feed) 0.84804=>0.83781
+>> ACC! INSERT ;api = 0 0.83781=>0.40469
+>> SUC! INSERT ;print(api)
+Example time cost:  0.02 min
+ALL examples time cost:  0.15 min
+Query times in this attack:  51
+Greedy query times: 51
+Ga query times: 0
+All Query times:  380
+Success rate:  0.8333333333333334
+Successful items count:  5
+Total count:  6
+Index:  5
+
+LABEL_11 LABEL_3
+Example time cost:  0.0 min
+ALL examples time cost:  0.15 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  381
+Success rate:  0.8333333333333334
+Successful items count:  5
+Total count:  6
+Index:  6
+
+LABEL_3 LABEL_3
+>> ACC! INSERT ;T = 0 0.92115=>0.64634
+>> ACC! INSERT ;print(T) 0.64634=>0.43820
+>> SUC! INSERT ;z = 0
+Example time cost:  0.01 min
+ALL examples time cost:  0.17 min
+Query times in this attack:  38
+Greedy query times: 38
+Ga query times: 0
+All Query times:  419
+Success rate:  0.8571428571428571
+Successful items count:  6
+Total count:  7
+Index:  7
+
+LABEL_4 LABEL_4
+>> ACC! INSERT ;f = 0 0.99486=>0.98663
+>> ACC! INSERT ;print(f) 0.98663=>0.97320
+>> ACC! INSERT ;num = 0 0.97320=>0.96035
+>> ACC! INSERT ;print(num) 0.96035=>0.91632
+>> ACC! INSERT ;l = 0 0.91632=>0.85212
+>> ACC! INSERT ;print(l) 0.85212=>0.79578
+>> ACC! INSERT ;l2 = 0 0.79578=>0.64369
+>> ACC! INSERT ;print(l2) 0.64369=>0.63400
+>> ACC! INSERT ;b = 0 0.63400=>0.54842
+>> ACC! INSERT ;print(b) 0.54842=>0.49725
+>> ACC! INSERT ;mb = 0 0.49725=>0.34905
+>> ACC! INSERT ;folder = 0 0.34905=>0.15812
+>> SUC! INSERT ;print(folder)
+Example time cost:  0.02 min
+ALL examples time cost:  0.19 min
+Query times in this attack:  67
+Greedy query times: 67
+Ga query times: 0
+All Query times:  486
+Success rate:  0.875
+Successful items count:  7
+Total count:  8
+Index:  8
+
+LABEL_4 LABEL_4
+>> ACC! INSERT ;f = 0 0.94140=>0.78221
+>> ACC! INSERT ;print(f) 0.78221=>0.70164
+>> ACC! INSERT ;num = 0 0.70164=>0.62842
+>> ACC! INSERT ;print(num) 0.62842=>0.46656
+>> ACC! INSERT ;i = 0 0.46656=>0.45959
+>> ACC! INSERT ;print(i) 0.45959=>0.29674
+>> ACC! INSERT ;res = 0 0.29674=>0.19674
+>> SUC! INSERT ;print(res)
+Example time cost:  0.02 min
+ALL examples time cost:  0.21 min
+Query times in this attack:  43
+Greedy query times: 43
+Ga query times: 0
+All Query times:  529
+Success rate:  0.8888888888888888
+Successful items count:  8
+Total count:  9
+Index:  9
+
+LABEL_5 LABEL_5
+Example time cost:  0.22 min
+ALL examples time cost:  0.42 min
+Query times in this attack:  515
+Greedy query times: 515
+Ga query times: 0
+All Query times:  1044
+Success rate:  0.8
+Successful items count:  8
+Total count:  10
+Index:  10
+
+LABEL_5 LABEL_5
+>> ACC! INSERT ;case_input = 0 0.97020=>0.96408
+>> ACC! INSERT ;print(case_input) 0.96408=>0.90669
+>> ACC! INSERT ;x = 0 0.90669=>0.90396
+>> ACC! INSERT ;print(x) 0.90396=>0.75270
+>> ACC! INSERT ;shape = 0 0.75270=>0.73588
+>> ACC! INSERT ;print(shape) 0.73588=>0.68214
+>> ACC! INSERT ;caseEntryNum = 0 0.68214=>0.66840
+>> ACC! INSERT ;print(caseEntryNum) 0.66840=>0.53556
+>> ACC! INSERT ;caseLineNo = 0 0.53556=>0.45779
+>> ACC! INSERT ;print(caseLineNo) 0.45779=>0.31912
+>> SUC! INSERT ;caselineNumber = 0
+Example time cost:  0.12 min
+ALL examples time cost:  0.54 min
+Query times in this attack:  291
+Greedy query times: 291
+Ga query times: 0
+All Query times:  1335
+Success rate:  0.8181818181818182
+Successful items count:  9
+Total count:  11
+Index:  11
+
+LABEL_8 LABEL_6
+Example time cost:  0.0 min
+ALL examples time cost:  0.54 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  1336
+Success rate:  0.8181818181818182
+Successful items count:  9
+Total count:  11
+Index:  12
+
+LABEL_6 LABEL_6
+>> ACC! INSERT ;T = 0 0.98725=>0.89476
+>> ACC! INSERT ;print(T) 0.89476=>0.49889
+>> ACC! INSERT ;line = 0 0.49889=>0.41138
+>> SUC! INSERT ;print(line)
+Example time cost:  0.02 min
+ALL examples time cost:  0.56 min
+Query times in this attack:  50
+Greedy query times: 50
+Ga query times: 0
+All Query times:  1386
+Success rate:  0.8333333333333334
+Successful items count:  10
+Total count:  12
+Index:  13
+
+LABEL_7 LABEL_7
+>> ACC! INSERT ;ji = 0 0.75300=>0.58598
+>> ACC! INSERT ;print(ji) 0.58598=>0.39622
+Example time cost:  0.11 min
+ALL examples time cost:  0.67 min
+Query times in this attack:  260
+Greedy query times: 260
+Ga query times: 0
+All Query times:  1646
+Success rate:  0.7692307692307693
+Successful items count:  10
+Total count:  13
+Index:  14
+
+LABEL_7 LABEL_7
+>> ACC! INSERT ;input_file = 0 0.95330=>0.92075
+>> ACC! INSERT ;print(input_file) 0.92075=>0.87704
+>> ACC! INSERT ;inputsfile = 0 0.87704=>0.83001
+>> ACC! INSERT ;print(inputsfile) 0.83001=>0.75586
+>> ACC! INSERT ;inputsresource = 0 0.75586=>0.71127
+>> ACC! INSERT ;input_resource = 0 0.71127=>0.67185
+>> ACC! INSERT ;inputingfiles = 0 0.67185=>0.54234
+>> ACC! INSERT ;inputodefile = 0 0.54234=>0.45688
+>> ACC! INSERT ;print(inputodefile) 0.45688=>0.41226
+>> ACC! INSERT ;data_files = 0 0.41226=>0.15583
+>> SUC! INSERT ;input_module = 0
+Example time cost:  0.03 min
+ALL examples time cost:  0.7 min
+Query times in this attack:  86
+Greedy query times: 86
+Ga query times: 0
+All Query times:  1732
+Success rate:  0.7857142857142857
+Successful items count:  11
+Total count:  14
+Index:  15
+
+LABEL_8 LABEL_8
+>> SUC! INSERT ;a = 0
+Example time cost:  0.03 min
+ALL examples time cost:  0.73 min
+Query times in this attack:  80
+Greedy query times: 80
+Ga query times: 0
+All Query times:  1812
+Success rate:  0.8
+Successful items count:  12
+Total count:  15
+Index:  16
+
+LABEL_8 LABEL_8
+>> SUC! INSERT ;T = 0
+Example time cost:  0.01 min
+ALL examples time cost:  0.74 min
+Query times in this attack:  28
+Greedy query times: 28
+Ga query times: 0
+All Query times:  1840
+Success rate:  0.8125
+Successful items count:  13
+Total count:  16
+Index:  17
+
+LABEL_9 LABEL_9
+>> ACC! INSERT ;number = 0 0.98347=>0.91715
+>> ACC! INSERT ;print(number) 0.91715=>0.75967
+>> ACC! INSERT ;strNum = 0 0.75967=>0.65187
+>> ACC! INSERT ;print(strNum) 0.65187=>0.47217
+>> ACC! INSERT ;i = 0 0.47217=>0.28132
+>> ACC! INSERT ;numTests = 0 0.28132=>0.25277
+>> SUC! INSERT ;print(numTests)
+Example time cost:  0.02 min
+ALL examples time cost:  0.76 min
+Query times in this attack:  53
+Greedy query times: 53
+Ga query times: 0
+All Query times:  1893
+Success rate:  0.8235294117647058
+Successful items count:  14
+Total count:  17
+Index:  18
+
+LABEL_9 LABEL_9
+>> ACC! INSERT ;inputFile = 0 0.99586=>0.99117
+>> ACC! INSERT ;print(inputFile) 0.99117=>0.95843
+>> ACC! INSERT ;numTests = 0 0.95843=>0.94547
+>> ACC! INSERT ;print(numTests) 0.94547=>0.92227
+>> ACC! INSERT ;s = 0 0.92227=>0.92106
+>> ACC! INSERT ;p = 0 0.92106=>0.90332
+>> ACC! INSERT ;totals = 0 0.90332=>0.84558
+>> ACC! INSERT ;print(totals) 0.84558=>0.81308
+>> ACC! INSERT ;guaranteed = 0 0.81308=>0.30967
+>> ACC! INSERT ;v = 0 0.30967=>0.30147
+>> ACC! INSERT ;pr = 0 0.30147=>0.28089
+>> SUC! INSERT ;totalities = 0
+Example time cost:  0.07 min
+ALL examples time cost:  0.83 min
+Query times in this attack:  167
+Greedy query times: 167
+Ga query times: 0
+All Query times:  2060
+Success rate:  0.8333333333333334
+Successful items count:  15
+Total count:  18
+Index:  19
+
+LABEL_10 LABEL_10
+>> ACC! INSERT ;n_cases = 0 0.96081=>0.95017
+>> ACC! INSERT ;print(n_cases) 0.95017=>0.77678
+>> ACC! INSERT ;s = 0 0.77678=>0.61451
+>> ACC! INSERT ;print(s) 0.61451=>0.46973
+>> ACC! INSERT ;n = 0 0.46973=>0.34133
+>> SUC! INSERT ;print(n)
+Example time cost:  0.01 min
+ALL examples time cost:  0.84 min
+Query times in this attack:  39
+Greedy query times: 39
+Ga query times: 0
+All Query times:  2099
+Success rate:  0.8421052631578947
+Successful items count:  16
+Total count:  19
+Index:  20
+
+LABEL_10 LABEL_10
+>> ACC! INSERT ;n_cases = 0 0.96944=>0.85810
+>> ACC! INSERT ;print(n_cases) 0.85810=>0.69310
+>> ACC! INSERT ;case = 0 0.69310=>0.37472
+>> SUC! INSERT ;print(case)
+Example time cost:  0.01 min
+ALL examples time cost:  0.85 min
+Query times in this attack:  34
+Greedy query times: 34
+Ga query times: 0
+All Query times:  2133
+Success rate:  0.85
+Successful items count:  17
+Total count:  20
+Index:  21
+
+LABEL_11 LABEL_11
+Example time cost:  0.15 min
+ALL examples time cost:  1.01 min
+Query times in this attack:  363
+Greedy query times: 363
+Ga query times: 0
+All Query times:  2496
+Success rate:  0.8095238095238095
+Successful items count:  17
+Total count:  21
+Index:  22
+
+LABEL_11 LABEL_11
+>> ACC! INSERT ;args = 0 0.99355=>0.98829
+>> ACC! INSERT ;print(args) 0.98829=>0.98427
+>> ACC! INSERT ;rslt = 0 0.98427=>0.97436
+>> ACC! INSERT ;print(rslt) 0.97436=>0.96304
+>> ACC! INSERT ;N = 0 0.96304=>0.95616
+>> ACC! INSERT ;S = 0 0.95616=>0.92540
+>> ACC! INSERT ;p = 0 0.92540=>0.89470
+>> ACC! INSERT ;i = 0 0.89470=>0.87369
+>> ACC! INSERT ;e = 0 0.87369=>0.87146
+>> ACC! INSERT ;inputFile = 0 0.87146=>0.86930
+>> ACC! INSERT ;inputLines = 0 0.86930=>0.81348
+>> ACC! INSERT ;T = 0 0.81348=>0.79920
+>> ACC! INSERT ;outputLines = 0 0.79920=>0.78202
+>> ACC! INSERT ;l = 0 0.78202=>0.73273
+>> ACC! INSERT ;loc = 0 0.73273=>0.56453
+>> ACC! INSERT ;function = 0 0.56453=>0.54942
+>> ACC! INSERT ;names = 0 0.54942=>0.54894
+>> ACC! INSERT ;RSitt = 0 0.54894=>0.40070
+>> ACC! INSERT ;rsnat = 0 0.40070=>0.38143
+>> ACC! INSERT ;arsrt = 0 0.38143=>0.34070
+>> ACC! INSERT ;rtlt = 0 0.34070=>0.33036
+>> SUC! INSERT ;rysgt = 0
+Example time cost:  0.05 min
+ALL examples time cost:  1.05 min
+Query times in this attack:  116
+Greedy query times: 116
+Ga query times: 0
+All Query times:  2612
+Success rate:  0.8181818181818182
+Successful items count:  18
+Total count:  22
+Index:  23
+
+LABEL_12 LABEL_12
+>> ACC! INSERT ;stream = 0 0.70839=>0.45547
+>> ACC! INSERT ;print(stream) 0.45547=>0.41384
+>> ACC! INSERT ;line = 0 0.41384=>0.33865
+>> ACC! INSERT ;print(line) 0.33865=>0.20143
+>> SUC! INSERT ;x = 0
+Example time cost:  0.02 min
+ALL examples time cost:  1.07 min
+Query times in this attack:  48
+Greedy query times: 48
+Ga query times: 0
+All Query times:  2660
+Success rate:  0.8260869565217391
+Successful items count:  19
+Total count:  23
+Index:  24
+
+LABEL_54 LABEL_12
+Example time cost:  0.0 min
+ALL examples time cost:  1.07 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  2661
+Success rate:  0.8260869565217391
+Successful items count:  19
+Total count:  23
+Index:  25
+
+LABEL_13 LABEL_13
+>> ACC! INSERT ;f = 0 0.99710=>0.98052
+>> ACC! INSERT ;print(f) 0.98052=>0.96307
+>> ACC! INSERT ;v = 0 0.96307=>0.95106
+>> ACC! INSERT ;print(v) 0.95106=>0.94283
+>> ACC! INSERT ;X = 0 0.94283=>0.92557
+>> ACC! INSERT ;print(X) 0.92557=>0.90817
+>> ACC! INSERT ;out = 0 0.90817=>0.88592
+>> ACC! INSERT ;print(out) 0.88592=>0.77220
+>> ACC! INSERT ;T = 0 0.77220=>0.62394
+>> ACC! INSERT ;i = 0 0.62394=>0.61151
+>> ACC! INSERT ;print(i) 0.61151=>0.57507
+>> ACC! INSERT ;outf = 0 0.57507=>0.43856
+>> ACC! INSERT ;print(outf) 0.43856=>0.39591
+>> ACC! INSERT ;MAX = 0 0.39591=>0.33225
+>> ACC! INSERT ;fs = 0 0.33225=>0.31583
+>> ACC! INSERT ;uf = 0 0.31583=>0.26658
+>> SUC! INSERT ;print(uf)
+Example time cost:  0.04 min
+ALL examples time cost:  1.11 min
+Query times in this attack:  108
+Greedy query times: 108
+Ga query times: 0
+All Query times:  2769
+Success rate:  0.8333333333333334
+Successful items count:  20
+Total count:  24
+Index:  26
+
+LABEL_13 LABEL_13
+>> ACC! INSERT ;z = 0 0.95592=>0.93346
+>> ACC! INSERT ;print(z) 0.93346=>0.81058
+>> ACC! INSERT ;Z = 0 0.81058=>0.78215
+>> ACC! INSERT ;print(Z) 0.78215=>0.63417
+>> ACC! INSERT ;D = 0 0.63417=>0.59321
+>> ACC! INSERT ;print(D) 0.59321=>0.40400
+>> ACC! INSERT ;File = 0 0.40400=>0.29052
+>> SUC! INSERT ;print(File)
+Example time cost:  0.03 min
+ALL examples time cost:  1.13 min
+Query times in this attack:  68
+Greedy query times: 68
+Ga query times: 0
+All Query times:  2837
+Success rate:  0.84
+Successful items count:  21
+Total count:  25
+Index:  27
+
+LABEL_25 LABEL_14
+Example time cost:  0.0 min
+ALL examples time cost:  1.14 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  2838
+Success rate:  0.84
+Successful items count:  21
+Total count:  25
+Index:  28
+
+LABEL_14 LABEL_14
+>> ACC! INSERT ;D1 = 0 0.95753=>0.86746
+>> ACC! INSERT ;print(D1) 0.86746=>0.79365
+>> ACC! INSERT ;D2 = 0 0.79365=>0.62324
+>> ACC! INSERT ;print(D2) 0.62324=>0.60096
+>> SUC! INSERT ;i = 0
+Example time cost:  0.03 min
+ALL examples time cost:  1.17 min
+Query times in this attack:  85
+Greedy query times: 85
+Ga query times: 0
+All Query times:  2923
+Success rate:  0.8461538461538461
+Successful items count:  22
+Total count:  26
+Index:  29
+
+LABEL_15 LABEL_15
+>> SUC! INSERT ;f = 0
+Example time cost:  0.02 min
+ALL examples time cost:  1.18 min
+Query times in this attack:  44
+Greedy query times: 44
+Ga query times: 0
+All Query times:  2967
+Success rate:  0.8518518518518519
+Successful items count:  23
+Total count:  27
+Index:  30
+
+LABEL_15 LABEL_15
+>> ACC! INSERT ;z = 0 0.67692=>0.66405
+>> ACC! INSERT ;print(z) 0.66405=>0.41807
+>> SUC! INSERT ;t = 0
+Example time cost:  0.02 min
+ALL examples time cost:  1.2 min
+Query times in this attack:  51
+Greedy query times: 51
+Ga query times: 0
+All Query times:  3018
+Success rate:  0.8571428571428571
+Successful items count:  24
+Total count:  28
+Index:  31
+
+LABEL_16 LABEL_16
+>> ACC! INSERT ;a = 0 0.90063=>0.90043
+>> ACC! INSERT ;print(a) 0.90043=>0.79542
+>> ACC! INSERT ;b = 0 0.79542=>0.73964
+>> ACC! INSERT ;print(b) 0.73964=>0.45569
+>> ACC! INSERT ;c = 0 0.45569=>0.43685
+>> ACC! INSERT ;print(c) 0.43685=>0.25477
+>> SUC! INSERT ;p3 = 0
+Example time cost:  0.03 min
+ALL examples time cost:  1.23 min
+Query times in this attack:  88
+Greedy query times: 88
+Ga query times: 0
+All Query times:  3106
+Success rate:  0.8620689655172413
+Successful items count:  25
+Total count:  29
+Index:  32
+
+LABEL_16 LABEL_16
+>> ACC! INSERT ;f = 0 0.53074=>0.37678
+>> ACC! INSERT ;print(f) 0.37678=>0.21427
+>> ACC! INSERT ;out = 0 0.21427=>0.18606
+>> SUC! INSERT ;print(out)
+Example time cost:  0.03 min
+ALL examples time cost:  1.26 min
+Query times in this attack:  79
+Greedy query times: 79
+Ga query times: 0
+All Query times:  3185
+Success rate:  0.8666666666666667
+Successful items count:  26
+Total count:  30
+Index:  33
+
+LABEL_17 LABEL_17
+>> SUC! INSERT ;num = 0
+Example time cost:  0.01 min
+ALL examples time cost:  1.27 min
+Query times in this attack:  33
+Greedy query times: 33
+Ga query times: 0
+All Query times:  3218
+Success rate:  0.8709677419354839
+Successful items count:  27
+Total count:  31
+Index:  34
+
+LABEL_27 LABEL_17
+Example time cost:  0.0 min
+ALL examples time cost:  1.27 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  3219
+Success rate:  0.8709677419354839
+Successful items count:  27
+Total count:  31
+Index:  35
+
+LABEL_18 LABEL_18
+>> ACC! INSERT ;a = 0 0.87495=>0.77394
+>> ACC! INSERT ;print(a) 0.77394=>0.55839
+>> ACC! INSERT ;am = 0 0.55839=>0.47361
+>> ACC! INSERT ;miningnon = 0 0.47361=>0.27468
+>> ACC! INSERT ;print(miningnon) 0.27468=>0.26560
+>> ACC! INSERT ;maxWmun = 0 0.26560=>0.24733
+>> ACC! INSERT ;print(maxWmun) 0.24733=>0.17681
+>> SUC! INSERT ;cli = 0
+Example time cost:  0.04 min
+ALL examples time cost:  1.31 min
+Query times in this attack:  99
+Greedy query times: 99
+Ga query times: 0
+All Query times:  3318
+Success rate:  0.875
+Successful items count:  28
+Total count:  32
+Index:  36
+
+LABEL_18 LABEL_18
+>> ACC! INSERT ;n = 0 0.97561=>0.95723
+>> ACC! INSERT ;results = 0 0.95723=>0.94635
+>> ACC! INSERT ;print(results) 0.94635=>0.94616
+>> ACC! INSERT ;desired_score = 0 0.94616=>0.94353
+>> ACC! INSERT ;print(desired_score) 0.94353=>0.93593
+>> ACC! INSERT ;l = 0 0.93593=>0.93246
+>> ACC! INSERT ;print(l) 0.93246=>0.92985
+>> ACC! INSERT ;b = 0 0.92985=>0.92205
+>> ACC! INSERT ;all = 0 0.92205=>0.87936
+>> ACC! INSERT ;print(all) 0.87936=>0.87928
+>> ACC! INSERT ;ne = 0 0.87928=>0.84863
+>> ACC! INSERT ;nor = 0 0.84863=>0.78838
+>> ACC! INSERT ;combinos = 0 0.78838=>0.76322
+>> ACC! INSERT ;print(combinos) 0.76322=>0.73282
+>> ACC! INSERT ;clines = 0 0.73282=>0.68953
+>> ACC! INSERT ;clinos = 0 0.68953=>0.57583
+>> ACC! INSERT ;includes = 0 0.57583=>0.52863
+>> ACC! INSERT ;windows = 0 0.52863=>0.44213
+>> ACC! INSERT ;tests = 0 0.44213=>0.41331
+>> ACC! INSERT ;stats = 0 0.41331=>0.36683
+>> ACC! INSERT ;multi = 0 0.36683=>0.24697
+>> ACC! INSERT ;maps = 0 0.24697=>0.18946
+>> SUC! INSERT ;section = 0
+Example time cost:  0.07 min
+ALL examples time cost:  1.38 min
+Query times in this attack:  164
+Greedy query times: 164
+Ga query times: 0
+All Query times:  3482
+Success rate:  0.8787878787878788
+Successful items count:  29
+Total count:  33
+Index:  37
+
+LABEL_19 LABEL_19
+>> ACC! INSERT ;n = 0 0.99365=>0.97988
+>> ACC! INSERT ;print(n) 0.97988=>0.97609
+>> ACC! INSERT ;A = 0 0.97609=>0.93118
+>> ACC! INSERT ;print(A) 0.93118=>0.90339
+>> ACC! INSERT ;B = 0 0.90339=>0.79860
+>> ACC! INSERT ;solution = 0 0.79860=>0.42936
+>> ACC! INSERT ;print(solution) 0.42936=>0.41256
+>> ACC! INSERT ;m = 0 0.41256=>0.36621
+>> SUC! INSERT ;print(m)
+Example time cost:  0.02 min
+ALL examples time cost:  1.4 min
+Query times in this attack:  56
+Greedy query times: 56
+Ga query times: 0
+All Query times:  3538
+Success rate:  0.8823529411764706
+Successful items count:  30
+Total count:  34
+Index:  38
+
+LABEL_19 LABEL_19
+>> ACC! INSERT ;S = 0 0.90379=>0.74088
+>> ACC! INSERT ;print(S) 0.74088=>0.55548
+>> ACC! INSERT ;tlist = 0 0.55548=>0.53213
+>> SUC! INSERT ;print(tlist)
+Example time cost:  0.02 min
+ALL examples time cost:  1.42 min
+Query times in this attack:  59
+Greedy query times: 59
+Ga query times: 0
+All Query times:  3597
+Success rate:  0.8857142857142857
+Successful items count:  31
+Total count:  35
+Index:  39
+
+LABEL_20 LABEL_20
+>> ACC! INSERT ;i = 0 0.87810=>0.86831
+>> ACC! INSERT ;fair_and_square_palindromes = 0 0.86831=>0.84838
+>> ACC! INSERT ;n__max = 0 0.84838=>0.83622
+>> ACC! INSERT ;print(n__max) 0.83622=>0.82635
+>> ACC! INSERT ;NAMmax = 0 0.82635=>0.81670
+>> ACC! INSERT ;print(NAMmax) 0.81670=>0.79629
+>> ACC! INSERT ;NIPMax = 0 0.79629=>0.77462
+>> ACC! INSERT ;print(NIPMax) 0.77462=>0.72642
+>> ACC! INSERT ;NNmax = 0 0.72642=>0.72243
+>> ACC! INSERT ;print(NNmax) 0.72243=>0.68267
+>> ACC! INSERT ;R_HEAD = 0 0.68267=>0.65849
+>> ACC! INSERT ;print(R_HEAD) 0.65849=>0.57884
+>> ACC! INSERT ;NNMax = 0 0.57884=>0.48616
+>> ACC! INSERT ;print(NNMax) 0.48616=>0.48504
+>> ACC! INSERT ;n_MAX = 0 0.48504=>0.40684
+>> ACC! INSERT ;NIPMAX = 0 0.40684=>0.33955
+>> ACC! INSERT ;print(NIPMAX) 0.33955=>0.32698
+>> SUC! INSERT ;net = 0
+Example time cost:  0.03 min
+ALL examples time cost:  1.45 min
+Query times in this attack:  83
+Greedy query times: 83
+Ga query times: 0
+All Query times:  3680
+Success rate:  0.8888888888888888
+Successful items count:  32
+Total count:  36
+Index:  40
+
+LABEL_10 LABEL_20
+Example time cost:  0.0 min
+ALL examples time cost:  1.45 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  3681
+Success rate:  0.8888888888888888
+Successful items count:  32
+Total count:  36
+Index:  41
+
+LABEL_21 LABEL_21
+>> ACC! INSERT ;INPUT = 0 0.98952=>0.98948
+>> ACC! INSERT ;print(INPUT) 0.98948=>0.97311
+>> ACC! INSERT ;self = 0 0.97311=>0.95831
+>> ACC! INSERT ;print(self) 0.95831=>0.89070
+>> ACC! INSERT ;function = 0 0.89070=>0.83996
+>> ACC! INSERT ;print(function) 0.83996=>0.80307
+>> ACC! INSERT ;_cache = 0 0.80307=>0.57808
+>> ACC! INSERT ;print(_cache) 0.57808=>0.37079
+>> ACC! INSERT ;_callable = 0 0.37079=>0.28396
+>> SUC! INSERT ;print(_callable)
+Example time cost:  0.03 min
+ALL examples time cost:  1.49 min
+Query times in this attack:  88
+Greedy query times: 88
+Ga query times: 0
+All Query times:  3769
+Success rate:  0.8918918918918919
+Successful items count:  33
+Total count:  37
+Index:  42
+
+LABEL_21 LABEL_21
+>> ACC! INSERT ;INPUT = 0 0.99274=>0.96198
+>> ACC! INSERT ;print(INPUT) 0.96198=>0.90067
+>> ACC! INSERT ;N = 0 0.90067=>0.89842
+>> ACC! INSERT ;print(N) 0.89842=>0.85653
+>> ACC! INSERT ;p = 0 0.85653=>0.82365
+>> ACC! INSERT ;print(p) 0.82365=>0.75997
+>> ACC! INSERT ;low_p = 0 0.75997=>0.68320
+>> ACC! INSERT ;print(low_p) 0.68320=>0.62499
+>> ACC! INSERT ;d = 0 0.62499=>0.60794
+>> ACC! INSERT ;print(d) 0.60794=>0.51859
+>> ACC! INSERT ;f = 0 0.51859=>0.46016
+>> SUC! INSERT ;l = 0
+Example time cost:  0.03 min
+ALL examples time cost:  1.51 min
+Query times in this attack:  70
+Greedy query times: 70
+Ga query times: 0
+All Query times:  3839
+Success rate:  0.8947368421052632
+Successful items count:  34
+Total count:  38
+Index:  43
+
+LABEL_22 LABEL_22
+>> ACC! INSERT ;i = 0 0.99133=>0.95321
+>> ACC! INSERT ;print(i) 0.95321=>0.93517
+>> ACC! INSERT ;n = 0 0.93517=>0.84386
+>> ACC! INSERT ;print(n) 0.84386=>0.70398
+>> ACC! INSERT ;rev = 0 0.70398=>0.36514
+>> SUC! INSERT ;print(rev)
+Example time cost:  0.03 min
+ALL examples time cost:  1.54 min
+Query times in this attack:  71
+Greedy query times: 71
+Ga query times: 0
+All Query times:  3910
+Success rate:  0.8974358974358975
+Successful items count:  35
+Total count:  39
+Index:  44
+
+LABEL_22 LABEL_22
+>> ACC! INSERT ;T = 0 0.98586=>0.81878
+>> ACC! INSERT ;print(T) 0.81878=>0.69578
+>> ACC! INSERT ;i = 0 0.69578=>0.51458
+>> ACC! INSERT ;print(i) 0.51458=>0.37904
+>> SUC! INSERT ;values = 0
+Example time cost:  0.02 min
+ALL examples time cost:  1.56 min
+Query times in this attack:  52
+Greedy query times: 52
+Ga query times: 0
+All Query times:  3962
+Success rate:  0.9
+Successful items count:  36
+Total count:  40
+Index:  45
+
+LABEL_23 LABEL_23
+>> ACC! INSERT ;FILE_NAME_BASE = 0 0.99282=>0.96891
+>> ACC! INSERT ;print(FILE_NAME_BASE) 0.96891=>0.95034
+>> ACC! INSERT ;inp = 0 0.95034=>0.93040
+>> ACC! INSERT ;print(inp) 0.93040=>0.88032
+>> ACC! INSERT ;x = 0 0.88032=>0.87340
+>> ACC! INSERT ;print(x) 0.87340=>0.86157
+>> ACC! INSERT ;l1 = 0 0.86157=>0.78327
+>> ACC! INSERT ;print(l1) 0.78327=>0.63412
+>> ACC! INSERT ;i = 0 0.63412=>0.62118
+>> ACC! INSERT ;print(i) 0.62118=>0.52987
+>> ACC! INSERT ;insh = 0 0.52987=>0.44713
+>> ACC! INSERT ;ib = 0 0.44713=>0.43755
+>> ACC! INSERT ;t = 0 0.43755=>0.27429
+>> SUC! INSERT ;print(t)
+Example time cost:  0.08 min
+ALL examples time cost:  1.64 min
+Query times in this attack:  195
+Greedy query times: 195
+Ga query times: 0
+All Query times:  4157
+Success rate:  0.9024390243902439
+Successful items count:  37
+Total count:  41
+Index:  46
+
+LABEL_23 LABEL_23
+Example time cost:  0.16 min
+ALL examples time cost:  1.8 min
+Query times in this attack:  378
+Greedy query times: 378
+Ga query times: 0
+All Query times:  4535
+Success rate:  0.8809523809523809
+Successful items count:  37
+Total count:  42
+Index:  47
+
+LABEL_24 LABEL_24
+Example time cost:  0.23 min
+ALL examples time cost:  2.03 min
+Query times in this attack:  504
+Greedy query times: 504
+Ga query times: 0
+All Query times:  5039
+Success rate:  0.8604651162790697
+Successful items count:  37
+Total count:  43
+Index:  48
+
+LABEL_24 LABEL_24
+>> ACC! INSERT ;infile = 0 0.95968=>0.91192
+>> ACC! INSERT ;print(infile) 0.91192=>0.89394
+>> ACC! INSERT ;NumCases = 0 0.89394=>0.88326
+>> ACC! INSERT ;print(NumCases) 0.88326=>0.80114
+>> ACC! INSERT ;iCase = 0 0.80114=>0.77932
+>> ACC! INSERT ;print(iCase) 0.77932=>0.77292
+>> ACC! INSERT ;line = 0 0.77292=>0.72234
+>> ACC! INSERT ;print(line) 0.72234=>0.69216
+>> ACC! INSERT ;n = 0 0.69216=>0.62655
+>> ACC! INSERT ;print(n) 0.62655=>0.60510
+>> ACC! INSERT ;s = 0 0.60510=>0.54922
+>> ACC! INSERT ;print(s) 0.54922=>0.54152
+>> ACC! INSERT ;p = 0 0.54152=>0.48334
+>> SUC! INSERT ;scores = 0
+Example time cost:  0.02 min
+ALL examples time cost:  2.05 min
+Query times in this attack:  54
+Greedy query times: 54
+Ga query times: 0
+All Query times:  5093
+Success rate:  0.8636363636363636
+Successful items count:  38
+Total count:  44
+Index:  49
+
+LABEL_25 LABEL_25
+>> ACC! INSERT ;case = 0 0.91926=>0.61749
+>> ACC! INSERT ;print(case) 0.61749=>0.45589
+>> SUC! INSERT ;b = 0
+Example time cost:  0.03 min
+ALL examples time cost:  2.08 min
+Query times in this attack:  93
+Greedy query times: 93
+Ga query times: 0
+All Query times:  5186
+Success rate:  0.8666666666666667
+Successful items count:  39
+Total count:  45
+Index:  50
+
+LABEL_25 LABEL_25
+Example time cost:  0.17 min
+ALL examples time cost:  2.25 min
+Query times in this attack:  393
+Greedy query times: 393
+Ga query times: 0
+All Query times:  5579
+Success rate:  0.8478260869565217
+Successful items count:  39
+Total count:  46
+Index:  51
+
+LABEL_65 LABEL_26
+Example time cost:  0.0 min
+ALL examples time cost:  2.25 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  5580
+Success rate:  0.8478260869565217
+Successful items count:  39
+Total count:  46
+Index:  52
+
+LABEL_26 LABEL_26
+>> ACC! INSERT ;t = 0 0.69946=>0.63299
+>> ACC! INSERT ;print(t) 0.63299=>0.57006
+>> ACC! INSERT ;validcount = 0 0.57006=>0.52204
+>> ACC! INSERT ;print(validcount) 0.52204=>0.40408
+>> SUC! INSERT ; inputfile = 0
+Example time cost:  0.03 min
+ALL examples time cost:  2.28 min
+Query times in this attack:  79
+Greedy query times: 79
+Ga query times: 0
+All Query times:  5659
+Success rate:  0.851063829787234
+Successful items count:  40
+Total count:  47
+Index:  53
+
+LABEL_27 LABEL_27
+>> ACC! INSERT ;fairsquares = 0 0.99354=>0.95953
+>> ACC! INSERT ;print(fairsquares) 0.95953=>0.81171
+>> ACC! INSERT ;f = 0 0.81171=>0.66650
+>> ACC! INSERT ;print(f) 0.66650=>0.54495
+>> ACC! INSERT ;x = 0 0.54495=>0.51329
+>> ACC! INSERT ;print(x) 0.51329=>0.31370
+>> ACC! INSERT ;left = 0 0.31370=>0.25880
+>> ACC! INSERT ;print(left) 0.25880=>0.18651
+>> SUC! INSERT ;B = 0
+Example time cost:  0.02 min
+ALL examples time cost:  2.31 min
+Query times in this attack:  66
+Greedy query times: 66
+Ga query times: 0
+All Query times:  5725
+Success rate:  0.8541666666666666
+Successful items count:  41
+Total count:  48
+Index:  54
+
+LABEL_55 LABEL_27
+Example time cost:  0.0 min
+ALL examples time cost:  2.31 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  5726
+Success rate:  0.8541666666666666
+Successful items count:  41
+Total count:  48
+Index:  55
+
+LABEL_65 LABEL_28
+Example time cost:  0.0 min
+ALL examples time cost:  2.31 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  5727
+Success rate:  0.8541666666666666
+Successful items count:  41
+Total count:  48
+Index:  56
+
+LABEL_28 LABEL_28
+>> ACC! INSERT ;f = 0 0.61793=>0.59511
+>> SUC! INSERT ;print(f)
+Example time cost:  0.01 min
+ALL examples time cost:  2.32 min
+Query times in this attack:  34
+Greedy query times: 34
+Ga query times: 0
+All Query times:  5761
+Success rate:  0.8571428571428571
+Successful items count:  42
+Total count:  49
+Index:  57
+
+LABEL_29 LABEL_29
+>> ACC! INSERT ;S = 0 0.92420=>0.92094
+>> ACC! INSERT ;print(S) 0.92094=>0.87656
+>> ACC! INSERT ;i = 0 0.87656=>0.87555
+>> ACC! INSERT ;print(i) 0.87555=>0.78998
+>> ACC! INSERT ;A = 0 0.78998=>0.74976
+>> ACC! INSERT ;print(A) 0.74976=>0.62964
+>> ACC! INSERT ;B = 0 0.62964=>0.56255
+>> ACC! INSERT ;print(B) 0.56255=>0.55838
+>> ACC! INSERT ;SM = 0 0.55838=>0.48251
+>> ACC! INSERT ;print(SM) 0.48251=>0.42128
+>> ACC! INSERT ;M = 0 0.42128=>0.39046
+>> ACC! INSERT ;againF = 0 0.39046=>0.35509
+>> SUC! INSERT ;print(againF)
+Example time cost:  0.06 min
+ALL examples time cost:  2.38 min
+Query times in this attack:  147
+Greedy query times: 147
+Ga query times: 0
+All Query times:  5908
+Success rate:  0.86
+Successful items count:  43
+Total count:  50
+Index:  58
+
+LABEL_9 LABEL_29
+Example time cost:  0.0 min
+ALL examples time cost:  2.38 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  5909
+Success rate:  0.86
+Successful items count:  43
+Total count:  50
+Index:  59
+
+LABEL_30 LABEL_30
+>> ACC! INSERT ;n = 0 0.99213=>0.98871
+>> ACC! INSERT ;print(n) 0.98871=>0.98719
+>> ACC! INSERT ;b = 0 0.98719=>0.98638
+>> ACC! INSERT ;print(b) 0.98638=>0.98382
+>> ACC! INSERT ;infile = 0 0.98382=>0.97117
+>> ACC! INSERT ;print(infile) 0.97117=>0.97053
+>> ACC! INSERT ;P = 0 0.97053=>0.96980
+>> ACC! INSERT ;N = 0 0.96980=>0.96551
+>> ACC! INSERT ;i = 0 0.96551=>0.96089
+>> ACC! INSERT ;l = 0 0.96089=>0.94790
+>> ACC! INSERT ;input = 0 0.94790=>0.94094
+>> ACC! INSERT ;int = 0 0.94094=>0.93847
+>> ACC! INSERT ;rx = 0 0.93847=>0.93358
+>> ACC! INSERT ;ct = 0 0.93358=>0.93138
+>> ACC! INSERT ;print(ct) 0.93138=>0.93052
+>> ACC! INSERT ;c = 0 0.93052=>0.89937
+>> ACC! INSERT ;print(c) 0.89937=>0.89829
+>> ACC! INSERT ;g = 0 0.89829=>0.88462
+>> ACC! INSERT ;l = 0 0.88462=>0.85010
+>> ACC! INSERT ;ne = 0 0.85010=>0.82874
+>> ACC! INSERT ;ln = 0 0.82874=>0.82224
+>> ACC! INSERT ;zn = 0 0.82224=>0.81809
+>> ACC! INSERT ;nr = 0 0.81809=>0.79506
+>> ACC! INSERT ;nc = 0 0.79506=>0.76878
+>> ACC! INSERT ;print(nc) 0.76878=>0.76318
+>> ACC! INSERT ;nn = 0 0.76318=>0.64386
+>> ACC! INSERT ;aa = 0 0.64386=>0.61531
+>> ACC! INSERT ;oa = 0 0.61531=>0.60191
+>> ACC! INSERT ;ba = 0 0.60191=>0.59938
+>> ACC! INSERT ;bb = 0 0.59938=>0.54360
+>> ACC! INSERT ;yy = 0 0.54360=>0.50216
+>> ACC! INSERT ;outfilename = 0 0.50216=>0.42800
+>> ACC! INSERT ;print(outfilename) 0.42800=>0.42736
+>> ACC! INSERT ;outfiles = 0 0.42736=>0.39402
+>> ACC! INSERT ;print(outfiles) 0.39402=>0.31310
+>> SUC! INSERT ; inbase = 0
+Example time cost:  0.08 min
+ALL examples time cost:  2.46 min
+Query times in this attack:  193
+Greedy query times: 193
+Ga query times: 0
+All Query times:  6102
+Success rate:  0.8627450980392157
+Successful items count:  44
+Total count:  51
+Index:  60
+
+LABEL_30 LABEL_30
+>> ACC! INSERT ;infile = 0 0.97621=>0.91472
+>> ACC! INSERT ;testcase = 0 0.91472=>0.83401
+>> ACC! INSERT ;print(testcase) 0.83401=>0.78435
+>> ACC! INSERT ;P = 0 0.78435=>0.76932
+>> ACC! INSERT ;S = 0 0.76932=>0.74202
+>> ACC! INSERT ;G = 0 0.74202=>0.70785
+>> ACC! INSERT ;config = 0 0.70785=>0.67200
+>> ACC! INSERT ;function = 0 0.67200=>0.66164
+>> ACC! INSERT ;other = 0 0.66164=>0.64348
+>> SUC! INSERT ;INFile = 0
+Example time cost:  0.04 min
+ALL examples time cost:  2.5 min
+Query times in this attack:  98
+Greedy query times: 98
+Ga query times: 0
+All Query times:  6200
+Success rate:  0.8653846153846154
+Successful items count:  45
+Total count:  52
+Index:  61
+
+LABEL_31 LABEL_31
+>> ACC! INSERT ;eni = 0 0.79402=>0.70916
+>> ACC! INSERT ;print(eni) 0.70916=>0.67589
+>> ACC! INSERT ;key = 0 0.67589=>0.56011
+>> ACC! INSERT ;print(key) 0.56011=>0.28734
+>> SUC! INSERT ;ti = 0
+Example time cost:  0.03 min
+ALL examples time cost:  2.52 min
+Query times in this attack:  71
+Greedy query times: 71
+Ga query times: 0
+All Query times:  6271
+Success rate:  0.8679245283018868
+Successful items count:  46
+Total count:  53
+Index:  62
+
+LABEL_31 LABEL_31
+>> ACC! INSERT ;scores_sum = 0 0.28990=>0.21093
+>> SUC! INSERT ;dancers_count = 0
+Example time cost:  0.02 min
+ALL examples time cost:  2.54 min
+Query times in this attack:  61
+Greedy query times: 61
+Ga query times: 0
+All Query times:  6332
+Success rate:  0.8703703703703703
+Successful items count:  47
+Total count:  54
+Index:  63
+
+LABEL_32 LABEL_32
+>> ACC! INSERT ;word = 0 0.98997=>0.98031
+>> ACC! INSERT ;print(word) 0.98031=>0.95478
+>> ACC! INSERT ;start = 0 0.95478=>0.93102
+>> ACC! INSERT ;print(start) 0.93102=>0.91349
+>> ACC! INSERT ;address = 0 0.91349=>0.91117
+>> ACC! INSERT ;color = 0 0.91117=>0.90785
+>> ACC! INSERT ;print(color) 0.90785=>0.88513
+>> ACC! INSERT ;way = 0 0.88513=>0.86988
+>> ACC! INSERT ;print(way) 0.86988=>0.85889
+>> ACC! INSERT ;character = 0 0.85889=>0.84115
+>> ACC! INSERT ;print(character) 0.84115=>0.78492
+>> ACC! INSERT ;name = 0 0.78492=>0.76545
+>> ACC! INSERT ;print(name) 0.76545=>0.72568
+>> ACC! INSERT ;sex = 0 0.72568=>0.68418
+>> ACC! INSERT ;language = 0 0.68418=>0.57654
+>> ACC! INSERT ;print(language) 0.57654=>0.57311
+>> ACC! INSERT ;ispalinn = 0 0.57311=>0.56567
+>> ACC! INSERT ;print(ispalinn) 0.56567=>0.36382
+>> ACC! INSERT ;fpsize = 0 0.36382=>0.32327
+>> ACC! INSERT ;print(fpsize) 0.32327=>0.28015
+>> SUC! INSERT ; f_both = 0
+Example time cost:  0.05 min
+ALL examples time cost:  2.59 min
+Query times in this attack:  116
+Greedy query times: 116
+Ga query times: 0
+All Query times:  6448
+Success rate:  0.8727272727272727
+Successful items count:  48
+Total count:  55
+Index:  64
+
+LABEL_45 LABEL_32
+Example time cost:  0.0 min
+ALL examples time cost:  2.59 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  6449
+Success rate:  0.8727272727272727
+Successful items count:  48
+Total count:  55
+Index:  65
+
+LABEL_33 LABEL_33
+>> ACC! INSERT ;num = 0 0.98113=>0.97337
+>> ACC! INSERT ;print(num) 0.97337=>0.95504
+>> ACC! INSERT ;A = 0 0.95504=>0.94931
+>> ACC! INSERT ;print(A) 0.94931=>0.93909
+>> ACC! INSERT ;B = 0 0.93909=>0.92883
+>> ACC! INSERT ;print(B) 0.92883=>0.90846
+>> ACC! INSERT ;count = 0 0.90846=>0.79362
+>> ACC! INSERT ;print(count) 0.79362=>0.69358
+>> ACC! INSERT ;all = 0 0.69358=>0.68976
+>> ACC! INSERT ;uri = 0 0.68976=>0.65335
+>> SUC! INSERT ;print(uri)
+Example time cost:  0.02 min
+ALL examples time cost:  2.61 min
+Query times in this attack:  52
+Greedy query times: 52
+Ga query times: 0
+All Query times:  6501
+Success rate:  0.875
+Successful items count:  49
+Total count:  56
+Index:  66
+
+LABEL_33 LABEL_33
+>> ACC! INSERT ;n = 0 0.92734=>0.72703
+>> ACC! INSERT ;a = 0 0.72703=>0.58066
+>> ACC! INSERT ;p = 0 0.58066=>0.49329
+>> ACC! INSERT ;b = 0 0.49329=>0.46862
+>> ACC! INSERT ;l = 0 0.46862=>0.31635
+>> SUC! INSERT ;per = 0
+Example time cost:  0.05 min
+ALL examples time cost:  2.66 min
+Query times in this attack:  129
+Greedy query times: 129
+Ga query times: 0
+All Query times:  6630
+Success rate:  0.8771929824561403
+Successful items count:  50
+Total count:  57
+Index:  67
+
+LABEL_34 LABEL_34
+>> ACC! INSERT ;T = 0 0.87779=>0.75994
+>> ACC! INSERT ;print(T) 0.75994=>0.53148
+>> ACC! INSERT ;A = 0 0.53148=>0.48355
+>> SUC! INSERT ;print(A)
+Example time cost:  0.01 min
+ALL examples time cost:  2.67 min
+Query times in this attack:  35
+Greedy query times: 35
+Ga query times: 0
+All Query times:  6665
+Success rate:  0.8793103448275862
+Successful items count:  51
+Total count:  58
+Index:  68
+
+LABEL_34 LABEL_34
+>> ACC! INSERT ;x = 0 0.95492=>0.93084
+>> ACC! INSERT ;print(x) 0.93084=>0.91409
+>> ACC! INSERT ;T = 0 0.91409=>0.84926
+>> ACC! INSERT ;print(T) 0.84926=>0.80335
+>> ACC! INSERT ;line = 0 0.80335=>0.76369
+>> ACC! INSERT ;print(line) 0.76369=>0.72090
+>> ACC! INSERT ;N = 0 0.72090=>0.65075
+>> ACC! INSERT ;print(N) 0.65075=>0.62182
+>> ACC! INSERT ;ex = 0 0.62182=>0.59759
+>> SUC! INSERT ;print(ex)
+Example time cost:  0.02 min
+ALL examples time cost:  2.69 min
+Query times in this attack:  47
+Greedy query times: 47
+Ga query times: 0
+All Query times:  6712
+Success rate:  0.8813559322033898
+Successful items count:  52
+Total count:  59
+Index:  69
+
+LABEL_35 LABEL_35
+>> SUC! INSERT ;alpha = 0
+Example time cost:  0.03 min
+ALL examples time cost:  2.72 min
+Query times in this attack:  84
+Greedy query times: 84
+Ga query times: 0
+All Query times:  6796
+Success rate:  0.8833333333333333
+Successful items count:  53
+Total count:  60
+Index:  70
+
+LABEL_35 LABEL_35
+>> ACC! INSERT ;caseI = 0 0.82223=>0.52012
+>> ACC! INSERT ;points = 0 0.52012=>0.33826
+>> ACC! INSERT ;gh = 0 0.33826=>0.32711
+>> ACC! INSERT ;vg = 0 0.32711=>0.31896
+>> ACC! INSERT ;Casei = 0 0.31896=>0.20152
+>> ACC! INSERT ;catchE = 0 0.20152=>0.19953
+>> SUC! INSERT ; caseN = 0
+Example time cost:  0.05 min
+ALL examples time cost:  2.77 min
+Query times in this attack:  121
+Greedy query times: 121
+Ga query times: 0
+All Query times:  6917
+Success rate:  0.8852459016393442
+Successful items count:  54
+Total count:  61
+Index:  71
+
+LABEL_10 LABEL_36
+Example time cost:  0.0 min
+ALL examples time cost:  2.77 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  6918
+Success rate:  0.8852459016393442
+Successful items count:  54
+Total count:  61
+Index:  72
+
+LABEL_36 LABEL_36
+>> ACC! INSERT ;start = 0 0.99579=>0.99308
+>> ACC! INSERT ;elems = 0 0.99308=>0.99258
+>> ACC! INSERT ;src = 0 0.99258=>0.99098
+>> ACC! INSERT ;set = 0 0.99098=>0.98370
+>> ACC! INSERT ;count = 0 0.98370=>0.97117
+>> ACC! INSERT ;s = 0 0.97117=>0.97056
+>> ACC! INSERT ;v = 0 0.97056=>0.97048
+>> ACC! INSERT ;elmas = 0 0.97048=>0.96489
+>> ACC! INSERT ;print(elmas) 0.96489=>0.94731
+>> ACC! INSERT ;elns = 0 0.94731=>0.92136
+>> ACC! INSERT ;elma = 0 0.92136=>0.91781
+>> ACC! INSERT ;elemes = 0 0.91781=>0.90209
+>> ACC! INSERT ;elms = 0 0.90209=>0.89416
+>> ACC! INSERT ;lemns = 0 0.89416=>0.89085
+>> ACC! INSERT ;elmes = 0 0.89085=>0.79975
+Example time cost:  0.03 min
+ALL examples time cost:  2.8 min
+Query times in this attack:  66
+Greedy query times: 66
+Ga query times: 0
+All Query times:  6984
+Success rate:  0.8709677419354839
+Successful items count:  54
+Total count:  62
+Index:  73
+
+LABEL_37 LABEL_37
+Example time cost:  0.13 min
+ALL examples time cost:  2.93 min
+Query times in this attack:  293
+Greedy query times: 293
+Ga query times: 0
+All Query times:  7277
+Success rate:  0.8571428571428571
+Successful items count:  54
+Total count:  63
+Index:  74
+
+LABEL_23 LABEL_37
+Example time cost:  0.0 min
+ALL examples time cost:  2.93 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  7278
+Success rate:  0.8571428571428571
+Successful items count:  54
+Total count:  63
+Index:  75
+
+LABEL_38 LABEL_38
+>> ACC! INSERT ;i = 0 0.85032=>0.84324
+>> ACC! INSERT ;inf = 0 0.84324=>0.81834
+>> ACC! INSERT ;print(inf) 0.81834=>0.81619
+>> ACC! INSERT ;Q = 0 0.81619=>0.80492
+>> ACC! INSERT ;II = 0 0.80492=>0.74660
+Example time cost:  0.08 min
+ALL examples time cost:  3.01 min
+Query times in this attack:  206
+Greedy query times: 206
+Ga query times: 0
+All Query times:  7484
+Success rate:  0.84375
+Successful items count:  54
+Total count:  64
+Index:  76
+
+LABEL_38 LABEL_38
+>> ACC! INSERT ;T = 0 0.97580=>0.96803
+>> ACC! INSERT ;Data = 0 0.96803=>0.92275
+>> ACC! INSERT ;print(Data) 0.92275=>0.89684
+>> ACC! INSERT ;Row = 0 0.89684=>0.85077
+>> ACC! INSERT ; data = 0 0.85077=>0.73872
+>> ACC! INSERT ;Code = 0 0.73872=>0.65206
+>> ACC! INSERT ;Dat = 0 0.65206=>0.56046
+>> ACC! INSERT ;Some = 0 0.56046=>0.55795
+Example time cost:  0.06 min
+ALL examples time cost:  3.07 min
+Query times in this attack:  146
+Greedy query times: 146
+Ga query times: 0
+All Query times:  7630
+Success rate:  0.8307692307692308
+Successful items count:  54
+Total count:  65
+Index:  77
+
+LABEL_39 LABEL_39
+>> ACC! INSERT ;s = 0 0.99449=>0.99128
+>> ACC! INSERT ;print(s) 0.99128=>0.98495
+>> ACC! INSERT ;length = 0 0.98495=>0.96590
+>> ACC! INSERT ;print(length) 0.96590=>0.93216
+>> ACC! INSERT ;n = 0 0.93216=>0.92703
+>> ACC! INSERT ;print(n) 0.92703=>0.86907
+>> ACC! INSERT ;b = 0 0.86907=>0.84752
+>> ACC! INSERT ;print(b) 0.84752=>0.77870
+>> ACC! INSERT ;l = 0 0.77870=>0.70973
+>> ACC! INSERT ;print(l) 0.70973=>0.55501
+>> ACC! INSERT ;aces = 0 0.55501=>0.48429
+>> ACC! INSERT ;print(aces) 0.48429=>0.29682
+>> SUC! INSERT ;sports = 0
+Example time cost:  0.02 min
+ALL examples time cost:  3.09 min
+Query times in this attack:  47
+Greedy query times: 47
+Ga query times: 0
+All Query times:  7677
+Success rate:  0.8333333333333334
+Successful items count:  55
+Total count:  66
+Index:  78
+
+LABEL_44 LABEL_39
+Example time cost:  0.0 min
+ALL examples time cost:  3.09 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  7678
+Success rate:  0.8333333333333334
+Successful items count:  55
+Total count:  66
+Index:  79
+
+LABEL_65 LABEL_40
+Example time cost:  0.0 min
+ALL examples time cost:  3.09 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  7679
+Success rate:  0.8333333333333334
+Successful items count:  55
+Total count:  66
+Index:  80
+
+LABEL_12 LABEL_40
+Example time cost:  0.0 min
+ALL examples time cost:  3.09 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  7680
+Success rate:  0.8333333333333334
+Successful items count:  55
+Total count:  66
+Index:  81
+
+LABEL_41 LABEL_41
+>> ACC! INSERT ;main = 0 0.98064=>0.91853
+>> ACC! INSERT ;print(main) 0.91853=>0.70575
+>> ACC! INSERT ;l = 0 0.70575=>0.62939
+>> ACC! INSERT ;print(l) 0.62939=>0.48530
+>> ACC! INSERT ;start = 0 0.48530=>0.48192
+>> ACC! INSERT ;print(start) 0.48192=>0.38725
+>> ACC! INSERT ;log = 0 0.38725=>0.27778
+>> ACC! INSERT ;pl = 0 0.27778=>0.26326
+>> SUC! INSERT ;example = 0
+Example time cost:  0.02 min
+ALL examples time cost:  3.11 min
+Query times in this attack:  45
+Greedy query times: 45
+Ga query times: 0
+All Query times:  7725
+Success rate:  0.835820895522388
+Successful items count:  56
+Total count:  67
+Index:  82
+
+LABEL_41 LABEL_41
+>> ACC! INSERT ;py = 0 0.88080=>0.87911
+>> ACC! INSERT ;print(py) 0.87911=>0.75177
+>> ACC! INSERT ;mode = 0 0.75177=>0.49144
+>> ACC! INSERT ;print(mode) 0.49144=>0.29202
+>> SUC! INSERT ;run = 0
+Example time cost:  0.02 min
+ALL examples time cost:  3.13 min
+Query times in this attack:  51
+Greedy query times: 51
+Ga query times: 0
+All Query times:  7776
+Success rate:  0.8382352941176471
+Successful items count:  57
+Total count:  68
+Index:  83
+
+LABEL_42 LABEL_42
+>> ACC! INSERT ;s = 0 0.96868=>0.93537
+>> ACC! INSERT ;print(s) 0.93537=>0.92887
+>> ACC! INSERT ;k = 0 0.92887=>0.83208
+>> ACC! INSERT ;print(k) 0.83208=>0.82865
+>> ACC! INSERT ;i = 0 0.82865=>0.65695
+>> ACC! INSERT ;goods = 0 0.65695=>0.32449
+>> SUC! INSERT ;test = 0
+Example time cost:  0.02 min
+ALL examples time cost:  3.15 min
+Query times in this attack:  51
+Greedy query times: 51
+Ga query times: 0
+All Query times:  7827
+Success rate:  0.8405797101449275
+Successful items count:  58
+Total count:  69
+Index:  84
+
+LABEL_42 LABEL_42
+>> ACC! INSERT ;T = 0 0.80185=>0.57701
+>> ACC! INSERT ;t = 0 0.57701=>0.35216
+>> SUC! INSERT ;l = 0
+Example time cost:  0.01 min
+ALL examples time cost:  3.16 min
+Query times in this attack:  37
+Greedy query times: 37
+Ga query times: 0
+All Query times:  7864
+Success rate:  0.8428571428571429
+Successful items count:  59
+Total count:  70
+Index:  85
+
+LABEL_27 LABEL_43
+Example time cost:  0.0 min
+ALL examples time cost:  3.16 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  7865
+Success rate:  0.8428571428571429
+Successful items count:  59
+Total count:  70
+Index:  86
+
+LABEL_43 LABEL_43
+Example time cost:  0.16 min
+ALL examples time cost:  3.32 min
+Query times in this attack:  377
+Greedy query times: 377
+Ga query times: 0
+All Query times:  8242
+Success rate:  0.8309859154929577
+Successful items count:  59
+Total count:  71
+Index:  87
+
+LABEL_44 LABEL_44
+>> ACC! INSERT ;num = 0 0.97038=>0.83982
+>> ACC! INSERT ;print(num) 0.83982=>0.69600
+>> ACC! INSERT ;s1 = 0 0.69600=>0.63339
+>> ACC! INSERT ;print(s1) 0.63339=>0.38981
+>> ACC! INSERT ;s2 = 0 0.38981=>0.28929
+>> ACC! INSERT ;print(s2) 0.28929=>0.17274
+>> SUC! INSERT ;fair_numbers = 0
+Example time cost:  0.01 min
+ALL examples time cost:  3.33 min
+Query times in this attack:  38
+Greedy query times: 38
+Ga query times: 0
+All Query times:  8280
+Success rate:  0.8333333333333334
+Successful items count:  60
+Total count:  72
+Index:  88
+
+LABEL_44 LABEL_44
+>> ACC! INSERT ;i = 0 0.97620=>0.86124
+>> ACC! INSERT ;print(i) 0.86124=>0.42999
+>> SUC! INSERT ;line = 0
+Example time cost:  0.01 min
+ALL examples time cost:  3.35 min
+Query times in this attack:  38
+Greedy query times: 38
+Ga query times: 0
+All Query times:  8318
+Success rate:  0.8356164383561644
+Successful items count:  61
+Total count:  73
+Index:  89
+
+LABEL_31 LABEL_45
+Example time cost:  0.0 min
+ALL examples time cost:  3.35 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  8319
+Success rate:  0.8356164383561644
+Successful items count:  61
+Total count:  73
+Index:  90
+
+LABEL_45 LABEL_45
+>> ACC! INSERT ;score = 0 0.64446=>0.58843
+>> ACC! INSERT ;best = 0 0.58843=>0.53818
+>> ACC! INSERT ;maxsurprising = 0 0.53818=>0.41353
+>> ACC! INSERT ;case = 0 0.41353=>0.19629
+>> SUC! INSERT ;case = 0
+Example time cost:  0.03 min
+ALL examples time cost:  3.38 min
+Query times in this attack:  72
+Greedy query times: 72
+Ga query times: 0
+All Query times:  8391
+Success rate:  0.8378378378378378
+Successful items count:  62
+Total count:  74
+Index:  91
+
+LABEL_46 LABEL_46
+>> ACC! INSERT ;n = 0 0.89655=>0.63131
+>> ACC! INSERT ;print(n) 0.63131=>0.57215
+>> ACC! INSERT ;l = 0 0.57215=>0.57130
+>> ACC! INSERT ;mid = 0 0.57130=>0.43188
+>> ACC! INSERT ;print(mid) 0.43188=>0.32376
+>> ACC! INSERT ;fair = 0 0.32376=>0.27792
+>> SUC! INSERT ;x = 0
+Example time cost:  0.03 min
+ALL examples time cost:  3.41 min
+Query times in this attack:  79
+Greedy query times: 79
+Ga query times: 0
+All Query times:  8470
+Success rate:  0.84
+Successful items count:  63
+Total count:  75
+Index:  92
+
+LABEL_46 LABEL_46
+>> ACC! INSERT ;input = 0 0.99212=>0.93382
+>> ACC! INSERT ;print(input) 0.93382=>0.86733
+>> ACC! INSERT ;low_scores = 0 0.86733=>0.85283
+>> ACC! INSERT ;print(low_scores) 0.85283=>0.82102
+>> ACC! INSERT ;format = 0 0.82102=>0.81042
+>> ACC! INSERT ;feed = 0 0.81042=>0.78071
+>> ACC! INSERT ;format = 0 0.78071=>0.77868
+>> ACC! INSERT ;final = 0 0.77868=>0.77319
+>> ACC! INSERT ;null = 0 0.77319=>0.76362
+>> ACC! INSERT ;character = 0 0.76362=>0.74519
+>> ACC! INSERT ;print(character) 0.74519=>0.72776
+>> ACC! INSERT ;df = 0 0.72776=>0.69444
+>> ACC! INSERT ;print(df) 0.69444=>0.60536
+>> ACC! INSERT ;M = 0 0.60536=>0.58277
+>> ACC! INSERT ;NR = 0 0.58277=>0.52447
+>> ACC! INSERT ;Size = 0 0.52447=>0.46593
+>> ACC! INSERT ;print(Size) 0.46593=>0.41431
+>> ACC! INSERT ;case = 0 0.41431=>0.30601
+>> SUC! INSERT ;u = 0
+Example time cost:  0.09 min
+ALL examples time cost:  3.5 min
+Query times in this attack:  220
+Greedy query times: 220
+Ga query times: 0
+All Query times:  8690
+Success rate:  0.8421052631578947
+Successful items count:  64
+Total count:  76
+Index:  93
+
+LABEL_14 LABEL_47
+Example time cost:  0.0 min
+ALL examples time cost:  3.5 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  8691
+Success rate:  0.8421052631578947
+Successful items count:  64
+Total count:  76
+Index:  94
+
+LABEL_51 LABEL_47
+Example time cost:  0.0 min
+ALL examples time cost:  3.5 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  8692
+Success rate:  0.8421052631578947
+Successful items count:  64
+Total count:  76
+Index:  95
+
+LABEL_48 LABEL_48
+>> ACC! INSERT ;directory = 0 0.99809=>0.99436
+>> ACC! INSERT ;print(directory) 0.99436=>0.97924
+>> ACC! INSERT ;n = 0 0.97924=>0.97164
+>> ACC! INSERT ;print(n) 0.97164=>0.96782
+>> ACC! INSERT ;l = 0 0.96782=>0.91063
+>> ACC! INSERT ;print(l) 0.91063=>0.89605
+>> ACC! INSERT ;fair_and_squares = 0 0.89605=>0.88885
+>> ACC! INSERT ;i = 0 0.88885=>0.69124
+>> ACC! INSERT ;T = 0 0.69124=>0.67894
+>> ACC! INSERT ;x = 0 0.67894=>0.51291
+>> SUC! INSERT ;input = 0
+Example time cost:  0.04 min
+ALL examples time cost:  3.53 min
+Query times in this attack:  95
+Greedy query times: 95
+Ga query times: 0
+All Query times:  8787
+Success rate:  0.8441558441558441
+Successful items count:  65
+Total count:  77
+Index:  96
+
+LABEL_48 LABEL_48
+>> ACC! INSERT ;directory = 0 0.99884=>0.99698
+>> ACC! INSERT ;print(directory) 0.99698=>0.99246
+>> ACC! INSERT ;f_in = 0 0.99246=>0.98785
+>> ACC! INSERT ;print(f_in) 0.98785=>0.97757
+>> ACC! INSERT ;f_out = 0 0.97757=>0.92473
+>> ACC! INSERT ;T = 0 0.92473=>0.74220
+>> ACC! INSERT ;nnn = 0 0.74220=>0.73145
+>> ACC! INSERT ;x = 0 0.73145=>0.67557
+>> ACC! INSERT ;S = 0 0.67557=>0.55992
+>> SUC! INSERT ;t = 0
+Example time cost:  0.04 min
+ALL examples time cost:  3.57 min
+Query times in this attack:  96
+Greedy query times: 96
+Ga query times: 0
+All Query times:  8883
+Success rate:  0.8461538461538461
+Successful items count:  66
+Total count:  78
+Index:  97
+
+LABEL_49 LABEL_49
+>> ACC! INSERT ;n = 0 0.99046=>0.94418
+>> ACC! INSERT ;print(n) 0.94418=>0.88522
+>> ACC! INSERT ;start = 0 0.88522=>0.68012
+>> ACC! INSERT ;print(start) 0.68012=>0.63773
+>> ACC! INSERT ;a = 0 0.63773=>0.38769
+>> ACC! INSERT ;print(a) 0.38769=>0.37817
+>> ACC! INSERT ;b = 0 0.37817=>0.27157
+>> ACC! INSERT ;case = 0 0.27157=>0.25102
+>> SUC! INSERT ;A = 0
+Example time cost:  0.03 min
+ALL examples time cost:  3.6 min
+Query times in this attack:  73
+Greedy query times: 73
+Ga query times: 0
+All Query times:  8956
+Success rate:  0.8481012658227848
+Successful items count:  67
+Total count:  79
+Index:  98
+
+LABEL_49 LABEL_49
+>> ACC! INSERT ;fin = 0 0.97610=>0.70682
+>> ACC! INSERT ;print(fin) 0.70682=>0.53808
+>> SUC! INSERT ;fout = 0
+Example time cost:  0.01 min
+ALL examples time cost:  3.61 min
+Query times in this attack:  41
+Greedy query times: 41
+Ga query times: 0
+All Query times:  8997
+Success rate:  0.85
+Successful items count:  68
+Total count:  80
+Index:  99
+
+LABEL_50 LABEL_50
+>> ACC! INSERT ;case = 0 0.99550=>0.98737
+>> ACC! INSERT ;print(case) 0.98737=>0.97795
+>> ACC! INSERT ;name = 0 0.97795=>0.95362
+>> ACC! INSERT ;print(name) 0.95362=>0.94530
+>> ACC! INSERT ;API = 0 0.94530=>0.93848
+>> ACC! INSERT ;print(API) 0.93848=>0.86362
+>> ACC! INSERT ;alpha = 0 0.86362=>0.81979
+>> ACC! INSERT ;print(alpha) 0.81979=>0.70795
+>> ACC! INSERT ;GA = 0 0.70795=>0.68085
+>> ACC! INSERT ;print(GA) 0.68085=>0.50022
+>> ACC! INSERT ;RB = 0 0.50022=>0.47525
+>> SUC! INSERT ;print(RB)
+Example time cost:  0.04 min
+ALL examples time cost:  3.65 min
+Query times in this attack:  107
+Greedy query times: 107
+Ga query times: 0
+All Query times:  9104
+Success rate:  0.8518518518518519
+Successful items count:  69
+Total count:  81
+Index:  100
+
+LABEL_50 LABEL_50
+>> ACC! INSERT ;n = 0 0.92225=>0.83087
+>> ACC! INSERT ;print(n) 0.83087=>0.75370
+>> ACC! INSERT ;s = 0 0.75370=>0.64537
+>> SUC! INSERT ;print(s)
+Example time cost:  0.01 min
+ALL examples time cost:  3.67 min
+Query times in this attack:  39
+Greedy query times: 39
+Ga query times: 0
+All Query times:  9143
+Success rate:  0.8536585365853658
+Successful items count:  70
+Total count:  82
+Index:  101
+
+LABEL_31 LABEL_51
+Example time cost:  0.0 min
+ALL examples time cost:  3.67 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  9144
+Success rate:  0.8536585365853658
+Successful items count:  70
+Total count:  82
+Index:  102
+
+LABEL_51 LABEL_51
+>> ACC! INSERT ;N = 0 0.97380=>0.95446
+>> ACC! INSERT ;p = 0 0.95446=>0.95216
+>> ACC! INSERT ;potential_surprises = 0 0.95216=>0.90363
+>> ACC! INSERT ;win_cutoff = 0 0.90363=>0.84772
+>> ACC! INSERT ;case_number = 0 0.84772=>0.82434
+>> ACC! INSERT ;P = 0 0.82434=>0.78660
+>> ACC! INSERT ;Q = 0 0.78660=>0.78578
+>> ACC! INSERT ;Net = 0 0.78578=>0.74919
+>> ACC! INSERT ;max = 0 0.74919=>0.70848
+>> ACC! INSERT ;pr = 0 0.70848=>0.70696
+>> ACC! INSERT ;outright_win = 0 0.70696=>0.67468
+>> ACC! INSERT ;win_potoffs = 0 0.67468=>0.66504
+>> ACC! INSERT ;rank = 0 0.66504=>0.63455
+Example time cost:  0.14 min
+ALL examples time cost:  3.81 min
+Query times in this attack:  344
+Greedy query times: 344
+Ga query times: 0
+All Query times:  9488
+Success rate:  0.8433734939759037
+Successful items count:  70
+Total count:  83
+Index:  103
+
+LABEL_52 LABEL_52
+>> SUC! INSERT ;r = 0
+Example time cost:  0.02 min
+ALL examples time cost:  3.83 min
+Query times in this attack:  51
+Greedy query times: 51
+Ga query times: 0
+All Query times:  9539
+Success rate:  0.8452380952380952
+Successful items count:  71
+Total count:  84
+Index:  104
+
+LABEL_52 LABEL_52
+>> ACC! INSERT ;mod_plus_conv_with_s = 0 0.98666=>0.91510
+>> ACC! INSERT ;print(mod_plus_conv_with_s) 0.91510=>0.83841
+>> ACC! INSERT ;mod_plus_conv_without_s = 0 0.83841=>0.72793
+>> ACC! INSERT ;xs = 0 0.72793=>0.72449
+>> ACC! INSERT ;SCores = 0 0.72449=>0.71912
+>> ACC! INSERT ;Scores = 0 0.71912=>0.65745
+>> ACC! INSERT ;Scales = 0 0.65745=>0.63450
+>> ACC! INSERT ;outs = 0 0.63450=>0.59107
+>> ACC! INSERT ;Total_cells = 0 0.59107=>0.55499
+>> ACC! INSERT ;total68grades = 0 0.55499=>0.49796
+Example time cost:  0.08 min
+ALL examples time cost:  3.91 min
+Query times in this attack:  198
+Greedy query times: 198
+Ga query times: 0
+All Query times:  9737
+Success rate:  0.8352941176470589
+Successful items count:  71
+Total count:  85
+Index:  105
+
+LABEL_53 LABEL_53
+>> ACC! INSERT ;n = 0 0.99949=>0.99866
+>> ACC! INSERT ;print(n) 0.99866=>0.99736
+>> ACC! INSERT ;i = 0 0.99736=>0.99026
+>> ACC! INSERT ;inputFileName = 0 0.99026=>0.89770
+>> ACC! INSERT ;f = 0 0.89770=>0.67469
+>> ACC! INSERT ;data = 0 0.67469=>0.46562
+>> SUC! INSERT ;l = 0
+Example time cost:  0.02 min
+ALL examples time cost:  3.93 min
+Query times in this attack:  60
+Greedy query times: 60
+Ga query times: 0
+All Query times:  9797
+Success rate:  0.8372093023255814
+Successful items count:  72
+Total count:  86
+Index:  106
+
+LABEL_53 LABEL_53
+>> ACC! INSERT ;arq = 0 0.97418=>0.55681
+>> ACC! INSERT ;print(arq) 0.55681=>0.45391
+>> SUC! INSERT ;n_cases = 0
+Example time cost:  0.02 min
+ALL examples time cost:  3.96 min
+Query times in this attack:  68
+Greedy query times: 68
+Ga query times: 0
+All Query times:  9865
+Success rate:  0.8390804597701149
+Successful items count:  73
+Total count:  87
+Index:  107
+
+LABEL_54 LABEL_54
+>> ACC! INSERT ;n = 0 0.99702=>0.97922
+>> ACC! INSERT ;print(n) 0.97922=>0.97797
+>> ACC! INSERT ;l = 0 0.97797=>0.93324
+>> ACC! INSERT ;u = 0 0.93324=>0.86171
+>> ACC! INSERT ;x = 0 0.86171=>0.78720
+>> ACC! INSERT ;pn = 0 0.78720=>0.74866
+>> ACC! INSERT ;print(pn) 0.74866=>0.69280
+>> ACC! INSERT ;r = 0 0.69280=>0.61311
+>> ACC! INSERT ;s = 0 0.61311=>0.35335
+>> SUC! INSERT ;v = 0
+Example time cost:  0.02 min
+ALL examples time cost:  3.98 min
+Query times in this attack:  58
+Greedy query times: 58
+Ga query times: 0
+All Query times:  9923
+Success rate:  0.8409090909090909
+Successful items count:  74
+Total count:  88
+Index:  108
+
+LABEL_54 LABEL_54
+>> ACC! INSERT ;num_surprises = 0 0.99506=>0.78797
+>> ACC! INSERT ;p = 0 0.78797=>0.63408
+>> ACC! INSERT ;ts = 0 0.63408=>0.63365
+>> ACC! INSERT ;s = 0 0.63365=>0.59495
+>> ACC! INSERT ;u = 0 0.59495=>0.53975
+>> ACC! INSERT ;a = 0 0.53975=>0.53689
+>> ACC! INSERT ;x = 0 0.53689=>0.45436
+>> ACC! INSERT ;num_projectities = 0 0.45436=>0.44360
+>> ACC! INSERT ;print(num_projectities) 0.44360=>0.43480
+>> ACC! INSERT ;num__surfaces = 0 0.43480=>0.32118
+>> ACC! INSERT ;num_curprise = 0 0.32118=>0.32033
+>> ACC! INSERT ;print(num_curprise) 0.32033=>0.30942
+>> ACC! INSERT ;num_useprises = 0 0.30942=>0.28512
+>> ACC! INSERT ;print(num_useprises) 0.28512=>0.25060
+>> SUC! INSERT ;num_sweprises = 0
+Example time cost:  0.03 min
+ALL examples time cost:  4.01 min
+Query times in this attack:  88
+Greedy query times: 88
+Ga query times: 0
+All Query times:  10011
+Success rate:  0.8426966292134831
+Successful items count:  75
+Total count:  89
+Index:  109
+
+LABEL_55 LABEL_55
+>> ACC! INSERT ;n = 0 0.94372=>0.86862
+>> ACC! INSERT ;s = 0 0.86862=>0.81885
+>> ACC! INSERT ;sqrt = 0 0.81885=>0.79704
+>> ACC! INSERT ;idx = 0 0.79704=>0.70914
+>> ACC! INSERT ;i = 0 0.70914=>0.60801
+>> ACC! INSERT ;z = 0 0.60801=>0.59069
+>> ACC! INSERT ;mn = 0 0.59069=>0.55390
+>> ACC! INSERT ;node = 0 0.55390=>0.50785
+>> SUC! INSERT ;nw = 0
+Example time cost:  0.04 min
+ALL examples time cost:  4.05 min
+Query times in this attack:  104
+Greedy query times: 104
+Ga query times: 0
+All Query times:  10115
+Success rate:  0.8444444444444444
+Successful items count:  76
+Total count:  90
+Index:  110
+
+LABEL_55 LABEL_55
+>> ACC! INSERT ;f = 0 0.96535=>0.86659
+>> ACC! INSERT ;print(f) 0.86659=>0.84864
+>> ACC! INSERT ;fn = 0 0.84864=>0.69185
+>> ACC! INSERT ;print(fn) 0.69185=>0.50801
+>> SUC! INSERT ;_t = 0
+Example time cost:  0.02 min
+ALL examples time cost:  4.07 min
+Query times in this attack:  49
+Greedy query times: 49
+Ga query times: 0
+All Query times:  10164
+Success rate:  0.8461538461538461
+Successful items count:  77
+Total count:  91
+Index:  111
+
+LABEL_56 LABEL_56
+>> ACC! INSERT ;file = 0 0.99326=>0.99041
+>> ACC! INSERT ;print(file) 0.99041=>0.98804
+>> ACC! INSERT ;i = 0 0.98804=>0.98781
+>> ACC! INSERT ;print(i) 0.98781=>0.98232
+>> ACC! INSERT ;test = 0 0.98232=>0.97979
+>> ACC! INSERT ;print(test) 0.97979=>0.96325
+>> ACC! INSERT ;line = 0 0.96325=>0.95577
+>> ACC! INSERT ;print(line) 0.95577=>0.93222
+>> ACC! INSERT ;frontHalf = 0 0.93222=>0.87332
+>> ACC! INSERT ;print(frontHalf) 0.87332=>0.80494
+>> ACC! INSERT ;backHalf = 0 0.80494=>0.80339
+>> SUC! INSERT ;print(backHalf)
+Example time cost:  0.04 min
+ALL examples time cost:  4.11 min
+Query times in this attack:  112
+Greedy query times: 112
+Ga query times: 0
+All Query times:  10276
+Success rate:  0.8478260869565217
+Successful items count:  78
+Total count:  92
+Index:  112
+
+LABEL_56 LABEL_56
+Example time cost:  0.21 min
+ALL examples time cost:  4.32 min
+Query times in this attack:  485
+Greedy query times: 485
+Ga query times: 0
+All Query times:  10761
+Success rate:  0.8387096774193549
+Successful items count:  78
+Total count:  93
+Index:  113
+
+LABEL_57 LABEL_57
+>> ACC! INSERT ;self = 0 0.65367=>0.56780
+>> ACC! INSERT ;tCase = 0 0.56780=>0.53638
+>> ACC! INSERT ;M = 0 0.53638=>0.50535
+>> ACC! INSERT ;N = 0 0.50535=>0.50112
+>> ACC! INSERT ;result = 0 0.50112=>0.47104
+>> ACC! INSERT ;i = 0 0.47104=>0.41372
+>> ACC! INSERT ;l = 0 0.41372=>0.34785
+>> ACC! INSERT ;connection = 0 0.34785=>0.34221
+>> SUC! INSERT ;function = 0
+Example time cost:  0.04 min
+ALL examples time cost:  4.36 min
+Query times in this attack:  94
+Greedy query times: 94
+Ga query times: 0
+All Query times:  10855
+Success rate:  0.8404255319148937
+Successful items count:  79
+Total count:  94
+Index:  114
+
+LABEL_57 LABEL_57
+>> SUC! INSERT ;tCase = 0
+Example time cost:  0.02 min
+ALL examples time cost:  4.38 min
+Query times in this attack:  59
+Greedy query times: 59
+Ga query times: 0
+All Query times:  10914
+Success rate:  0.8421052631578947
+Successful items count:  80
+Total count:  95
+Index:  115
+
+LABEL_5 LABEL_58
+Example time cost:  0.0 min
+ALL examples time cost:  4.38 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  10915
+Success rate:  0.8421052631578947
+Successful items count:  80
+Total count:  95
+Index:  116
+
+LABEL_58 LABEL_58
+>> ACC! INSERT ;p = 0 0.94037=>0.67743
+>> ACC! INSERT ;print(p) 0.67743=>0.54014
+>> ACC! INSERT ;t = 0 0.54014=>0.47048
+>> ACC! INSERT ;print(t) 0.47048=>0.33216
+>> SUC! INSERT ;q = 0
+Example time cost:  0.02 min
+ALL examples time cost:  4.4 min
+Query times in this attack:  54
+Greedy query times: 54
+Ga query times: 0
+All Query times:  10969
+Success rate:  0.84375
+Successful items count:  81
+Total count:  96
+Index:  117
+
+LABEL_59 LABEL_59
+>> ACC! INSERT ;lst = 0 0.54565=>0.33816
+>> ACC! INSERT ;print(lst) 0.33816=>0.29327
+>> ACC! INSERT ;count = 0 0.29327=>0.20146
+>> SUC! INSERT ;fname = 0
+Example time cost:  0.02 min
+ALL examples time cost:  4.41 min
+Query times in this attack:  49
+Greedy query times: 49
+Ga query times: 0
+All Query times:  11018
+Success rate:  0.845360824742268
+Successful items count:  82
+Total count:  97
+Index:  118
+
+LABEL_51 LABEL_59
+Example time cost:  0.0 min
+ALL examples time cost:  4.41 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  11019
+Success rate:  0.845360824742268
+Successful items count:  82
+Total count:  97
+Index:  119
+
+LABEL_60 LABEL_60
+Example time cost:  0.17 min
+ALL examples time cost:  4.59 min
+Query times in this attack:  419
+Greedy query times: 419
+Ga query times: 0
+All Query times:  11438
+Success rate:  0.8367346938775511
+Successful items count:  82
+Total count:  98
+Index:  120
+
+LABEL_60 LABEL_60
+Example time cost:  0.17 min
+ALL examples time cost:  4.76 min
+Query times in this attack:  401
+Greedy query times: 401
+Ga query times: 0
+All Query times:  11839
+Success rate:  0.8282828282828283
+Successful items count:  82
+Total count:  99
+Index:  121
+
+LABEL_61 LABEL_61
+>> ACC! INSERT ;x = 0 0.97936=>0.91686
+>> ACC! INSERT ;print(x) 0.91686=>0.86625
+>> ACC! INSERT ;t = 0 0.86625=>0.82963
+>> ACC! INSERT ;print(t) 0.82963=>0.80453
+>> ACC! INSERT ;case = 0 0.80453=>0.58029
+>> ACC! INSERT ;print(case) 0.58029=>0.53108
+Example time cost:  0.07 min
+ALL examples time cost:  4.83 min
+Query times in this attack:  160
+Greedy query times: 160
+Ga query times: 0
+All Query times:  11999
+Success rate:  0.82
+Successful items count:  82
+Total count:  100
+Index:  122
+
+LABEL_61 LABEL_61
+>> ACC! INSERT ;t = 0 0.98429=>0.94497
+>> ACC! INSERT ;print(t) 0.94497=>0.92102
+>> ACC! INSERT ;max = 0 0.92102=>0.78066
+>> ACC! INSERT ;i = 0 0.78066=>0.69765
+>> ACC! INSERT ;line = 0 0.69765=>0.67547
+>> ACC! INSERT ;n = 0 0.67547=>0.45958
+>> ACC! INSERT ;l = 0 0.45958=>0.45716
+>> ACC! INSERT ;lt = 0 0.45716=>0.41708
+>> ACC! INSERT ;b = 0 0.41708=>0.40434
+>> ACC! INSERT ;step = 0 0.40434=>0.29422
+>> SUC! INSERT ;min = 0
+Example time cost:  0.03 min
+ALL examples time cost:  4.86 min
+Query times in this attack:  79
+Greedy query times: 79
+Ga query times: 0
+All Query times:  12078
+Success rate:  0.8217821782178217
+Successful items count:  83
+Total count:  101
+Index:  123
+
+LABEL_28 LABEL_62
+Example time cost:  0.0 min
+ALL examples time cost:  4.86 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  12079
+Success rate:  0.8217821782178217
+Successful items count:  83
+Total count:  101
+Index:  124
+
+LABEL_62 LABEL_62
+>> ACC! INSERT ;i = 0 0.48551=>0.43498
+>> SUC! INSERT ;ns = 0
+Example time cost:  0.01 min
+ALL examples time cost:  4.87 min
+Query times in this attack:  32
+Greedy query times: 32
+Ga query times: 0
+All Query times:  12111
+Success rate:  0.8235294117647058
+Successful items count:  84
+Total count:  102
+Index:  125
+
+LABEL_63 LABEL_63
+>> ACC! INSERT ;N = 0 0.78760=>0.48182
+>> ACC! INSERT ;print(N) 0.48182=>0.36305
+>> SUC! INSERT ;n = 0
+Example time cost:  0.02 min
+ALL examples time cost:  4.89 min
+Query times in this attack:  48
+Greedy query times: 48
+Ga query times: 0
+All Query times:  12159
+Success rate:  0.8252427184466019
+Successful items count:  85
+Total count:  103
+Index:  126
+
+LABEL_63 LABEL_63
+>> ACC! INSERT ;fin = 0 0.97759=>0.97488
+>> ACC! INSERT ;print(fin) 0.97488=>0.92395
+>> ACC! INSERT ;T = 0 0.92395=>0.85413
+>> ACC! INSERT ;print(T) 0.85413=>0.84263
+>> ACC! INSERT ;numbers = 0 0.84263=>0.81788
+>> ACC! INSERT ;print(numbers) 0.81788=>0.77234
+>> ACC! INSERT ;N = 0 0.77234=>0.68070
+>> ACC! INSERT ;print(N) 0.68070=>0.64063
+>> ACC! INSERT ;S = 0 0.64063=>0.54637
+>> ACC! INSERT ;print(S) 0.54637=>0.53416
+>> ACC! INSERT ;p = 0 0.53416=>0.46591
+>> ACC! INSERT ;surpising_limit = 0 0.46591=>0.46290
+>> ACC! INSERT ;surprising_count = 0 0.46290=>0.36769
+>> ACC! INSERT ;fun = 0 0.36769=>0.27315
+>> ACC! INSERT ;ir = 0 0.27315=>0.22025
+>> SUC! INSERT ;br = 0
+Example time cost:  0.02 min
+ALL examples time cost:  4.91 min
+Query times in this attack:  64
+Greedy query times: 64
+Ga query times: 0
+All Query times:  12223
+Success rate:  0.8269230769230769
+Successful items count:  86
+Total count:  104
+Index:  127
+
+LABEL_64 LABEL_64
+>> ACC! INSERT ;n = 0 0.97458=>0.74079
+>> ACC! INSERT ;print(n) 0.74079=>0.55016
+>> ACC! INSERT ;s = 0 0.55016=>0.41372
+>> SUC! INSERT ;print(s)
+Example time cost:  0.02 min
+ALL examples time cost:  4.93 min
+Query times in this attack:  53
+Greedy query times: 53
+Ga query times: 0
+All Query times:  12276
+Success rate:  0.8285714285714286
+Successful items count:  87
+Total count:  105
+Index:  128
+
+LABEL_64 LABEL_64
+>> ACC! INSERT ;T = 0 0.96420=>0.83198
+>> ACC! INSERT ;print(T) 0.83198=>0.62015
+>> ACC! INSERT ;Ti = 0 0.62015=>0.50649
+>> ACC! INSERT ;print(Ti) 0.50649=>0.22709
+>> SUC! INSERT ;numbers = 0
+Example time cost:  0.02 min
+ALL examples time cost:  4.95 min
+Query times in this attack:  46
+Greedy query times: 46
+Ga query times: 0
+All Query times:  12322
+Success rate:  0.8301886792452831
+Successful items count:  88
+Total count:  106
+Index:  129
+
+LABEL_65 LABEL_65
+>> ACC! INSERT ;t = 0 0.85131=>0.83406
+>> ACC! INSERT ;print(t) 0.83406=>0.56642
+>> ACC! INSERT ;B = 0 0.56642=>0.52130
+>> ACC! INSERT ;print(B) 0.52130=>0.24780
+>> ACC! INSERT ;x = 0 0.24780=>0.21727
+>> SUC! INSERT ;print(x)
+Example time cost:  0.03 min
+ALL examples time cost:  4.98 min
+Query times in this attack:  84
+Greedy query times: 84
+Ga query times: 0
+All Query times:  12406
+Success rate:  0.8317757009345794
+Successful items count:  89
+Total count:  107
+Index:  130
+
+LABEL_65 LABEL_65
+>> ACC! INSERT ;line = 0 0.96649=>0.91614
+>> ACC! INSERT ;print(line) 0.91614=>0.49533
+>> ACC! INSERT ;p = 0 0.49533=>0.34445
+>> SUC! INSERT ;print(p)
+Example time cost:  0.02 min
+ALL examples time cost:  5.0 min
+Query times in this attack:  47
+Greedy query times: 47
+Ga query times: 0
+All Query times:  12453
+Success rate:  0.8333333333333334
+Successful items count:  90
+Total count:  108
+Index:  131
+

@@ -1,0 +1,5633 @@
+Example time cost:  0.02 min
+ALL examples time cost:  0.02 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  1
+Example time cost:  0.0 min
+ALL examples time cost:  0.02 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  2
+Example time cost:  0.0 min
+ALL examples time cost:  0.02 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 0
+All Query times:  3
+Example time cost:  0.11 min
+ALL examples time cost:  0.13 min
+Query times in this attack:  440
+Greedy query times: 1
+Ga query times: 439
+All Query times:  443
+Success rate:  0.0
+Successful items count:  0
+Total count:  1
+Index:  3
+
+Example time cost:  0.0 min
+ALL examples time cost:  0.13 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 439
+All Query times:  444
+Success rate:  0.0
+Successful items count:  0
+Total count:  1
+Index:  4
+
+GA SUC!
+Example time cost:  0.28 min
+ALL examples time cost:  0.41 min
+Query times in this attack:  804
+Greedy query times: 1
+Ga query times: 803
+All Query times:  1248
+Success rate:  0.5
+Successful items count:  1
+Total count:  2
+Index:  5
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  0.45 min
+Query times in this attack:  159
+Greedy query times: 1
+Ga query times: 158
+All Query times:  1407
+Success rate:  0.6666666666666666
+Successful items count:  2
+Total count:  3
+Index:  6
+
+Example time cost:  0.0 min
+ALL examples time cost:  0.45 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 158
+All Query times:  1408
+Success rate:  0.6666666666666666
+Successful items count:  2
+Total count:  3
+Index:  7
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  0.64 min
+Query times in this attack:  647
+Greedy query times: 1
+Ga query times: 646
+All Query times:  2055
+Success rate:  0.75
+Successful items count:  3
+Total count:  4
+Index:  8
+
+GA SUC!
+Example time cost:  0.06 min
+ALL examples time cost:  0.7 min
+Query times in this attack:  221
+Greedy query times: 1
+Ga query times: 220
+All Query times:  2276
+Success rate:  0.8
+Successful items count:  4
+Total count:  5
+Index:  9
+
+GA SUC!
+Example time cost:  0.4 min
+ALL examples time cost:  1.1 min
+Query times in this attack:  644
+Greedy query times: 1
+Ga query times: 643
+All Query times:  2920
+Success rate:  0.8333333333333334
+Successful items count:  5
+Total count:  6
+Index:  10
+
+Example time cost:  0.06 min
+ALL examples time cost:  1.17 min
+Query times in this attack:  246
+Greedy query times: 1
+Ga query times: 245
+All Query times:  3166
+Success rate:  0.7142857142857143
+Successful items count:  5
+Total count:  7
+Index:  11
+
+Example time cost:  0.08 min
+ALL examples time cost:  1.25 min
+Query times in this attack:  290
+Greedy query times: 1
+Ga query times: 289
+All Query times:  3456
+Success rate:  0.625
+Successful items count:  5
+Total count:  8
+Index:  12
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  1.4 min
+Query times in this attack:  587
+Greedy query times: 1
+Ga query times: 586
+All Query times:  4043
+Success rate:  0.6666666666666666
+Successful items count:  6
+Total count:  9
+Index:  13
+
+Example time cost:  0.14 min
+ALL examples time cost:  1.54 min
+Query times in this attack:  605
+Greedy query times: 1
+Ga query times: 604
+All Query times:  4648
+Success rate:  0.6
+Successful items count:  6
+Total count:  10
+Index:  14
+
+Example time cost:  0.0 min
+ALL examples time cost:  1.54 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 604
+All Query times:  4649
+Success rate:  0.6
+Successful items count:  6
+Total count:  10
+Index:  15
+
+Example time cost:  0.0 min
+ALL examples time cost:  1.54 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 604
+All Query times:  4650
+Success rate:  0.6
+Successful items count:  6
+Total count:  10
+Index:  16
+
+Example time cost:  0.0 min
+ALL examples time cost:  1.54 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 604
+All Query times:  4651
+Success rate:  0.6
+Successful items count:  6
+Total count:  10
+Index:  17
+
+Example time cost:  0.14 min
+ALL examples time cost:  1.68 min
+Query times in this attack:  521
+Greedy query times: 1
+Ga query times: 520
+All Query times:  5172
+Success rate:  0.5454545454545454
+Successful items count:  6
+Total count:  11
+Index:  18
+
+GA SUC!
+Example time cost:  0.07 min
+ALL examples time cost:  1.74 min
+Query times in this attack:  229
+Greedy query times: 1
+Ga query times: 228
+All Query times:  5401
+Success rate:  0.5833333333333334
+Successful items count:  7
+Total count:  12
+Index:  19
+
+Example time cost:  0.0 min
+ALL examples time cost:  1.74 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 228
+All Query times:  5402
+Success rate:  0.5833333333333334
+Successful items count:  7
+Total count:  12
+Index:  20
+
+Example time cost:  0.0 min
+ALL examples time cost:  1.74 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 228
+All Query times:  5403
+Success rate:  0.5833333333333334
+Successful items count:  7
+Total count:  12
+Index:  21
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  1.79 min
+Query times in this attack:  164
+Greedy query times: 1
+Ga query times: 163
+All Query times:  5567
+Success rate:  0.6153846153846154
+Successful items count:  8
+Total count:  13
+Index:  22
+
+Example time cost:  0.09 min
+ALL examples time cost:  1.88 min
+Query times in this attack:  352
+Greedy query times: 1
+Ga query times: 351
+All Query times:  5919
+Success rate:  0.5714285714285714
+Successful items count:  8
+Total count:  14
+Index:  23
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  2.03 min
+Query times in this attack:  408
+Greedy query times: 1
+Ga query times: 407
+All Query times:  6327
+Success rate:  0.6
+Successful items count:  9
+Total count:  15
+Index:  24
+
+Example time cost:  0.0 min
+ALL examples time cost:  2.03 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 407
+All Query times:  6328
+Success rate:  0.6
+Successful items count:  9
+Total count:  15
+Index:  25
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  2.07 min
+Query times in this attack:  156
+Greedy query times: 1
+Ga query times: 155
+All Query times:  6484
+Success rate:  0.625
+Successful items count:  10
+Total count:  16
+Index:  26
+
+Example time cost:  0.41 min
+ALL examples time cost:  2.48 min
+Query times in this attack:  1413
+Greedy query times: 1
+Ga query times: 1412
+All Query times:  7897
+Success rate:  0.5882352941176471
+Successful items count:  10
+Total count:  17
+Index:  27
+
+Example time cost:  0.0 min
+ALL examples time cost:  2.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1412
+All Query times:  7898
+Success rate:  0.5882352941176471
+Successful items count:  10
+Total count:  17
+Index:  28
+
+Example time cost:  0.0 min
+ALL examples time cost:  2.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1412
+All Query times:  7899
+Success rate:  0.5882352941176471
+Successful items count:  10
+Total count:  17
+Index:  29
+
+Example time cost:  0.0 min
+ALL examples time cost:  2.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1412
+All Query times:  7900
+Success rate:  0.5882352941176471
+Successful items count:  10
+Total count:  17
+Index:  30
+
+Example time cost:  0.08 min
+ALL examples time cost:  2.56 min
+Query times in this attack:  276
+Greedy query times: 1
+Ga query times: 275
+All Query times:  8176
+Success rate:  0.5555555555555556
+Successful items count:  10
+Total count:  18
+Index:  31
+
+Example time cost:  0.08 min
+ALL examples time cost:  2.64 min
+Query times in this attack:  302
+Greedy query times: 1
+Ga query times: 301
+All Query times:  8478
+Success rate:  0.5263157894736842
+Successful items count:  10
+Total count:  19
+Index:  32
+
+GA SUC!
+Example time cost:  0.18 min
+ALL examples time cost:  2.82 min
+Query times in this attack:  353
+Greedy query times: 1
+Ga query times: 352
+All Query times:  8831
+Success rate:  0.55
+Successful items count:  11
+Total count:  20
+Index:  33
+
+Example time cost:  0.0 min
+ALL examples time cost:  2.82 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 352
+All Query times:  8832
+Success rate:  0.55
+Successful items count:  11
+Total count:  20
+Index:  34
+
+Example time cost:  0.17 min
+ALL examples time cost:  2.99 min
+Query times in this attack:  676
+Greedy query times: 1
+Ga query times: 675
+All Query times:  9508
+Success rate:  0.5238095238095238
+Successful items count:  11
+Total count:  21
+Index:  35
+
+Example time cost:  0.58 min
+ALL examples time cost:  3.57 min
+Query times in this attack:  1479
+Greedy query times: 1
+Ga query times: 1478
+All Query times:  10987
+Success rate:  0.5
+Successful items count:  11
+Total count:  22
+Index:  36
+
+Example time cost:  0.06 min
+ALL examples time cost:  3.62 min
+Query times in this attack:  258
+Greedy query times: 1
+Ga query times: 257
+All Query times:  11245
+Success rate:  0.4782608695652174
+Successful items count:  11
+Total count:  23
+Index:  37
+
+GA SUC!
+Example time cost:  0.11 min
+ALL examples time cost:  3.74 min
+Query times in this attack:  416
+Greedy query times: 1
+Ga query times: 415
+All Query times:  11661
+Success rate:  0.5
+Successful items count:  12
+Total count:  24
+Index:  38
+
+GA SUC!
+Example time cost:  0.16 min
+ALL examples time cost:  3.89 min
+Query times in this attack:  437
+Greedy query times: 1
+Ga query times: 436
+All Query times:  12098
+Success rate:  0.52
+Successful items count:  13
+Total count:  25
+Index:  39
+
+Example time cost:  0.37 min
+ALL examples time cost:  4.27 min
+Query times in this attack:  1392
+Greedy query times: 1
+Ga query times: 1391
+All Query times:  13490
+Success rate:  0.5
+Successful items count:  13
+Total count:  26
+Index:  40
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.27 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1391
+All Query times:  13491
+Success rate:  0.5
+Successful items count:  13
+Total count:  26
+Index:  41
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.27 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1391
+All Query times:  13492
+Success rate:  0.5
+Successful items count:  13
+Total count:  26
+Index:  42
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.27 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1391
+All Query times:  13493
+Success rate:  0.5
+Successful items count:  13
+Total count:  26
+Index:  43
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.27 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1391
+All Query times:  13494
+Success rate:  0.5
+Successful items count:  13
+Total count:  26
+Index:  44
+
+Example time cost:  0.08 min
+ALL examples time cost:  4.34 min
+Query times in this attack:  289
+Greedy query times: 1
+Ga query times: 288
+All Query times:  13783
+Success rate:  0.48148148148148145
+Successful items count:  13
+Total count:  27
+Index:  45
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.34 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 288
+All Query times:  13784
+Success rate:  0.48148148148148145
+Successful items count:  13
+Total count:  27
+Index:  46
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.34 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 288
+All Query times:  13785
+Success rate:  0.48148148148148145
+Successful items count:  13
+Total count:  27
+Index:  47
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  4.43 min
+Query times in this attack:  284
+Greedy query times: 1
+Ga query times: 283
+All Query times:  14069
+Success rate:  0.5
+Successful items count:  14
+Total count:  28
+Index:  48
+
+Example time cost:  0.12 min
+ALL examples time cost:  4.55 min
+Query times in this attack:  256
+Greedy query times: 1
+Ga query times: 255
+All Query times:  14325
+Success rate:  0.4827586206896552
+Successful items count:  14
+Total count:  29
+Index:  49
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.55 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 255
+All Query times:  14326
+Success rate:  0.4827586206896552
+Successful items count:  14
+Total count:  29
+Index:  50
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.55 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 255
+All Query times:  14327
+Success rate:  0.4827586206896552
+Successful items count:  14
+Total count:  29
+Index:  51
+
+Example time cost:  0.0 min
+ALL examples time cost:  4.55 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 255
+All Query times:  14328
+Success rate:  0.4827586206896552
+Successful items count:  14
+Total count:  29
+Index:  52
+
+GA SUC!
+Example time cost:  0.16 min
+ALL examples time cost:  4.71 min
+Query times in this attack:  549
+Greedy query times: 1
+Ga query times: 548
+All Query times:  14877
+Success rate:  0.5
+Successful items count:  15
+Total count:  30
+Index:  53
+
+Example time cost:  0.11 min
+ALL examples time cost:  4.81 min
+Query times in this attack:  420
+Greedy query times: 1
+Ga query times: 419
+All Query times:  15297
+Success rate:  0.4838709677419355
+Successful items count:  15
+Total count:  31
+Index:  54
+
+Example time cost:  0.48 min
+ALL examples time cost:  5.29 min
+Query times in this attack:  1695
+Greedy query times: 1
+Ga query times: 1694
+All Query times:  16992
+Success rate:  0.46875
+Successful items count:  15
+Total count:  32
+Index:  55
+
+Example time cost:  0.0 min
+ALL examples time cost:  5.3 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1694
+All Query times:  16993
+Success rate:  0.46875
+Successful items count:  15
+Total count:  32
+Index:  56
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  5.34 min
+Query times in this attack:  160
+Greedy query times: 1
+Ga query times: 159
+All Query times:  17153
+Success rate:  0.48484848484848486
+Successful items count:  16
+Total count:  33
+Index:  57
+
+Example time cost:  0.0 min
+ALL examples time cost:  5.34 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 159
+All Query times:  17154
+Success rate:  0.48484848484848486
+Successful items count:  16
+Total count:  33
+Index:  58
+
+Example time cost:  0.11 min
+ALL examples time cost:  5.45 min
+Query times in this attack:  441
+Greedy query times: 1
+Ga query times: 440
+All Query times:  17595
+Success rate:  0.47058823529411764
+Successful items count:  16
+Total count:  34
+Index:  59
+
+Example time cost:  0.0 min
+ALL examples time cost:  5.45 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 440
+All Query times:  17596
+Success rate:  0.47058823529411764
+Successful items count:  16
+Total count:  34
+Index:  60
+
+Example time cost:  0.79 min
+ALL examples time cost:  6.24 min
+Query times in this attack:  2238
+Greedy query times: 1
+Ga query times: 2237
+All Query times:  19834
+Success rate:  0.45714285714285713
+Successful items count:  16
+Total count:  35
+Index:  61
+
+Example time cost:  0.0 min
+ALL examples time cost:  6.24 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 2237
+All Query times:  19835
+Success rate:  0.45714285714285713
+Successful items count:  16
+Total count:  35
+Index:  62
+
+Example time cost:  0.11 min
+ALL examples time cost:  6.35 min
+Query times in this attack:  427
+Greedy query times: 1
+Ga query times: 426
+All Query times:  20262
+Success rate:  0.4444444444444444
+Successful items count:  16
+Total count:  36
+Index:  63
+
+GA SUC!
+Example time cost:  0.14 min
+ALL examples time cost:  6.49 min
+Query times in this attack:  437
+Greedy query times: 1
+Ga query times: 436
+All Query times:  20699
+Success rate:  0.4594594594594595
+Successful items count:  17
+Total count:  37
+Index:  64
+
+Example time cost:  0.0 min
+ALL examples time cost:  6.49 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 436
+All Query times:  20700
+Success rate:  0.4594594594594595
+Successful items count:  17
+Total count:  37
+Index:  65
+
+Example time cost:  0.2 min
+ALL examples time cost:  6.7 min
+Query times in this attack:  719
+Greedy query times: 1
+Ga query times: 718
+All Query times:  21419
+Success rate:  0.4473684210526316
+Successful items count:  17
+Total count:  38
+Index:  66
+
+Example time cost:  0.15 min
+ALL examples time cost:  6.85 min
+Query times in this attack:  399
+Greedy query times: 1
+Ga query times: 398
+All Query times:  21818
+Success rate:  0.4358974358974359
+Successful items count:  17
+Total count:  39
+Index:  67
+
+Example time cost:  0.0 min
+ALL examples time cost:  6.85 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 398
+All Query times:  21819
+Success rate:  0.4358974358974359
+Successful items count:  17
+Total count:  39
+Index:  68
+
+Example time cost:  0.0 min
+ALL examples time cost:  6.85 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 398
+All Query times:  21820
+Success rate:  0.4358974358974359
+Successful items count:  17
+Total count:  39
+Index:  69
+
+Example time cost:  0.24 min
+ALL examples time cost:  7.09 min
+Query times in this attack:  913
+Greedy query times: 1
+Ga query times: 912
+All Query times:  22733
+Success rate:  0.425
+Successful items count:  17
+Total count:  40
+Index:  70
+
+Example time cost:  0.28 min
+ALL examples time cost:  7.37 min
+Query times in this attack:  1014
+Greedy query times: 1
+Ga query times: 1013
+All Query times:  23747
+Success rate:  0.4146341463414634
+Successful items count:  17
+Total count:  41
+Index:  71
+
+Example time cost:  0.0 min
+ALL examples time cost:  7.37 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1013
+All Query times:  23748
+Success rate:  0.4146341463414634
+Successful items count:  17
+Total count:  41
+Index:  72
+
+Example time cost:  0.0 min
+ALL examples time cost:  7.37 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1013
+All Query times:  23749
+Success rate:  0.4146341463414634
+Successful items count:  17
+Total count:  41
+Index:  73
+
+Example time cost:  0.06 min
+ALL examples time cost:  7.43 min
+Query times in this attack:  240
+Greedy query times: 1
+Ga query times: 239
+All Query times:  23989
+Success rate:  0.40476190476190477
+Successful items count:  17
+Total count:  42
+Index:  74
+
+Example time cost:  0.52 min
+ALL examples time cost:  7.95 min
+Query times in this attack:  1646
+Greedy query times: 1
+Ga query times: 1645
+All Query times:  25635
+Success rate:  0.3953488372093023
+Successful items count:  17
+Total count:  43
+Index:  75
+
+Example time cost:  0.12 min
+ALL examples time cost:  8.07 min
+Query times in this attack:  450
+Greedy query times: 1
+Ga query times: 449
+All Query times:  26085
+Success rate:  0.38636363636363635
+Successful items count:  17
+Total count:  44
+Index:  76
+
+Example time cost:  0.06 min
+ALL examples time cost:  8.13 min
+Query times in this attack:  253
+Greedy query times: 1
+Ga query times: 252
+All Query times:  26338
+Success rate:  0.37777777777777777
+Successful items count:  17
+Total count:  45
+Index:  77
+
+Example time cost:  0.39 min
+ALL examples time cost:  8.52 min
+Query times in this attack:  1267
+Greedy query times: 1
+Ga query times: 1266
+All Query times:  27605
+Success rate:  0.3695652173913043
+Successful items count:  17
+Total count:  46
+Index:  78
+
+Example time cost:  0.0 min
+ALL examples time cost:  8.52 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1266
+All Query times:  27606
+Success rate:  0.3695652173913043
+Successful items count:  17
+Total count:  46
+Index:  79
+
+Example time cost:  0.0 min
+ALL examples time cost:  8.53 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1266
+All Query times:  27607
+Success rate:  0.3695652173913043
+Successful items count:  17
+Total count:  46
+Index:  80
+
+Example time cost:  0.0 min
+ALL examples time cost:  8.53 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1266
+All Query times:  27608
+Success rate:  0.3695652173913043
+Successful items count:  17
+Total count:  46
+Index:  81
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  8.58 min
+Query times in this attack:  200
+Greedy query times: 1
+Ga query times: 199
+All Query times:  27808
+Success rate:  0.3829787234042553
+Successful items count:  18
+Total count:  47
+Index:  82
+
+Example time cost:  0.21 min
+ALL examples time cost:  8.79 min
+Query times in this attack:  948
+Greedy query times: 1
+Ga query times: 947
+All Query times:  28756
+Success rate:  0.375
+Successful items count:  18
+Total count:  48
+Index:  83
+
+Example time cost:  0.0 min
+ALL examples time cost:  8.79 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 947
+All Query times:  28757
+Success rate:  0.375
+Successful items count:  18
+Total count:  48
+Index:  84
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  8.85 min
+Query times in this attack:  331
+Greedy query times: 1
+Ga query times: 330
+All Query times:  29088
+Success rate:  0.3877551020408163
+Successful items count:  19
+Total count:  49
+Index:  85
+
+Example time cost:  0.0 min
+ALL examples time cost:  8.85 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 330
+All Query times:  29089
+Success rate:  0.3877551020408163
+Successful items count:  19
+Total count:  49
+Index:  86
+
+Example time cost:  0.24 min
+ALL examples time cost:  9.09 min
+Query times in this attack:  1001
+Greedy query times: 1
+Ga query times: 1000
+All Query times:  30090
+Success rate:  0.38
+Successful items count:  19
+Total count:  50
+Index:  87
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  9.13 min
+Query times in this attack:  168
+Greedy query times: 1
+Ga query times: 167
+All Query times:  30258
+Success rate:  0.39215686274509803
+Successful items count:  20
+Total count:  51
+Index:  88
+
+Example time cost:  0.49 min
+ALL examples time cost:  9.62 min
+Query times in this attack:  1662
+Greedy query times: 1
+Ga query times: 1661
+All Query times:  31920
+Success rate:  0.38461538461538464
+Successful items count:  20
+Total count:  52
+Index:  89
+
+Example time cost:  0.25 min
+ALL examples time cost:  9.87 min
+Query times in this attack:  1038
+Greedy query times: 1
+Ga query times: 1037
+All Query times:  32958
+Success rate:  0.37735849056603776
+Successful items count:  20
+Total count:  53
+Index:  90
+
+Example time cost:  0.0 min
+ALL examples time cost:  9.87 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1037
+All Query times:  32959
+Success rate:  0.37735849056603776
+Successful items count:  20
+Total count:  53
+Index:  91
+
+Example time cost:  0.1 min
+ALL examples time cost:  9.97 min
+Query times in this attack:  438
+Greedy query times: 1
+Ga query times: 437
+All Query times:  33397
+Success rate:  0.37037037037037035
+Successful items count:  20
+Total count:  54
+Index:  92
+
+Example time cost:  0.0 min
+ALL examples time cost:  9.97 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 437
+All Query times:  33398
+Success rate:  0.37037037037037035
+Successful items count:  20
+Total count:  54
+Index:  93
+
+Example time cost:  0.0 min
+ALL examples time cost:  9.97 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 437
+All Query times:  33399
+Success rate:  0.37037037037037035
+Successful items count:  20
+Total count:  54
+Index:  94
+
+Example time cost:  0.1 min
+ALL examples time cost:  10.07 min
+Query times in this attack:  425
+Greedy query times: 1
+Ga query times: 424
+All Query times:  33824
+Success rate:  0.36363636363636365
+Successful items count:  20
+Total count:  55
+Index:  95
+
+Example time cost:  0.0 min
+ALL examples time cost:  10.07 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 424
+All Query times:  33825
+Success rate:  0.36363636363636365
+Successful items count:  20
+Total count:  55
+Index:  96
+
+Example time cost:  0.14 min
+ALL examples time cost:  10.21 min
+Query times in this attack:  550
+Greedy query times: 1
+Ga query times: 549
+All Query times:  34375
+Success rate:  0.35714285714285715
+Successful items count:  20
+Total count:  56
+Index:  97
+
+Example time cost:  0.06 min
+ALL examples time cost:  10.26 min
+Query times in this attack:  245
+Greedy query times: 1
+Ga query times: 244
+All Query times:  34620
+Success rate:  0.3508771929824561
+Successful items count:  20
+Total count:  57
+Index:  98
+
+Example time cost:  0.0 min
+ALL examples time cost:  10.26 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 244
+All Query times:  34621
+Success rate:  0.3508771929824561
+Successful items count:  20
+Total count:  57
+Index:  99
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  10.32 min
+Query times in this attack:  209
+Greedy query times: 1
+Ga query times: 208
+All Query times:  34830
+Success rate:  0.3620689655172414
+Successful items count:  21
+Total count:  58
+Index:  100
+
+Example time cost:  0.0 min
+ALL examples time cost:  10.32 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 208
+All Query times:  34831
+Success rate:  0.3620689655172414
+Successful items count:  21
+Total count:  58
+Index:  101
+
+Example time cost:  0.15 min
+ALL examples time cost:  10.47 min
+Query times in this attack:  614
+Greedy query times: 1
+Ga query times: 613
+All Query times:  35445
+Success rate:  0.3559322033898305
+Successful items count:  21
+Total count:  59
+Index:  102
+
+Example time cost:  0.0 min
+ALL examples time cost:  10.47 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 613
+All Query times:  35446
+Success rate:  0.3559322033898305
+Successful items count:  21
+Total count:  59
+Index:  103
+
+Example time cost:  0.25 min
+ALL examples time cost:  10.72 min
+Query times in this attack:  905
+Greedy query times: 1
+Ga query times: 904
+All Query times:  36351
+Success rate:  0.35
+Successful items count:  21
+Total count:  60
+Index:  104
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  10.8 min
+Query times in this attack:  303
+Greedy query times: 1
+Ga query times: 302
+All Query times:  36654
+Success rate:  0.36065573770491804
+Successful items count:  22
+Total count:  61
+Index:  105
+
+Example time cost:  0.0 min
+ALL examples time cost:  10.8 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 302
+All Query times:  36655
+Success rate:  0.36065573770491804
+Successful items count:  22
+Total count:  61
+Index:  106
+
+Example time cost:  0.7 min
+ALL examples time cost:  11.5 min
+Query times in this attack:  2399
+Greedy query times: 1
+Ga query times: 2398
+All Query times:  39054
+Success rate:  0.3548387096774194
+Successful items count:  22
+Total count:  62
+Index:  107
+
+GA SUC!
+Example time cost:  0.1 min
+ALL examples time cost:  11.59 min
+Query times in this attack:  406
+Greedy query times: 1
+Ga query times: 405
+All Query times:  39460
+Success rate:  0.36507936507936506
+Successful items count:  23
+Total count:  63
+Index:  108
+
+GA SUC!
+Example time cost:  0.06 min
+ALL examples time cost:  11.65 min
+Query times in this attack:  266
+Greedy query times: 1
+Ga query times: 265
+All Query times:  39726
+Success rate:  0.375
+Successful items count:  24
+Total count:  64
+Index:  109
+
+GA SUC!
+Example time cost:  0.16 min
+ALL examples time cost:  11.81 min
+Query times in this attack:  570
+Greedy query times: 1
+Ga query times: 569
+All Query times:  40296
+Success rate:  0.38461538461538464
+Successful items count:  25
+Total count:  65
+Index:  110
+
+Example time cost:  0.05 min
+ALL examples time cost:  11.86 min
+Query times in this attack:  232
+Greedy query times: 1
+Ga query times: 231
+All Query times:  40528
+Success rate:  0.3787878787878788
+Successful items count:  25
+Total count:  66
+Index:  111
+
+GA SUC!
+Example time cost:  0.25 min
+ALL examples time cost:  12.11 min
+Query times in this attack:  938
+Greedy query times: 1
+Ga query times: 937
+All Query times:  41466
+Success rate:  0.3880597014925373
+Successful items count:  26
+Total count:  67
+Index:  112
+
+Example time cost:  0.0 min
+ALL examples time cost:  12.11 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 937
+All Query times:  41467
+Success rate:  0.3880597014925373
+Successful items count:  26
+Total count:  67
+Index:  113
+
+Example time cost:  0.0 min
+ALL examples time cost:  12.11 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 937
+All Query times:  41468
+Success rate:  0.3880597014925373
+Successful items count:  26
+Total count:  67
+Index:  114
+
+GA SUC!
+Example time cost:  0.12 min
+ALL examples time cost:  12.23 min
+Query times in this attack:  477
+Greedy query times: 1
+Ga query times: 476
+All Query times:  41945
+Success rate:  0.39705882352941174
+Successful items count:  27
+Total count:  68
+Index:  115
+
+Example time cost:  0.0 min
+ALL examples time cost:  12.23 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 476
+All Query times:  41946
+Success rate:  0.39705882352941174
+Successful items count:  27
+Total count:  68
+Index:  116
+
+Example time cost:  0.06 min
+ALL examples time cost:  12.29 min
+Query times in this attack:  237
+Greedy query times: 1
+Ga query times: 236
+All Query times:  42183
+Success rate:  0.391304347826087
+Successful items count:  27
+Total count:  69
+Index:  117
+
+Example time cost:  0.0 min
+ALL examples time cost:  12.29 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 236
+All Query times:  42184
+Success rate:  0.391304347826087
+Successful items count:  27
+Total count:  69
+Index:  118
+
+Example time cost:  0.0 min
+ALL examples time cost:  12.29 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 236
+All Query times:  42185
+Success rate:  0.391304347826087
+Successful items count:  27
+Total count:  69
+Index:  119
+
+GA SUC!
+Example time cost:  0.09 min
+ALL examples time cost:  12.38 min
+Query times in this attack:  342
+Greedy query times: 1
+Ga query times: 341
+All Query times:  42527
+Success rate:  0.4
+Successful items count:  28
+Total count:  70
+Index:  120
+
+Example time cost:  0.0 min
+ALL examples time cost:  12.38 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 341
+All Query times:  42528
+Success rate:  0.4
+Successful items count:  28
+Total count:  70
+Index:  121
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  12.51 min
+Query times in this attack:  503
+Greedy query times: 1
+Ga query times: 502
+All Query times:  43031
+Success rate:  0.4084507042253521
+Successful items count:  29
+Total count:  71
+Index:  122
+
+Example time cost:  0.75 min
+ALL examples time cost:  13.27 min
+Query times in this attack:  2412
+Greedy query times: 1
+Ga query times: 2411
+All Query times:  45443
+Success rate:  0.4027777777777778
+Successful items count:  29
+Total count:  72
+Index:  123
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  13.42 min
+Query times in this attack:  570
+Greedy query times: 1
+Ga query times: 569
+All Query times:  46013
+Success rate:  0.410958904109589
+Successful items count:  30
+Total count:  73
+Index:  124
+
+GA SUC!
+Example time cost:  0.14 min
+ALL examples time cost:  13.56 min
+Query times in this attack:  414
+Greedy query times: 1
+Ga query times: 413
+All Query times:  46427
+Success rate:  0.4189189189189189
+Successful items count:  31
+Total count:  74
+Index:  125
+
+Example time cost:  0.08 min
+ALL examples time cost:  13.63 min
+Query times in this attack:  455
+Greedy query times: 1
+Ga query times: 454
+All Query times:  46882
+Success rate:  0.41333333333333333
+Successful items count:  31
+Total count:  75
+Index:  126
+
+Example time cost:  0.1 min
+ALL examples time cost:  13.73 min
+Query times in this attack:  521
+Greedy query times: 1
+Ga query times: 520
+All Query times:  47403
+Success rate:  0.40789473684210525
+Successful items count:  31
+Total count:  76
+Index:  127
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  13.88 min
+Query times in this attack:  548
+Greedy query times: 1
+Ga query times: 547
+All Query times:  47951
+Success rate:  0.4155844155844156
+Successful items count:  32
+Total count:  77
+Index:  128
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  13.92 min
+Query times in this attack:  163
+Greedy query times: 1
+Ga query times: 162
+All Query times:  48114
+Success rate:  0.4230769230769231
+Successful items count:  33
+Total count:  78
+Index:  129
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  13.96 min
+Query times in this attack:  139
+Greedy query times: 1
+Ga query times: 138
+All Query times:  48253
+Success rate:  0.43037974683544306
+Successful items count:  34
+Total count:  79
+Index:  130
+
+GA SUC!
+Example time cost:  0.14 min
+ALL examples time cost:  14.1 min
+Query times in this attack:  516
+Greedy query times: 1
+Ga query times: 515
+All Query times:  48769
+Success rate:  0.4375
+Successful items count:  35
+Total count:  80
+Index:  131
+
+Example time cost:  0.0 min
+ALL examples time cost:  14.1 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 515
+All Query times:  48770
+Success rate:  0.4375
+Successful items count:  35
+Total count:  80
+Index:  132
+
+Example time cost:  0.0 min
+ALL examples time cost:  14.1 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 515
+All Query times:  48771
+Success rate:  0.4375
+Successful items count:  35
+Total count:  80
+Index:  133
+
+Example time cost:  0.16 min
+ALL examples time cost:  14.26 min
+Query times in this attack:  626
+Greedy query times: 1
+Ga query times: 625
+All Query times:  49397
+Success rate:  0.43209876543209874
+Successful items count:  35
+Total count:  81
+Index:  134
+
+GA SUC!
+Example time cost:  0.24 min
+ALL examples time cost:  14.5 min
+Query times in this attack:  574
+Greedy query times: 1
+Ga query times: 573
+All Query times:  49971
+Success rate:  0.43902439024390244
+Successful items count:  36
+Total count:  82
+Index:  135
+
+Example time cost:  0.43 min
+ALL examples time cost:  14.94 min
+Query times in this attack:  1608
+Greedy query times: 1
+Ga query times: 1607
+All Query times:  51579
+Success rate:  0.43373493975903615
+Successful items count:  36
+Total count:  83
+Index:  136
+
+Example time cost:  0.12 min
+ALL examples time cost:  15.06 min
+Query times in this attack:  475
+Greedy query times: 1
+Ga query times: 474
+All Query times:  52054
+Success rate:  0.42857142857142855
+Successful items count:  36
+Total count:  84
+Index:  137
+
+GA SUC!
+Example time cost:  0.37 min
+ALL examples time cost:  15.43 min
+Query times in this attack:  1079
+Greedy query times: 1
+Ga query times: 1078
+All Query times:  53133
+Success rate:  0.43529411764705883
+Successful items count:  37
+Total count:  85
+Index:  138
+
+GA SUC!
+Example time cost:  0.1 min
+ALL examples time cost:  15.53 min
+Query times in this attack:  305
+Greedy query times: 1
+Ga query times: 304
+All Query times:  53438
+Success rate:  0.4418604651162791
+Successful items count:  38
+Total count:  86
+Index:  139
+
+GA SUC!
+Example time cost:  0.27 min
+ALL examples time cost:  15.81 min
+Query times in this attack:  987
+Greedy query times: 1
+Ga query times: 986
+All Query times:  54425
+Success rate:  0.4482758620689655
+Successful items count:  39
+Total count:  87
+Index:  140
+
+Example time cost:  0.07 min
+ALL examples time cost:  15.88 min
+Query times in this attack:  286
+Greedy query times: 1
+Ga query times: 285
+All Query times:  54711
+Success rate:  0.4431818181818182
+Successful items count:  39
+Total count:  88
+Index:  141
+
+Example time cost:  1.48 min
+ALL examples time cost:  17.35 min
+Query times in this attack:  3700
+Greedy query times: 1
+Ga query times: 3699
+All Query times:  58411
+Success rate:  0.43820224719101125
+Successful items count:  39
+Total count:  89
+Index:  142
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  17.39 min
+Query times in this attack:  157
+Greedy query times: 1
+Ga query times: 156
+All Query times:  58568
+Success rate:  0.4444444444444444
+Successful items count:  40
+Total count:  90
+Index:  143
+
+Example time cost:  0.0 min
+ALL examples time cost:  17.39 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 156
+All Query times:  58569
+Success rate:  0.4444444444444444
+Successful items count:  40
+Total count:  90
+Index:  144
+
+GA SUC!
+Example time cost:  0.03 min
+ALL examples time cost:  17.42 min
+Query times in this attack:  137
+Greedy query times: 1
+Ga query times: 136
+All Query times:  58706
+Success rate:  0.45054945054945056
+Successful items count:  41
+Total count:  91
+Index:  145
+
+Example time cost:  0.0 min
+ALL examples time cost:  17.42 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 136
+All Query times:  58707
+Success rate:  0.45054945054945056
+Successful items count:  41
+Total count:  91
+Index:  146
+
+Example time cost:  0.0 min
+ALL examples time cost:  17.43 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 136
+All Query times:  58708
+Success rate:  0.45054945054945056
+Successful items count:  41
+Total count:  91
+Index:  147
+
+Example time cost:  0.18 min
+ALL examples time cost:  17.6 min
+Query times in this attack:  729
+Greedy query times: 1
+Ga query times: 728
+All Query times:  59437
+Success rate:  0.44565217391304346
+Successful items count:  41
+Total count:  92
+Index:  148
+
+Example time cost:  0.0 min
+ALL examples time cost:  17.6 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 728
+All Query times:  59438
+Success rate:  0.44565217391304346
+Successful items count:  41
+Total count:  92
+Index:  149
+
+Example time cost:  0.0 min
+ALL examples time cost:  17.6 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 728
+All Query times:  59439
+Success rate:  0.44565217391304346
+Successful items count:  41
+Total count:  92
+Index:  150
+
+Example time cost:  0.0 min
+ALL examples time cost:  17.6 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 728
+All Query times:  59440
+Success rate:  0.44565217391304346
+Successful items count:  41
+Total count:  92
+Index:  151
+
+Example time cost:  0.0 min
+ALL examples time cost:  17.6 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 728
+All Query times:  59441
+Success rate:  0.44565217391304346
+Successful items count:  41
+Total count:  92
+Index:  152
+
+GA SUC!
+Example time cost:  0.46 min
+ALL examples time cost:  18.06 min
+Query times in this attack:  999
+Greedy query times: 1
+Ga query times: 998
+All Query times:  60440
+Success rate:  0.45161290322580644
+Successful items count:  42
+Total count:  93
+Index:  153
+
+Example time cost:  0.11 min
+ALL examples time cost:  18.17 min
+Query times in this attack:  451
+Greedy query times: 1
+Ga query times: 450
+All Query times:  60891
+Success rate:  0.44680851063829785
+Successful items count:  42
+Total count:  94
+Index:  154
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  18.36 min
+Query times in this attack:  642
+Greedy query times: 1
+Ga query times: 641
+All Query times:  61533
+Success rate:  0.45263157894736844
+Successful items count:  43
+Total count:  95
+Index:  155
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  18.43 min
+Query times in this attack:  328
+Greedy query times: 1
+Ga query times: 327
+All Query times:  61861
+Success rate:  0.4583333333333333
+Successful items count:  44
+Total count:  96
+Index:  156
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  18.52 min
+Query times in this attack:  342
+Greedy query times: 1
+Ga query times: 341
+All Query times:  62203
+Success rate:  0.4639175257731959
+Successful items count:  45
+Total count:  97
+Index:  157
+
+GA SUC!
+Example time cost:  0.38 min
+ALL examples time cost:  18.9 min
+Query times in this attack:  731
+Greedy query times: 1
+Ga query times: 730
+All Query times:  62934
+Success rate:  0.46938775510204084
+Successful items count:  46
+Total count:  98
+Index:  158
+
+Example time cost:  0.21 min
+ALL examples time cost:  19.11 min
+Query times in this attack:  851
+Greedy query times: 1
+Ga query times: 850
+All Query times:  63785
+Success rate:  0.46464646464646464
+Successful items count:  46
+Total count:  99
+Index:  159
+
+Example time cost:  0.0 min
+ALL examples time cost:  19.11 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 850
+All Query times:  63786
+Success rate:  0.46464646464646464
+Successful items count:  46
+Total count:  99
+Index:  160
+
+Example time cost:  0.15 min
+ALL examples time cost:  19.26 min
+Query times in this attack:  620
+Greedy query times: 1
+Ga query times: 619
+All Query times:  64406
+Success rate:  0.46
+Successful items count:  46
+Total count:  100
+Index:  161
+
+Example time cost:  0.13 min
+ALL examples time cost:  19.39 min
+Query times in this attack:  512
+Greedy query times: 1
+Ga query times: 511
+All Query times:  64918
+Success rate:  0.45544554455445546
+Successful items count:  46
+Total count:  101
+Index:  162
+
+Example time cost:  0.0 min
+ALL examples time cost:  19.39 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 511
+All Query times:  64919
+Success rate:  0.45544554455445546
+Successful items count:  46
+Total count:  101
+Index:  163
+
+Example time cost:  0.06 min
+ALL examples time cost:  19.45 min
+Query times in this attack:  218
+Greedy query times: 1
+Ga query times: 217
+All Query times:  65137
+Success rate:  0.45098039215686275
+Successful items count:  46
+Total count:  102
+Index:  164
+
+Example time cost:  0.13 min
+ALL examples time cost:  19.58 min
+Query times in this attack:  516
+Greedy query times: 1
+Ga query times: 515
+All Query times:  65653
+Success rate:  0.44660194174757284
+Successful items count:  46
+Total count:  103
+Index:  165
+
+Example time cost:  0.0 min
+ALL examples time cost:  19.58 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 515
+All Query times:  65654
+Success rate:  0.44660194174757284
+Successful items count:  46
+Total count:  103
+Index:  166
+
+Example time cost:  0.0 min
+ALL examples time cost:  19.58 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 515
+All Query times:  65655
+Success rate:  0.44660194174757284
+Successful items count:  46
+Total count:  103
+Index:  167
+
+Example time cost:  0.24 min
+ALL examples time cost:  19.82 min
+Query times in this attack:  1009
+Greedy query times: 1
+Ga query times: 1008
+All Query times:  66664
+Success rate:  0.4423076923076923
+Successful items count:  46
+Total count:  104
+Index:  168
+
+GA SUC!
+Example time cost:  0.11 min
+ALL examples time cost:  19.94 min
+Query times in this attack:  428
+Greedy query times: 1
+Ga query times: 427
+All Query times:  67092
+Success rate:  0.44761904761904764
+Successful items count:  47
+Total count:  105
+Index:  169
+
+GA SUC!
+Example time cost:  0.27 min
+ALL examples time cost:  20.21 min
+Query times in this attack:  636
+Greedy query times: 1
+Ga query times: 635
+All Query times:  67728
+Success rate:  0.4528301886792453
+Successful items count:  48
+Total count:  106
+Index:  170
+
+Example time cost:  0.2 min
+ALL examples time cost:  20.41 min
+Query times in this attack:  844
+Greedy query times: 1
+Ga query times: 843
+All Query times:  68572
+Success rate:  0.4485981308411215
+Successful items count:  48
+Total count:  107
+Index:  171
+
+Example time cost:  0.0 min
+ALL examples time cost:  20.41 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 843
+All Query times:  68573
+Success rate:  0.4485981308411215
+Successful items count:  48
+Total count:  107
+Index:  172
+
+Example time cost:  0.44 min
+ALL examples time cost:  20.86 min
+Query times in this attack:  1339
+Greedy query times: 1
+Ga query times: 1338
+All Query times:  69912
+Success rate:  0.4444444444444444
+Successful items count:  48
+Total count:  108
+Index:  173
+
+GA SUC!
+Example time cost:  0.03 min
+ALL examples time cost:  20.88 min
+Query times in this attack:  99
+Greedy query times: 1
+Ga query times: 98
+All Query times:  70011
+Success rate:  0.44954128440366975
+Successful items count:  49
+Total count:  109
+Index:  174
+
+Example time cost:  0.18 min
+ALL examples time cost:  21.06 min
+Query times in this attack:  625
+Greedy query times: 1
+Ga query times: 624
+All Query times:  70636
+Success rate:  0.44545454545454544
+Successful items count:  49
+Total count:  110
+Index:  175
+
+GA SUC!
+Example time cost:  0.1 min
+ALL examples time cost:  21.16 min
+Query times in this attack:  275
+Greedy query times: 1
+Ga query times: 274
+All Query times:  70911
+Success rate:  0.45045045045045046
+Successful items count:  50
+Total count:  111
+Index:  176
+
+Example time cost:  0.0 min
+ALL examples time cost:  21.16 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 274
+All Query times:  70912
+Success rate:  0.45045045045045046
+Successful items count:  50
+Total count:  111
+Index:  177
+
+Example time cost:  0.15 min
+ALL examples time cost:  21.31 min
+Query times in this attack:  618
+Greedy query times: 1
+Ga query times: 617
+All Query times:  71530
+Success rate:  0.44642857142857145
+Successful items count:  50
+Total count:  112
+Index:  178
+
+Example time cost:  0.0 min
+ALL examples time cost:  21.31 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 617
+All Query times:  71531
+Success rate:  0.44642857142857145
+Successful items count:  50
+Total count:  112
+Index:  179
+
+Example time cost:  0.43 min
+ALL examples time cost:  21.74 min
+Query times in this attack:  1320
+Greedy query times: 1
+Ga query times: 1319
+All Query times:  72851
+Success rate:  0.4424778761061947
+Successful items count:  50
+Total count:  113
+Index:  180
+
+GA SUC!
+Example time cost:  0.11 min
+ALL examples time cost:  21.85 min
+Query times in this attack:  377
+Greedy query times: 1
+Ga query times: 376
+All Query times:  73228
+Success rate:  0.4473684210526316
+Successful items count:  51
+Total count:  114
+Index:  181
+
+Example time cost:  0.0 min
+ALL examples time cost:  21.85 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 376
+All Query times:  73229
+Success rate:  0.4473684210526316
+Successful items count:  51
+Total count:  114
+Index:  182
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  21.98 min
+Query times in this attack:  459
+Greedy query times: 1
+Ga query times: 458
+All Query times:  73688
+Success rate:  0.45217391304347826
+Successful items count:  52
+Total count:  115
+Index:  183
+
+GA SUC!
+Example time cost:  0.16 min
+ALL examples time cost:  22.14 min
+Query times in this attack:  530
+Greedy query times: 1
+Ga query times: 529
+All Query times:  74218
+Success rate:  0.45689655172413796
+Successful items count:  53
+Total count:  116
+Index:  184
+
+Example time cost:  0.0 min
+ALL examples time cost:  22.14 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 529
+All Query times:  74219
+Success rate:  0.45689655172413796
+Successful items count:  53
+Total count:  116
+Index:  185
+
+Example time cost:  0.0 min
+ALL examples time cost:  22.14 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 529
+All Query times:  74220
+Success rate:  0.45689655172413796
+Successful items count:  53
+Total count:  116
+Index:  186
+
+Example time cost:  0.06 min
+ALL examples time cost:  22.2 min
+Query times in this attack:  262
+Greedy query times: 1
+Ga query times: 261
+All Query times:  74482
+Success rate:  0.452991452991453
+Successful items count:  53
+Total count:  117
+Index:  187
+
+Example time cost:  0.19 min
+ALL examples time cost:  22.39 min
+Query times in this attack:  749
+Greedy query times: 1
+Ga query times: 748
+All Query times:  75231
+Success rate:  0.4491525423728814
+Successful items count:  53
+Total count:  118
+Index:  188
+
+Example time cost:  0.0 min
+ALL examples time cost:  22.39 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 748
+All Query times:  75232
+Success rate:  0.4491525423728814
+Successful items count:  53
+Total count:  118
+Index:  189
+
+Example time cost:  0.06 min
+ALL examples time cost:  22.44 min
+Query times in this attack:  237
+Greedy query times: 1
+Ga query times: 236
+All Query times:  75469
+Success rate:  0.44537815126050423
+Successful items count:  53
+Total count:  119
+Index:  190
+
+Example time cost:  0.0 min
+ALL examples time cost:  22.44 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 236
+All Query times:  75470
+Success rate:  0.44537815126050423
+Successful items count:  53
+Total count:  119
+Index:  191
+
+Example time cost:  0.0 min
+ALL examples time cost:  22.44 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 236
+All Query times:  75471
+Success rate:  0.44537815126050423
+Successful items count:  53
+Total count:  119
+Index:  192
+
+GA SUC!
+Example time cost:  0.41 min
+ALL examples time cost:  22.85 min
+Query times in this attack:  615
+Greedy query times: 1
+Ga query times: 614
+All Query times:  76086
+Success rate:  0.45
+Successful items count:  54
+Total count:  120
+Index:  193
+
+GA SUC!
+Example time cost:  0.1 min
+ALL examples time cost:  22.95 min
+Query times in this attack:  401
+Greedy query times: 1
+Ga query times: 400
+All Query times:  76487
+Success rate:  0.45454545454545453
+Successful items count:  55
+Total count:  121
+Index:  194
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  23.1 min
+Query times in this attack:  517
+Greedy query times: 1
+Ga query times: 516
+All Query times:  77004
+Success rate:  0.45901639344262296
+Successful items count:  56
+Total count:  122
+Index:  195
+
+Example time cost:  0.09 min
+ALL examples time cost:  23.19 min
+Query times in this attack:  430
+Greedy query times: 1
+Ga query times: 429
+All Query times:  77434
+Success rate:  0.45528455284552843
+Successful items count:  56
+Total count:  123
+Index:  196
+
+Example time cost:  0.07 min
+ALL examples time cost:  23.25 min
+Query times in this attack:  275
+Greedy query times: 1
+Ga query times: 274
+All Query times:  77709
+Success rate:  0.45161290322580644
+Successful items count:  56
+Total count:  124
+Index:  197
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  23.34 min
+Query times in this attack:  321
+Greedy query times: 1
+Ga query times: 320
+All Query times:  78030
+Success rate:  0.456
+Successful items count:  57
+Total count:  125
+Index:  198
+
+Example time cost:  0.1 min
+ALL examples time cost:  23.44 min
+Query times in this attack:  394
+Greedy query times: 1
+Ga query times: 393
+All Query times:  78424
+Success rate:  0.4523809523809524
+Successful items count:  57
+Total count:  126
+Index:  199
+
+Example time cost:  0.0 min
+ALL examples time cost:  23.44 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 393
+All Query times:  78425
+Success rate:  0.4523809523809524
+Successful items count:  57
+Total count:  126
+Index:  200
+
+Example time cost:  0.19 min
+ALL examples time cost:  23.63 min
+Query times in this attack:  773
+Greedy query times: 1
+Ga query times: 772
+All Query times:  79198
+Success rate:  0.44881889763779526
+Successful items count:  57
+Total count:  127
+Index:  201
+
+Example time cost:  0.0 min
+ALL examples time cost:  23.63 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 772
+All Query times:  79199
+Success rate:  0.44881889763779526
+Successful items count:  57
+Total count:  127
+Index:  202
+
+Example time cost:  0.0 min
+ALL examples time cost:  23.63 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 772
+All Query times:  79200
+Success rate:  0.44881889763779526
+Successful items count:  57
+Total count:  127
+Index:  203
+
+Example time cost:  0.05 min
+ALL examples time cost:  23.68 min
+Query times in this attack:  219
+Greedy query times: 1
+Ga query times: 218
+All Query times:  79419
+Success rate:  0.4453125
+Successful items count:  57
+Total count:  128
+Index:  204
+
+Example time cost:  0.24 min
+ALL examples time cost:  23.92 min
+Query times in this attack:  949
+Greedy query times: 1
+Ga query times: 948
+All Query times:  80368
+Success rate:  0.4418604651162791
+Successful items count:  57
+Total count:  129
+Index:  205
+
+Example time cost:  0.0 min
+ALL examples time cost:  23.92 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 948
+All Query times:  80369
+Success rate:  0.4418604651162791
+Successful items count:  57
+Total count:  129
+Index:  206
+
+Example time cost:  0.22 min
+ALL examples time cost:  24.14 min
+Query times in this attack:  865
+Greedy query times: 1
+Ga query times: 864
+All Query times:  81234
+Success rate:  0.43846153846153846
+Successful items count:  57
+Total count:  130
+Index:  207
+
+Example time cost:  0.16 min
+ALL examples time cost:  24.3 min
+Query times in this attack:  581
+Greedy query times: 1
+Ga query times: 580
+All Query times:  81815
+Success rate:  0.4351145038167939
+Successful items count:  57
+Total count:  131
+Index:  208
+
+Example time cost:  0.0 min
+ALL examples time cost:  24.3 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 580
+All Query times:  81816
+Success rate:  0.4351145038167939
+Successful items count:  57
+Total count:  131
+Index:  209
+
+Example time cost:  0.18 min
+ALL examples time cost:  24.48 min
+Query times in this attack:  748
+Greedy query times: 1
+Ga query times: 747
+All Query times:  82564
+Success rate:  0.4318181818181818
+Successful items count:  57
+Total count:  132
+Index:  210
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  24.53 min
+Query times in this attack:  200
+Greedy query times: 1
+Ga query times: 199
+All Query times:  82764
+Success rate:  0.43609022556390975
+Successful items count:  58
+Total count:  133
+Index:  211
+
+Example time cost:  0.0 min
+ALL examples time cost:  24.53 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 199
+All Query times:  82765
+Success rate:  0.43609022556390975
+Successful items count:  58
+Total count:  133
+Index:  212
+
+Example time cost:  0.0 min
+ALL examples time cost:  24.54 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 199
+All Query times:  82766
+Success rate:  0.43609022556390975
+Successful items count:  58
+Total count:  133
+Index:  213
+
+Example time cost:  0.0 min
+ALL examples time cost:  24.54 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 199
+All Query times:  82767
+Success rate:  0.43609022556390975
+Successful items count:  58
+Total count:  133
+Index:  214
+
+Example time cost:  0.64 min
+ALL examples time cost:  25.18 min
+Query times in this attack:  1816
+Greedy query times: 1
+Ga query times: 1815
+All Query times:  84583
+Success rate:  0.43283582089552236
+Successful items count:  58
+Total count:  134
+Index:  215
+
+Example time cost:  0.0 min
+ALL examples time cost:  25.18 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1815
+All Query times:  84584
+Success rate:  0.43283582089552236
+Successful items count:  58
+Total count:  134
+Index:  216
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  25.37 min
+Query times in this attack:  655
+Greedy query times: 1
+Ga query times: 654
+All Query times:  85239
+Success rate:  0.43703703703703706
+Successful items count:  59
+Total count:  135
+Index:  217
+
+GA SUC!
+Example time cost:  0.38 min
+ALL examples time cost:  25.75 min
+Query times in this attack:  669
+Greedy query times: 1
+Ga query times: 668
+All Query times:  85908
+Success rate:  0.4411764705882353
+Successful items count:  60
+Total count:  136
+Index:  218
+
+GA SUC!
+Example time cost:  0.07 min
+ALL examples time cost:  25.82 min
+Query times in this attack:  272
+Greedy query times: 1
+Ga query times: 271
+All Query times:  86180
+Success rate:  0.44525547445255476
+Successful items count:  61
+Total count:  137
+Index:  219
+
+Example time cost:  0.0 min
+ALL examples time cost:  25.82 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 271
+All Query times:  86181
+Success rate:  0.44525547445255476
+Successful items count:  61
+Total count:  137
+Index:  220
+
+GA SUC!
+Example time cost:  0.07 min
+ALL examples time cost:  25.89 min
+Query times in this attack:  254
+Greedy query times: 1
+Ga query times: 253
+All Query times:  86435
+Success rate:  0.4492753623188406
+Successful items count:  62
+Total count:  138
+Index:  221
+
+GA SUC!
+Example time cost:  0.1 min
+ALL examples time cost:  26.0 min
+Query times in this attack:  327
+Greedy query times: 1
+Ga query times: 326
+All Query times:  86762
+Success rate:  0.45323741007194246
+Successful items count:  63
+Total count:  139
+Index:  222
+
+Example time cost:  0.29 min
+ALL examples time cost:  26.29 min
+Query times in this attack:  1190
+Greedy query times: 1
+Ga query times: 1189
+All Query times:  87952
+Success rate:  0.45
+Successful items count:  63
+Total count:  140
+Index:  223
+
+Example time cost:  0.07 min
+ALL examples time cost:  26.36 min
+Query times in this attack:  277
+Greedy query times: 1
+Ga query times: 276
+All Query times:  88229
+Success rate:  0.44680851063829785
+Successful items count:  63
+Total count:  141
+Index:  224
+
+Example time cost:  0.3 min
+ALL examples time cost:  26.66 min
+Query times in this attack:  925
+Greedy query times: 1
+Ga query times: 924
+All Query times:  89154
+Success rate:  0.44366197183098594
+Successful items count:  63
+Total count:  142
+Index:  225
+
+Example time cost:  0.33 min
+ALL examples time cost:  26.99 min
+Query times in this attack:  984
+Greedy query times: 1
+Ga query times: 983
+All Query times:  90138
+Success rate:  0.4405594405594406
+Successful items count:  63
+Total count:  143
+Index:  226
+
+Example time cost:  0.14 min
+ALL examples time cost:  27.13 min
+Query times in this attack:  615
+Greedy query times: 1
+Ga query times: 614
+All Query times:  90753
+Success rate:  0.4375
+Successful items count:  63
+Total count:  144
+Index:  227
+
+Example time cost:  0.31 min
+ALL examples time cost:  27.44 min
+Query times in this attack:  1121
+Greedy query times: 1
+Ga query times: 1120
+All Query times:  91874
+Success rate:  0.43448275862068964
+Successful items count:  63
+Total count:  145
+Index:  228
+
+Example time cost:  0.0 min
+ALL examples time cost:  27.44 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1120
+All Query times:  91875
+Success rate:  0.43448275862068964
+Successful items count:  63
+Total count:  145
+Index:  229
+
+Example time cost:  0.22 min
+ALL examples time cost:  27.66 min
+Query times in this attack:  899
+Greedy query times: 1
+Ga query times: 898
+All Query times:  92774
+Success rate:  0.4315068493150685
+Successful items count:  63
+Total count:  146
+Index:  230
+
+Example time cost:  0.0 min
+ALL examples time cost:  27.66 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 898
+All Query times:  92775
+Success rate:  0.4315068493150685
+Successful items count:  63
+Total count:  146
+Index:  231
+
+Example time cost:  0.11 min
+ALL examples time cost:  27.77 min
+Query times in this attack:  469
+Greedy query times: 1
+Ga query times: 468
+All Query times:  93244
+Success rate:  0.42857142857142855
+Successful items count:  63
+Total count:  147
+Index:  232
+
+GA SUC!
+Example time cost:  0.12 min
+ALL examples time cost:  27.88 min
+Query times in this attack:  379
+Greedy query times: 1
+Ga query times: 378
+All Query times:  93623
+Success rate:  0.43243243243243246
+Successful items count:  64
+Total count:  148
+Index:  233
+
+Example time cost:  1.08 min
+ALL examples time cost:  28.96 min
+Query times in this attack:  1895
+Greedy query times: 1
+Ga query times: 1894
+All Query times:  95518
+Success rate:  0.42953020134228187
+Successful items count:  64
+Total count:  149
+Index:  234
+
+Example time cost:  0.0 min
+ALL examples time cost:  28.97 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1894
+All Query times:  95519
+Success rate:  0.42953020134228187
+Successful items count:  64
+Total count:  149
+Index:  235
+
+Example time cost:  0.19 min
+ALL examples time cost:  29.16 min
+Query times in this attack:  769
+Greedy query times: 1
+Ga query times: 768
+All Query times:  96288
+Success rate:  0.4266666666666667
+Successful items count:  64
+Total count:  150
+Index:  236
+
+Example time cost:  0.0 min
+ALL examples time cost:  29.16 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 768
+All Query times:  96289
+Success rate:  0.4266666666666667
+Successful items count:  64
+Total count:  150
+Index:  237
+
+GA SUC!
+Example time cost:  0.17 min
+ALL examples time cost:  29.33 min
+Query times in this attack:  589
+Greedy query times: 1
+Ga query times: 588
+All Query times:  96878
+Success rate:  0.4304635761589404
+Successful items count:  65
+Total count:  151
+Index:  238
+
+GA SUC!
+Example time cost:  0.16 min
+ALL examples time cost:  29.48 min
+Query times in this attack:  532
+Greedy query times: 1
+Ga query times: 531
+All Query times:  97410
+Success rate:  0.4342105263157895
+Successful items count:  66
+Total count:  152
+Index:  239
+
+Example time cost:  0.0 min
+ALL examples time cost:  29.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 531
+All Query times:  97411
+Success rate:  0.4342105263157895
+Successful items count:  66
+Total count:  152
+Index:  240
+
+GA SUC!
+Example time cost:  0.2 min
+ALL examples time cost:  29.68 min
+Query times in this attack:  647
+Greedy query times: 1
+Ga query times: 646
+All Query times:  98058
+Success rate:  0.43790849673202614
+Successful items count:  67
+Total count:  153
+Index:  241
+
+Example time cost:  0.64 min
+ALL examples time cost:  30.32 min
+Query times in this attack:  1571
+Greedy query times: 1
+Ga query times: 1570
+All Query times:  99629
+Success rate:  0.43506493506493504
+Successful items count:  67
+Total count:  154
+Index:  242
+
+GA SUC!
+Example time cost:  0.1 min
+ALL examples time cost:  30.42 min
+Query times in this attack:  425
+Greedy query times: 1
+Ga query times: 424
+All Query times:  100054
+Success rate:  0.43870967741935485
+Successful items count:  68
+Total count:  155
+Index:  243
+
+GA SUC!
+Example time cost:  0.14 min
+ALL examples time cost:  30.56 min
+Query times in this attack:  521
+Greedy query times: 1
+Ga query times: 520
+All Query times:  100575
+Success rate:  0.4423076923076923
+Successful items count:  69
+Total count:  156
+Index:  244
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  30.61 min
+Query times in this attack:  219
+Greedy query times: 1
+Ga query times: 218
+All Query times:  100794
+Success rate:  0.445859872611465
+Successful items count:  70
+Total count:  157
+Index:  245
+
+GA SUC!
+Example time cost:  0.21 min
+ALL examples time cost:  30.83 min
+Query times in this attack:  580
+Greedy query times: 1
+Ga query times: 579
+All Query times:  101374
+Success rate:  0.44936708860759494
+Successful items count:  71
+Total count:  158
+Index:  246
+
+Example time cost:  0.0 min
+ALL examples time cost:  30.83 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 579
+All Query times:  101375
+Success rate:  0.44936708860759494
+Successful items count:  71
+Total count:  158
+Index:  247
+
+Example time cost:  0.2 min
+ALL examples time cost:  31.03 min
+Query times in this attack:  825
+Greedy query times: 1
+Ga query times: 824
+All Query times:  102200
+Success rate:  0.44654088050314467
+Successful items count:  71
+Total count:  159
+Index:  248
+
+GA SUC!
+Example time cost:  0.02 min
+ALL examples time cost:  31.06 min
+Query times in this attack:  109
+Greedy query times: 1
+Ga query times: 108
+All Query times:  102309
+Success rate:  0.45
+Successful items count:  72
+Total count:  160
+Index:  249
+
+Example time cost:  0.0 min
+ALL examples time cost:  31.06 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 108
+All Query times:  102310
+Success rate:  0.45
+Successful items count:  72
+Total count:  160
+Index:  250
+
+Example time cost:  0.0 min
+ALL examples time cost:  31.06 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 108
+All Query times:  102311
+Success rate:  0.45
+Successful items count:  72
+Total count:  160
+Index:  251
+
+Example time cost:  0.0 min
+ALL examples time cost:  31.06 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 108
+All Query times:  102312
+Success rate:  0.45
+Successful items count:  72
+Total count:  160
+Index:  252
+
+Example time cost:  0.13 min
+ALL examples time cost:  31.19 min
+Query times in this attack:  553
+Greedy query times: 1
+Ga query times: 552
+All Query times:  102865
+Success rate:  0.4472049689440994
+Successful items count:  72
+Total count:  161
+Index:  253
+
+GA SUC!
+Example time cost:  0.36 min
+ALL examples time cost:  31.55 min
+Query times in this attack:  750
+Greedy query times: 1
+Ga query times: 749
+All Query times:  103615
+Success rate:  0.4506172839506173
+Successful items count:  73
+Total count:  162
+Index:  254
+
+Example time cost:  0.37 min
+ALL examples time cost:  31.92 min
+Query times in this attack:  1512
+Greedy query times: 1
+Ga query times: 1511
+All Query times:  105127
+Success rate:  0.44785276073619634
+Successful items count:  73
+Total count:  163
+Index:  255
+
+Example time cost:  0.0 min
+ALL examples time cost:  31.92 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1511
+All Query times:  105128
+Success rate:  0.44785276073619634
+Successful items count:  73
+Total count:  163
+Index:  256
+
+Example time cost:  0.0 min
+ALL examples time cost:  31.92 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1511
+All Query times:  105129
+Success rate:  0.44785276073619634
+Successful items count:  73
+Total count:  163
+Index:  257
+
+Example time cost:  1.35 min
+ALL examples time cost:  33.27 min
+Query times in this attack:  2140
+Greedy query times: 1
+Ga query times: 2139
+All Query times:  107269
+Success rate:  0.4451219512195122
+Successful items count:  73
+Total count:  164
+Index:  258
+
+Example time cost:  0.0 min
+ALL examples time cost:  33.27 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 2139
+All Query times:  107270
+Success rate:  0.4451219512195122
+Successful items count:  73
+Total count:  164
+Index:  259
+
+Example time cost:  0.15 min
+ALL examples time cost:  33.42 min
+Query times in this attack:  624
+Greedy query times: 1
+Ga query times: 623
+All Query times:  107894
+Success rate:  0.44242424242424244
+Successful items count:  73
+Total count:  165
+Index:  260
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  33.5 min
+Query times in this attack:  300
+Greedy query times: 1
+Ga query times: 299
+All Query times:  108194
+Success rate:  0.4457831325301205
+Successful items count:  74
+Total count:  166
+Index:  261
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  33.63 min
+Query times in this attack:  460
+Greedy query times: 1
+Ga query times: 459
+All Query times:  108654
+Success rate:  0.4491017964071856
+Successful items count:  75
+Total count:  167
+Index:  262
+
+Example time cost:  0.17 min
+ALL examples time cost:  33.8 min
+Query times in this attack:  659
+Greedy query times: 1
+Ga query times: 658
+All Query times:  109313
+Success rate:  0.44642857142857145
+Successful items count:  75
+Total count:  168
+Index:  263
+
+Example time cost:  0.0 min
+ALL examples time cost:  33.8 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 658
+All Query times:  109314
+Success rate:  0.44642857142857145
+Successful items count:  75
+Total count:  168
+Index:  264
+
+Example time cost:  0.22 min
+ALL examples time cost:  34.02 min
+Query times in this attack:  861
+Greedy query times: 1
+Ga query times: 860
+All Query times:  110175
+Success rate:  0.4437869822485207
+Successful items count:  75
+Total count:  169
+Index:  265
+
+Example time cost:  0.14 min
+ALL examples time cost:  34.16 min
+Query times in this attack:  513
+Greedy query times: 1
+Ga query times: 512
+All Query times:  110688
+Success rate:  0.4411764705882353
+Successful items count:  75
+Total count:  170
+Index:  266
+
+Example time cost:  0.31 min
+ALL examples time cost:  34.47 min
+Query times in this attack:  1240
+Greedy query times: 1
+Ga query times: 1239
+All Query times:  111928
+Success rate:  0.43859649122807015
+Successful items count:  75
+Total count:  171
+Index:  267
+
+Example time cost:  0.4 min
+ALL examples time cost:  34.87 min
+Query times in this attack:  1210
+Greedy query times: 1
+Ga query times: 1209
+All Query times:  113138
+Success rate:  0.436046511627907
+Successful items count:  75
+Total count:  172
+Index:  268
+
+Example time cost:  0.05 min
+ALL examples time cost:  34.93 min
+Query times in this attack:  224
+Greedy query times: 1
+Ga query times: 223
+All Query times:  113362
+Success rate:  0.43352601156069365
+Successful items count:  75
+Total count:  173
+Index:  269
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  34.98 min
+Query times in this attack:  215
+Greedy query times: 1
+Ga query times: 214
+All Query times:  113577
+Success rate:  0.4367816091954023
+Successful items count:  76
+Total count:  174
+Index:  270
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  35.02 min
+Query times in this attack:  188
+Greedy query times: 1
+Ga query times: 187
+All Query times:  113765
+Success rate:  0.44
+Successful items count:  77
+Total count:  175
+Index:  271
+
+GA SUC!
+Example time cost:  0.31 min
+ALL examples time cost:  35.33 min
+Query times in this attack:  995
+Greedy query times: 1
+Ga query times: 994
+All Query times:  114760
+Success rate:  0.4431818181818182
+Successful items count:  78
+Total count:  176
+Index:  272
+
+Example time cost:  0.7 min
+ALL examples time cost:  36.03 min
+Query times in this attack:  2574
+Greedy query times: 1
+Ga query times: 2573
+All Query times:  117334
+Success rate:  0.4406779661016949
+Successful items count:  78
+Total count:  177
+Index:  273
+
+GA SUC!
+Example time cost:  0.11 min
+ALL examples time cost:  36.15 min
+Query times in this attack:  447
+Greedy query times: 1
+Ga query times: 446
+All Query times:  117781
+Success rate:  0.4438202247191011
+Successful items count:  79
+Total count:  178
+Index:  274
+
+Example time cost:  0.0 min
+ALL examples time cost:  36.15 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 446
+All Query times:  117782
+Success rate:  0.4438202247191011
+Successful items count:  79
+Total count:  178
+Index:  275
+
+Example time cost:  0.0 min
+ALL examples time cost:  36.15 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 446
+All Query times:  117783
+Success rate:  0.4438202247191011
+Successful items count:  79
+Total count:  178
+Index:  276
+
+Example time cost:  0.0 min
+ALL examples time cost:  36.15 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 446
+All Query times:  117784
+Success rate:  0.4438202247191011
+Successful items count:  79
+Total count:  178
+Index:  277
+
+Example time cost:  0.0 min
+ALL examples time cost:  36.15 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 446
+All Query times:  117785
+Success rate:  0.4438202247191011
+Successful items count:  79
+Total count:  178
+Index:  278
+
+GA SUC!
+Example time cost:  0.11 min
+ALL examples time cost:  36.26 min
+Query times in this attack:  415
+Greedy query times: 1
+Ga query times: 414
+All Query times:  118200
+Success rate:  0.44692737430167595
+Successful items count:  80
+Total count:  179
+Index:  279
+
+Example time cost:  0.06 min
+ALL examples time cost:  36.32 min
+Query times in this attack:  250
+Greedy query times: 1
+Ga query times: 249
+All Query times:  118450
+Success rate:  0.4444444444444444
+Successful items count:  80
+Total count:  180
+Index:  280
+
+Example time cost:  0.0 min
+ALL examples time cost:  36.32 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 249
+All Query times:  118451
+Success rate:  0.4444444444444444
+Successful items count:  80
+Total count:  180
+Index:  281
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  36.4 min
+Query times in this attack:  275
+Greedy query times: 1
+Ga query times: 274
+All Query times:  118726
+Success rate:  0.44751381215469616
+Successful items count:  81
+Total count:  181
+Index:  282
+
+Example time cost:  0.1 min
+ALL examples time cost:  36.5 min
+Query times in this attack:  413
+Greedy query times: 1
+Ga query times: 412
+All Query times:  119139
+Success rate:  0.44505494505494503
+Successful items count:  81
+Total count:  182
+Index:  283
+
+Example time cost:  0.1 min
+ALL examples time cost:  36.6 min
+Query times in this attack:  433
+Greedy query times: 1
+Ga query times: 432
+All Query times:  119572
+Success rate:  0.4426229508196721
+Successful items count:  81
+Total count:  183
+Index:  284
+
+Example time cost:  0.0 min
+ALL examples time cost:  36.6 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 432
+All Query times:  119573
+Success rate:  0.4426229508196721
+Successful items count:  81
+Total count:  183
+Index:  285
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  36.75 min
+Query times in this attack:  490
+Greedy query times: 1
+Ga query times: 489
+All Query times:  120063
+Success rate:  0.44565217391304346
+Successful items count:  82
+Total count:  184
+Index:  286
+
+Example time cost:  0.0 min
+ALL examples time cost:  36.75 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 489
+All Query times:  120064
+Success rate:  0.44565217391304346
+Successful items count:  82
+Total count:  184
+Index:  287
+
+Example time cost:  0.05 min
+ALL examples time cost:  36.81 min
+Query times in this attack:  229
+Greedy query times: 1
+Ga query times: 228
+All Query times:  120293
+Success rate:  0.44324324324324327
+Successful items count:  82
+Total count:  185
+Index:  288
+
+Example time cost:  0.36 min
+ALL examples time cost:  37.17 min
+Query times in this attack:  1345
+Greedy query times: 1
+Ga query times: 1344
+All Query times:  121638
+Success rate:  0.44086021505376344
+Successful items count:  82
+Total count:  186
+Index:  289
+
+Example time cost:  0.0 min
+ALL examples time cost:  37.17 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1344
+All Query times:  121639
+Success rate:  0.44086021505376344
+Successful items count:  82
+Total count:  186
+Index:  290
+
+GA SUC!
+Example time cost:  0.1 min
+ALL examples time cost:  37.26 min
+Query times in this attack:  303
+Greedy query times: 1
+Ga query times: 302
+All Query times:  121942
+Success rate:  0.44385026737967914
+Successful items count:  83
+Total count:  187
+Index:  291
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  37.34 min
+Query times in this attack:  321
+Greedy query times: 1
+Ga query times: 320
+All Query times:  122263
+Success rate:  0.44680851063829785
+Successful items count:  84
+Total count:  188
+Index:  292
+
+Example time cost:  0.0 min
+ALL examples time cost:  37.34 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 320
+All Query times:  122264
+Success rate:  0.44680851063829785
+Successful items count:  84
+Total count:  188
+Index:  293
+
+GA SUC!
+Example time cost:  0.39 min
+ALL examples time cost:  37.74 min
+Query times in this attack:  813
+Greedy query times: 1
+Ga query times: 812
+All Query times:  123077
+Success rate:  0.4497354497354497
+Successful items count:  85
+Total count:  189
+Index:  294
+
+Example time cost:  1.8 min
+ALL examples time cost:  39.54 min
+Query times in this attack:  2637
+Greedy query times: 1
+Ga query times: 2636
+All Query times:  125714
+Success rate:  0.4473684210526316
+Successful items count:  85
+Total count:  190
+Index:  295
+
+Example time cost:  0.0 min
+ALL examples time cost:  39.54 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 2636
+All Query times:  125715
+Success rate:  0.4473684210526316
+Successful items count:  85
+Total count:  190
+Index:  296
+
+Example time cost:  0.0 min
+ALL examples time cost:  39.54 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 2636
+All Query times:  125716
+Success rate:  0.4473684210526316
+Successful items count:  85
+Total count:  190
+Index:  297
+
+Example time cost:  0.14 min
+ALL examples time cost:  39.68 min
+Query times in this attack:  567
+Greedy query times: 1
+Ga query times: 566
+All Query times:  126283
+Success rate:  0.44502617801047123
+Successful items count:  85
+Total count:  191
+Index:  298
+
+Example time cost:  0.22 min
+ALL examples time cost:  39.91 min
+Query times in this attack:  877
+Greedy query times: 1
+Ga query times: 876
+All Query times:  127160
+Success rate:  0.4427083333333333
+Successful items count:  85
+Total count:  192
+Index:  299
+
+Example time cost:  0.0 min
+ALL examples time cost:  39.91 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 876
+All Query times:  127161
+Success rate:  0.4427083333333333
+Successful items count:  85
+Total count:  192
+Index:  300
+
+Example time cost:  0.06 min
+ALL examples time cost:  39.97 min
+Query times in this attack:  260
+Greedy query times: 1
+Ga query times: 259
+All Query times:  127421
+Success rate:  0.44041450777202074
+Successful items count:  85
+Total count:  193
+Index:  301
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  40.11 min
+Query times in this attack:  552
+Greedy query times: 1
+Ga query times: 551
+All Query times:  127973
+Success rate:  0.44329896907216493
+Successful items count:  86
+Total count:  194
+Index:  302
+
+Example time cost:  0.0 min
+ALL examples time cost:  40.11 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 551
+All Query times:  127974
+Success rate:  0.44329896907216493
+Successful items count:  86
+Total count:  194
+Index:  303
+
+Example time cost:  0.0 min
+ALL examples time cost:  40.11 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 551
+All Query times:  127975
+Success rate:  0.44329896907216493
+Successful items count:  86
+Total count:  194
+Index:  304
+
+Example time cost:  0.0 min
+ALL examples time cost:  40.11 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 551
+All Query times:  127976
+Success rate:  0.44329896907216493
+Successful items count:  86
+Total count:  194
+Index:  305
+
+GA SUC!
+Example time cost:  0.17 min
+ALL examples time cost:  40.29 min
+Query times in this attack:  368
+Greedy query times: 1
+Ga query times: 367
+All Query times:  128344
+Success rate:  0.4461538461538462
+Successful items count:  87
+Total count:  195
+Index:  306
+
+Example time cost:  0.0 min
+ALL examples time cost:  40.29 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 367
+All Query times:  128345
+Success rate:  0.4461538461538462
+Successful items count:  87
+Total count:  195
+Index:  307
+
+Example time cost:  0.0 min
+ALL examples time cost:  40.29 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 367
+All Query times:  128346
+Success rate:  0.4461538461538462
+Successful items count:  87
+Total count:  195
+Index:  308
+
+Example time cost:  0.21 min
+ALL examples time cost:  40.5 min
+Query times in this attack:  847
+Greedy query times: 1
+Ga query times: 846
+All Query times:  129193
+Success rate:  0.44387755102040816
+Successful items count:  87
+Total count:  196
+Index:  309
+
+GA SUC!
+Example time cost:  0.2 min
+ALL examples time cost:  40.7 min
+Query times in this attack:  636
+Greedy query times: 1
+Ga query times: 635
+All Query times:  129829
+Success rate:  0.4467005076142132
+Successful items count:  88
+Total count:  197
+Index:  310
+
+Example time cost:  0.0 min
+ALL examples time cost:  40.7 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 635
+All Query times:  129830
+Success rate:  0.4467005076142132
+Successful items count:  88
+Total count:  197
+Index:  311
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  40.85 min
+Query times in this attack:  565
+Greedy query times: 1
+Ga query times: 564
+All Query times:  130395
+Success rate:  0.4494949494949495
+Successful items count:  89
+Total count:  198
+Index:  312
+
+Example time cost:  0.23 min
+ALL examples time cost:  41.08 min
+Query times in this attack:  889
+Greedy query times: 1
+Ga query times: 888
+All Query times:  131284
+Success rate:  0.4472361809045226
+Successful items count:  89
+Total count:  199
+Index:  313
+
+GA SUC!
+Example time cost:  0.27 min
+ALL examples time cost:  41.35 min
+Query times in this attack:  993
+Greedy query times: 1
+Ga query times: 992
+All Query times:  132277
+Success rate:  0.45
+Successful items count:  90
+Total count:  200
+Index:  314
+
+Example time cost:  0.0 min
+ALL examples time cost:  41.35 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 992
+All Query times:  132278
+Success rate:  0.45
+Successful items count:  90
+Total count:  200
+Index:  315
+
+GA SUC!
+Example time cost:  0.02 min
+ALL examples time cost:  41.37 min
+Query times in this attack:  79
+Greedy query times: 1
+Ga query times: 78
+All Query times:  132357
+Success rate:  0.4527363184079602
+Successful items count:  91
+Total count:  201
+Index:  316
+
+Example time cost:  0.0 min
+ALL examples time cost:  41.37 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 78
+All Query times:  132358
+Success rate:  0.4527363184079602
+Successful items count:  91
+Total count:  201
+Index:  317
+
+Example time cost:  0.0 min
+ALL examples time cost:  41.38 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 78
+All Query times:  132359
+Success rate:  0.4527363184079602
+Successful items count:  91
+Total count:  201
+Index:  318
+
+Example time cost:  0.0 min
+ALL examples time cost:  41.38 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 78
+All Query times:  132360
+Success rate:  0.4527363184079602
+Successful items count:  91
+Total count:  201
+Index:  319
+
+GA SUC!
+Example time cost:  0.22 min
+ALL examples time cost:  41.6 min
+Query times in this attack:  750
+Greedy query times: 1
+Ga query times: 749
+All Query times:  133110
+Success rate:  0.45544554455445546
+Successful items count:  92
+Total count:  202
+Index:  320
+
+GA SUC!
+Example time cost:  0.29 min
+ALL examples time cost:  41.89 min
+Query times in this attack:  843
+Greedy query times: 1
+Ga query times: 842
+All Query times:  133953
+Success rate:  0.458128078817734
+Successful items count:  93
+Total count:  203
+Index:  321
+
+Example time cost:  0.09 min
+ALL examples time cost:  41.98 min
+Query times in this attack:  337
+Greedy query times: 1
+Ga query times: 336
+All Query times:  134290
+Success rate:  0.45588235294117646
+Successful items count:  93
+Total count:  204
+Index:  322
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  42.01 min
+Query times in this attack:  149
+Greedy query times: 1
+Ga query times: 148
+All Query times:  134439
+Success rate:  0.4585365853658537
+Successful items count:  94
+Total count:  205
+Index:  323
+
+Example time cost:  0.0 min
+ALL examples time cost:  42.01 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 148
+All Query times:  134440
+Success rate:  0.4585365853658537
+Successful items count:  94
+Total count:  205
+Index:  324
+
+Example time cost:  0.0 min
+ALL examples time cost:  42.01 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 148
+All Query times:  134441
+Success rate:  0.4585365853658537
+Successful items count:  94
+Total count:  205
+Index:  325
+
+GA SUC!
+Example time cost:  0.15 min
+ALL examples time cost:  42.16 min
+Query times in this attack:  474
+Greedy query times: 1
+Ga query times: 473
+All Query times:  134915
+Success rate:  0.46116504854368934
+Successful items count:  95
+Total count:  206
+Index:  326
+
+Example time cost:  0.32 min
+ALL examples time cost:  42.48 min
+Query times in this attack:  1102
+Greedy query times: 1
+Ga query times: 1101
+All Query times:  136017
+Success rate:  0.45893719806763283
+Successful items count:  95
+Total count:  207
+Index:  327
+
+Example time cost:  0.0 min
+ALL examples time cost:  42.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1101
+All Query times:  136018
+Success rate:  0.45893719806763283
+Successful items count:  95
+Total count:  207
+Index:  328
+
+Example time cost:  0.59 min
+ALL examples time cost:  43.07 min
+Query times in this attack:  1751
+Greedy query times: 1
+Ga query times: 1750
+All Query times:  137769
+Success rate:  0.4567307692307692
+Successful items count:  95
+Total count:  208
+Index:  329
+
+Example time cost:  0.41 min
+ALL examples time cost:  43.48 min
+Query times in this attack:  1337
+Greedy query times: 1
+Ga query times: 1336
+All Query times:  139106
+Success rate:  0.45454545454545453
+Successful items count:  95
+Total count:  209
+Index:  330
+
+Example time cost:  0.0 min
+ALL examples time cost:  43.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1336
+All Query times:  139107
+Success rate:  0.45454545454545453
+Successful items count:  95
+Total count:  209
+Index:  331
+
+GA SUC!
+Example time cost:  0.06 min
+ALL examples time cost:  43.54 min
+Query times in this attack:  246
+Greedy query times: 1
+Ga query times: 245
+All Query times:  139353
+Success rate:  0.45714285714285713
+Successful items count:  96
+Total count:  210
+Index:  332
+
+Example time cost:  0.34 min
+ALL examples time cost:  43.88 min
+Query times in this attack:  1198
+Greedy query times: 1
+Ga query times: 1197
+All Query times:  140551
+Success rate:  0.4549763033175355
+Successful items count:  96
+Total count:  211
+Index:  333
+
+Example time cost:  0.06 min
+ALL examples time cost:  43.95 min
+Query times in this attack:  272
+Greedy query times: 1
+Ga query times: 271
+All Query times:  140823
+Success rate:  0.4528301886792453
+Successful items count:  96
+Total count:  212
+Index:  334
+
+Example time cost:  0.07 min
+ALL examples time cost:  44.02 min
+Query times in this attack:  306
+Greedy query times: 1
+Ga query times: 305
+All Query times:  141129
+Success rate:  0.4507042253521127
+Successful items count:  96
+Total count:  213
+Index:  335
+
+Example time cost:  0.06 min
+ALL examples time cost:  44.08 min
+Query times in this attack:  269
+Greedy query times: 1
+Ga query times: 268
+All Query times:  141398
+Success rate:  0.4485981308411215
+Successful items count:  96
+Total count:  214
+Index:  336
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  44.27 min
+Query times in this attack:  760
+Greedy query times: 1
+Ga query times: 759
+All Query times:  142158
+Success rate:  0.4511627906976744
+Successful items count:  97
+Total count:  215
+Index:  337
+
+Example time cost:  0.0 min
+ALL examples time cost:  44.27 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 759
+All Query times:  142159
+Success rate:  0.4511627906976744
+Successful items count:  97
+Total count:  215
+Index:  338
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  44.32 min
+Query times in this attack:  220
+Greedy query times: 1
+Ga query times: 219
+All Query times:  142379
+Success rate:  0.4537037037037037
+Successful items count:  98
+Total count:  216
+Index:  339
+
+Example time cost:  0.06 min
+ALL examples time cost:  44.38 min
+Query times in this attack:  263
+Greedy query times: 1
+Ga query times: 262
+All Query times:  142642
+Success rate:  0.45161290322580644
+Successful items count:  98
+Total count:  217
+Index:  340
+
+Example time cost:  0.11 min
+ALL examples time cost:  44.49 min
+Query times in this attack:  449
+Greedy query times: 1
+Ga query times: 448
+All Query times:  143091
+Success rate:  0.44954128440366975
+Successful items count:  98
+Total count:  218
+Index:  341
+
+Example time cost:  0.13 min
+ALL examples time cost:  44.62 min
+Query times in this attack:  498
+Greedy query times: 1
+Ga query times: 497
+All Query times:  143589
+Success rate:  0.4474885844748858
+Successful items count:  98
+Total count:  219
+Index:  342
+
+GA SUC!
+Example time cost:  0.05 min
+ALL examples time cost:  44.68 min
+Query times in this attack:  217
+Greedy query times: 1
+Ga query times: 216
+All Query times:  143806
+Success rate:  0.45
+Successful items count:  99
+Total count:  220
+Index:  343
+
+GA SUC!
+Example time cost:  0.16 min
+ALL examples time cost:  44.84 min
+Query times in this attack:  547
+Greedy query times: 1
+Ga query times: 546
+All Query times:  144353
+Success rate:  0.45248868778280543
+Successful items count:  100
+Total count:  221
+Index:  344
+
+Example time cost:  0.07 min
+ALL examples time cost:  44.91 min
+Query times in this attack:  255
+Greedy query times: 1
+Ga query times: 254
+All Query times:  144608
+Success rate:  0.45045045045045046
+Successful items count:  100
+Total count:  222
+Index:  345
+
+Example time cost:  0.14 min
+ALL examples time cost:  45.05 min
+Query times in this attack:  531
+Greedy query times: 1
+Ga query times: 530
+All Query times:  145139
+Success rate:  0.4484304932735426
+Successful items count:  100
+Total count:  223
+Index:  346
+
+Example time cost:  0.06 min
+ALL examples time cost:  45.11 min
+Query times in this attack:  275
+Greedy query times: 1
+Ga query times: 274
+All Query times:  145414
+Success rate:  0.44642857142857145
+Successful items count:  100
+Total count:  224
+Index:  347
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  45.18 min
+Query times in this attack:  321
+Greedy query times: 1
+Ga query times: 320
+All Query times:  145735
+Success rate:  0.4488888888888889
+Successful items count:  101
+Total count:  225
+Index:  348
+
+Example time cost:  0.05 min
+ALL examples time cost:  45.24 min
+Query times in this attack:  253
+Greedy query times: 1
+Ga query times: 252
+All Query times:  145988
+Success rate:  0.4469026548672566
+Successful items count:  101
+Total count:  226
+Index:  349
+
+Example time cost:  0.0 min
+ALL examples time cost:  45.24 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 252
+All Query times:  145989
+Success rate:  0.4469026548672566
+Successful items count:  101
+Total count:  226
+Index:  350
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  45.43 min
+Query times in this attack:  710
+Greedy query times: 1
+Ga query times: 709
+All Query times:  146699
+Success rate:  0.44933920704845814
+Successful items count:  102
+Total count:  227
+Index:  351
+
+Example time cost:  0.0 min
+ALL examples time cost:  45.43 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 709
+All Query times:  146700
+Success rate:  0.44933920704845814
+Successful items count:  102
+Total count:  227
+Index:  352
+
+GA SUC!
+Example time cost:  0.23 min
+ALL examples time cost:  45.66 min
+Query times in this attack:  550
+Greedy query times: 1
+Ga query times: 549
+All Query times:  147250
+Success rate:  0.4517543859649123
+Successful items count:  103
+Total count:  228
+Index:  353
+
+Example time cost:  0.18 min
+ALL examples time cost:  45.84 min
+Query times in this attack:  681
+Greedy query times: 1
+Ga query times: 680
+All Query times:  147931
+Success rate:  0.4497816593886463
+Successful items count:  103
+Total count:  229
+Index:  354
+
+Example time cost:  0.5 min
+ALL examples time cost:  46.34 min
+Query times in this attack:  1630
+Greedy query times: 1
+Ga query times: 1629
+All Query times:  149561
+Success rate:  0.44782608695652176
+Successful items count:  103
+Total count:  230
+Index:  355
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  46.46 min
+Query times in this attack:  478
+Greedy query times: 1
+Ga query times: 477
+All Query times:  150039
+Success rate:  0.45021645021645024
+Successful items count:  104
+Total count:  231
+Index:  356
+
+Example time cost:  0.0 min
+ALL examples time cost:  46.46 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 477
+All Query times:  150040
+Success rate:  0.45021645021645024
+Successful items count:  104
+Total count:  231
+Index:  357
+
+Example time cost:  0.24 min
+ALL examples time cost:  46.71 min
+Query times in this attack:  869
+Greedy query times: 1
+Ga query times: 868
+All Query times:  150909
+Success rate:  0.4482758620689655
+Successful items count:  104
+Total count:  232
+Index:  358
+
+Example time cost:  0.0 min
+ALL examples time cost:  46.71 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 868
+All Query times:  150910
+Success rate:  0.4482758620689655
+Successful items count:  104
+Total count:  232
+Index:  359
+
+Example time cost:  0.0 min
+ALL examples time cost:  46.71 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 868
+All Query times:  150911
+Success rate:  0.4482758620689655
+Successful items count:  104
+Total count:  232
+Index:  360
+
+Example time cost:  0.06 min
+ALL examples time cost:  46.77 min
+Query times in this attack:  269
+Greedy query times: 1
+Ga query times: 268
+All Query times:  151180
+Success rate:  0.44635193133047213
+Successful items count:  104
+Total count:  233
+Index:  361
+
+GA SUC!
+Example time cost:  0.21 min
+ALL examples time cost:  46.99 min
+Query times in this attack:  586
+Greedy query times: 1
+Ga query times: 585
+All Query times:  151766
+Success rate:  0.44871794871794873
+Successful items count:  105
+Total count:  234
+Index:  362
+
+Example time cost:  0.23 min
+ALL examples time cost:  47.22 min
+Query times in this attack:  857
+Greedy query times: 1
+Ga query times: 856
+All Query times:  152623
+Success rate:  0.44680851063829785
+Successful items count:  105
+Total count:  235
+Index:  363
+
+Example time cost:  0.0 min
+ALL examples time cost:  47.22 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 856
+All Query times:  152624
+Success rate:  0.44680851063829785
+Successful items count:  105
+Total count:  235
+Index:  364
+
+Example time cost:  0.0 min
+ALL examples time cost:  47.22 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 856
+All Query times:  152625
+Success rate:  0.44680851063829785
+Successful items count:  105
+Total count:  235
+Index:  365
+
+Example time cost:  0.0 min
+ALL examples time cost:  47.22 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 856
+All Query times:  152626
+Success rate:  0.44680851063829785
+Successful items count:  105
+Total count:  235
+Index:  366
+
+Example time cost:  0.0 min
+ALL examples time cost:  47.22 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 856
+All Query times:  152627
+Success rate:  0.44680851063829785
+Successful items count:  105
+Total count:  235
+Index:  367
+
+Example time cost:  0.0 min
+ALL examples time cost:  47.22 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 856
+All Query times:  152628
+Success rate:  0.44680851063829785
+Successful items count:  105
+Total count:  235
+Index:  368
+
+Example time cost:  0.0 min
+ALL examples time cost:  47.22 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 856
+All Query times:  152629
+Success rate:  0.44680851063829785
+Successful items count:  105
+Total count:  235
+Index:  369
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  47.35 min
+Query times in this attack:  474
+Greedy query times: 1
+Ga query times: 473
+All Query times:  153103
+Success rate:  0.4491525423728814
+Successful items count:  106
+Total count:  236
+Index:  370
+
+Example time cost:  0.0 min
+ALL examples time cost:  47.35 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 473
+All Query times:  153104
+Success rate:  0.4491525423728814
+Successful items count:  106
+Total count:  236
+Index:  371
+
+Example time cost:  0.28 min
+ALL examples time cost:  47.63 min
+Query times in this attack:  957
+Greedy query times: 1
+Ga query times: 956
+All Query times:  154061
+Success rate:  0.4472573839662447
+Successful items count:  106
+Total count:  237
+Index:  372
+
+Example time cost:  0.19 min
+ALL examples time cost:  47.82 min
+Query times in this attack:  711
+Greedy query times: 1
+Ga query times: 710
+All Query times:  154772
+Success rate:  0.44537815126050423
+Successful items count:  106
+Total count:  238
+Index:  373
+
+Example time cost:  0.07 min
+ALL examples time cost:  47.89 min
+Query times in this attack:  271
+Greedy query times: 1
+Ga query times: 270
+All Query times:  155043
+Success rate:  0.4435146443514644
+Successful items count:  106
+Total count:  239
+Index:  374
+
+Example time cost:  0.0 min
+ALL examples time cost:  47.89 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 270
+All Query times:  155044
+Success rate:  0.4435146443514644
+Successful items count:  106
+Total count:  239
+Index:  375
+
+Example time cost:  0.43 min
+ALL examples time cost:  48.32 min
+Query times in this attack:  1429
+Greedy query times: 1
+Ga query times: 1428
+All Query times:  156473
+Success rate:  0.44166666666666665
+Successful items count:  106
+Total count:  240
+Index:  376
+
+Example time cost:  0.11 min
+ALL examples time cost:  48.43 min
+Query times in this attack:  446
+Greedy query times: 1
+Ga query times: 445
+All Query times:  156919
+Success rate:  0.43983402489626555
+Successful items count:  106
+Total count:  241
+Index:  377
+
+Example time cost:  0.0 min
+ALL examples time cost:  48.43 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 445
+All Query times:  156920
+Success rate:  0.43983402489626555
+Successful items count:  106
+Total count:  241
+Index:  378
+
+GA SUC!
+Example time cost:  0.09 min
+ALL examples time cost:  48.52 min
+Query times in this attack:  346
+Greedy query times: 1
+Ga query times: 345
+All Query times:  157266
+Success rate:  0.44214876033057854
+Successful items count:  107
+Total count:  242
+Index:  379
+
+Example time cost:  0.0 min
+ALL examples time cost:  48.52 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 345
+All Query times:  157267
+Success rate:  0.44214876033057854
+Successful items count:  107
+Total count:  242
+Index:  380
+
+Example time cost:  0.17 min
+ALL examples time cost:  48.69 min
+Query times in this attack:  727
+Greedy query times: 1
+Ga query times: 726
+All Query times:  157994
+Success rate:  0.4403292181069959
+Successful items count:  107
+Total count:  243
+Index:  381
+
+GA SUC!
+Example time cost:  0.17 min
+ALL examples time cost:  48.87 min
+Query times in this attack:  637
+Greedy query times: 1
+Ga query times: 636
+All Query times:  158631
+Success rate:  0.4426229508196721
+Successful items count:  108
+Total count:  244
+Index:  382
+
+Example time cost:  0.21 min
+ALL examples time cost:  49.08 min
+Query times in this attack:  745
+Greedy query times: 1
+Ga query times: 744
+All Query times:  159376
+Success rate:  0.44081632653061226
+Successful items count:  108
+Total count:  245
+Index:  383
+
+Example time cost:  0.2 min
+ALL examples time cost:  49.28 min
+Query times in this attack:  797
+Greedy query times: 1
+Ga query times: 796
+All Query times:  160173
+Success rate:  0.43902439024390244
+Successful items count:  108
+Total count:  246
+Index:  384
+
+Example time cost:  0.0 min
+ALL examples time cost:  49.28 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 796
+All Query times:  160174
+Success rate:  0.43902439024390244
+Successful items count:  108
+Total count:  246
+Index:  385
+
+GA SUC!
+Example time cost:  0.24 min
+ALL examples time cost:  49.52 min
+Query times in this attack:  800
+Greedy query times: 1
+Ga query times: 799
+All Query times:  160974
+Success rate:  0.44129554655870445
+Successful items count:  109
+Total count:  247
+Index:  386
+
+GA SUC!
+Example time cost:  0.25 min
+ALL examples time cost:  49.77 min
+Query times in this attack:  986
+Greedy query times: 1
+Ga query times: 985
+All Query times:  161960
+Success rate:  0.4435483870967742
+Successful items count:  110
+Total count:  248
+Index:  387
+
+Example time cost:  0.0 min
+ALL examples time cost:  49.77 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 985
+All Query times:  161961
+Success rate:  0.4435483870967742
+Successful items count:  110
+Total count:  248
+Index:  388
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  49.9 min
+Query times in this attack:  486
+Greedy query times: 1
+Ga query times: 485
+All Query times:  162447
+Success rate:  0.4457831325301205
+Successful items count:  111
+Total count:  249
+Index:  389
+
+Example time cost:  0.09 min
+ALL examples time cost:  49.99 min
+Query times in this attack:  326
+Greedy query times: 1
+Ga query times: 325
+All Query times:  162773
+Success rate:  0.444
+Successful items count:  111
+Total count:  250
+Index:  390
+
+Example time cost:  0.0 min
+ALL examples time cost:  49.99 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 325
+All Query times:  162774
+Success rate:  0.444
+Successful items count:  111
+Total count:  250
+Index:  391
+
+GA SUC!
+Example time cost:  0.07 min
+ALL examples time cost:  50.06 min
+Query times in this attack:  269
+Greedy query times: 1
+Ga query times: 268
+All Query times:  163043
+Success rate:  0.44621513944223107
+Successful items count:  112
+Total count:  251
+Index:  392
+
+Example time cost:  0.29 min
+ALL examples time cost:  50.35 min
+Query times in this attack:  1009
+Greedy query times: 1
+Ga query times: 1008
+All Query times:  164052
+Success rate:  0.4444444444444444
+Successful items count:  112
+Total count:  252
+Index:  393
+
+Example time cost:  0.0 min
+ALL examples time cost:  50.35 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1008
+All Query times:  164053
+Success rate:  0.4444444444444444
+Successful items count:  112
+Total count:  252
+Index:  394
+
+GA SUC!
+Example time cost:  0.16 min
+ALL examples time cost:  50.51 min
+Query times in this attack:  515
+Greedy query times: 1
+Ga query times: 514
+All Query times:  164568
+Success rate:  0.44664031620553357
+Successful items count:  113
+Total count:  253
+Index:  395
+
+Example time cost:  0.0 min
+ALL examples time cost:  50.51 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 514
+All Query times:  164569
+Success rate:  0.44664031620553357
+Successful items count:  113
+Total count:  253
+Index:  396
+
+Example time cost:  0.0 min
+ALL examples time cost:  50.51 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 514
+All Query times:  164570
+Success rate:  0.44664031620553357
+Successful items count:  113
+Total count:  253
+Index:  397
+
+GA SUC!
+Example time cost:  0.37 min
+ALL examples time cost:  50.88 min
+Query times in this attack:  1062
+Greedy query times: 1
+Ga query times: 1061
+All Query times:  165632
+Success rate:  0.44881889763779526
+Successful items count:  114
+Total count:  254
+Index:  398
+
+Example time cost:  0.2 min
+ALL examples time cost:  51.07 min
+Query times in this attack:  821
+Greedy query times: 1
+Ga query times: 820
+All Query times:  166453
+Success rate:  0.4470588235294118
+Successful items count:  114
+Total count:  255
+Index:  399
+
+GA SUC!
+Example time cost:  0.12 min
+ALL examples time cost:  51.19 min
+Query times in this attack:  452
+Greedy query times: 1
+Ga query times: 451
+All Query times:  166905
+Success rate:  0.44921875
+Successful items count:  115
+Total count:  256
+Index:  400
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  51.39 min
+Query times in this attack:  669
+Greedy query times: 1
+Ga query times: 668
+All Query times:  167574
+Success rate:  0.45136186770428016
+Successful items count:  116
+Total count:  257
+Index:  401
+
+GA SUC!
+Example time cost:  0.09 min
+ALL examples time cost:  51.48 min
+Query times in this attack:  233
+Greedy query times: 1
+Ga query times: 232
+All Query times:  167807
+Success rate:  0.45348837209302323
+Successful items count:  117
+Total count:  258
+Index:  402
+
+Example time cost:  0.0 min
+ALL examples time cost:  51.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 232
+All Query times:  167808
+Success rate:  0.45348837209302323
+Successful items count:  117
+Total count:  258
+Index:  403
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  51.67 min
+Query times in this attack:  479
+Greedy query times: 1
+Ga query times: 478
+All Query times:  168287
+Success rate:  0.4555984555984556
+Successful items count:  118
+Total count:  259
+Index:  404
+
+GA SUC!
+Example time cost:  0.06 min
+ALL examples time cost:  51.73 min
+Query times in this attack:  228
+Greedy query times: 1
+Ga query times: 227
+All Query times:  168515
+Success rate:  0.4576923076923077
+Successful items count:  119
+Total count:  260
+Index:  405
+
+GA SUC!
+Example time cost:  0.08 min
+ALL examples time cost:  51.8 min
+Query times in this attack:  314
+Greedy query times: 1
+Ga query times: 313
+All Query times:  168829
+Success rate:  0.45977011494252873
+Successful items count:  120
+Total count:  261
+Index:  406
+
+Example time cost:  0.14 min
+ALL examples time cost:  51.95 min
+Query times in this attack:  615
+Greedy query times: 1
+Ga query times: 614
+All Query times:  169444
+Success rate:  0.4580152671755725
+Successful items count:  120
+Total count:  262
+Index:  407
+
+Example time cost:  0.0 min
+ALL examples time cost:  51.95 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 614
+All Query times:  169445
+Success rate:  0.4580152671755725
+Successful items count:  120
+Total count:  262
+Index:  408
+
+Example time cost:  0.27 min
+ALL examples time cost:  52.22 min
+Query times in this attack:  1069
+Greedy query times: 1
+Ga query times: 1068
+All Query times:  170514
+Success rate:  0.45627376425855515
+Successful items count:  120
+Total count:  263
+Index:  409
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  52.35 min
+Query times in this attack:  502
+Greedy query times: 1
+Ga query times: 501
+All Query times:  171016
+Success rate:  0.4583333333333333
+Successful items count:  121
+Total count:  264
+Index:  410
+
+GA SUC!
+Example time cost:  0.2 min
+ALL examples time cost:  52.55 min
+Query times in this attack:  658
+Greedy query times: 1
+Ga query times: 657
+All Query times:  171674
+Success rate:  0.46037735849056605
+Successful items count:  122
+Total count:  265
+Index:  411
+
+Example time cost:  0.22 min
+ALL examples time cost:  52.77 min
+Query times in this attack:  716
+Greedy query times: 1
+Ga query times: 715
+All Query times:  172390
+Success rate:  0.45864661654135336
+Successful items count:  122
+Total count:  266
+Index:  412
+
+Example time cost:  0.0 min
+ALL examples time cost:  52.77 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 715
+All Query times:  172391
+Success rate:  0.45864661654135336
+Successful items count:  122
+Total count:  266
+Index:  413
+
+GA SUC!
+Example time cost:  0.06 min
+ALL examples time cost:  52.84 min
+Query times in this attack:  264
+Greedy query times: 1
+Ga query times: 263
+All Query times:  172655
+Success rate:  0.4606741573033708
+Successful items count:  123
+Total count:  267
+Index:  414
+
+Example time cost:  0.0 min
+ALL examples time cost:  52.84 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 263
+All Query times:  172656
+Success rate:  0.4606741573033708
+Successful items count:  123
+Total count:  267
+Index:  415
+
+Example time cost:  0.09 min
+ALL examples time cost:  52.92 min
+Query times in this attack:  359
+Greedy query times: 1
+Ga query times: 358
+All Query times:  173015
+Success rate:  0.458955223880597
+Successful items count:  123
+Total count:  268
+Index:  416
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  52.96 min
+Query times in this attack:  150
+Greedy query times: 1
+Ga query times: 149
+All Query times:  173165
+Success rate:  0.46096654275092935
+Successful items count:  124
+Total count:  269
+Index:  417
+
+Example time cost:  0.0 min
+ALL examples time cost:  52.96 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 149
+All Query times:  173166
+Success rate:  0.46096654275092935
+Successful items count:  124
+Total count:  269
+Index:  418
+
+Example time cost:  0.18 min
+ALL examples time cost:  53.14 min
+Query times in this attack:  747
+Greedy query times: 1
+Ga query times: 746
+All Query times:  173913
+Success rate:  0.45925925925925926
+Successful items count:  124
+Total count:  270
+Index:  419
+
+Example time cost:  0.11 min
+ALL examples time cost:  53.25 min
+Query times in this attack:  444
+Greedy query times: 1
+Ga query times: 443
+All Query times:  174357
+Success rate:  0.4575645756457565
+Successful items count:  124
+Total count:  271
+Index:  420
+
+Example time cost:  0.0 min
+ALL examples time cost:  53.25 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 443
+All Query times:  174358
+Success rate:  0.4575645756457565
+Successful items count:  124
+Total count:  271
+Index:  421
+
+Example time cost:  0.06 min
+ALL examples time cost:  53.3 min
+Query times in this attack:  244
+Greedy query times: 1
+Ga query times: 243
+All Query times:  174602
+Success rate:  0.45588235294117646
+Successful items count:  124
+Total count:  272
+Index:  422
+
+GA SUC!
+Example time cost:  0.04 min
+ALL examples time cost:  53.34 min
+Query times in this attack:  182
+Greedy query times: 1
+Ga query times: 181
+All Query times:  174784
+Success rate:  0.45787545787545786
+Successful items count:  125
+Total count:  273
+Index:  423
+
+GA SUC!
+Example time cost:  0.18 min
+ALL examples time cost:  53.52 min
+Query times in this attack:  573
+Greedy query times: 1
+Ga query times: 572
+All Query times:  175357
+Success rate:  0.45985401459854014
+Successful items count:  126
+Total count:  274
+Index:  424
+
+Example time cost:  0.18 min
+ALL examples time cost:  53.7 min
+Query times in this attack:  737
+Greedy query times: 1
+Ga query times: 736
+All Query times:  176094
+Success rate:  0.4581818181818182
+Successful items count:  126
+Total count:  275
+Index:  425
+
+Example time cost:  0.0 min
+ALL examples time cost:  53.71 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 736
+All Query times:  176095
+Success rate:  0.4581818181818182
+Successful items count:  126
+Total count:  275
+Index:  426
+
+Example time cost:  0.12 min
+ALL examples time cost:  53.83 min
+Query times in this attack:  493
+Greedy query times: 1
+Ga query times: 492
+All Query times:  176588
+Success rate:  0.45652173913043476
+Successful items count:  126
+Total count:  276
+Index:  427
+
+GA SUC!
+Example time cost:  0.31 min
+ALL examples time cost:  54.14 min
+Query times in this attack:  975
+Greedy query times: 1
+Ga query times: 974
+All Query times:  177563
+Success rate:  0.4584837545126354
+Successful items count:  127
+Total count:  277
+Index:  428
+
+GA SUC!
+Example time cost:  0.03 min
+ALL examples time cost:  54.17 min
+Query times in this attack:  117
+Greedy query times: 1
+Ga query times: 116
+All Query times:  177680
+Success rate:  0.460431654676259
+Successful items count:  128
+Total count:  278
+Index:  429
+
+Example time cost:  0.0 min
+ALL examples time cost:  54.17 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 116
+All Query times:  177681
+Success rate:  0.460431654676259
+Successful items count:  128
+Total count:  278
+Index:  430
+
+GA SUC!
+Example time cost:  0.07 min
+ALL examples time cost:  54.24 min
+Query times in this attack:  284
+Greedy query times: 1
+Ga query times: 283
+All Query times:  177965
+Success rate:  0.46236559139784944
+Successful items count:  129
+Total count:  279
+Index:  431
+
+Example time cost:  0.0 min
+ALL examples time cost:  54.24 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 283
+All Query times:  177966
+Success rate:  0.46236559139784944
+Successful items count:  129
+Total count:  279
+Index:  432
+
+Example time cost:  0.0 min
+ALL examples time cost:  54.24 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 283
+All Query times:  177967
+Success rate:  0.46236559139784944
+Successful items count:  129
+Total count:  279
+Index:  433
+
+GA SUC!
+Example time cost:  0.24 min
+ALL examples time cost:  54.48 min
+Query times in this attack:  688
+Greedy query times: 1
+Ga query times: 687
+All Query times:  178655
+Success rate:  0.4642857142857143
+Successful items count:  130
+Total count:  280
+Index:  434
+
+Example time cost:  0.0 min
+ALL examples time cost:  54.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 687
+All Query times:  178656
+Success rate:  0.4642857142857143
+Successful items count:  130
+Total count:  280
+Index:  435
+
+Example time cost:  0.0 min
+ALL examples time cost:  54.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 687
+All Query times:  178657
+Success rate:  0.4642857142857143
+Successful items count:  130
+Total count:  280
+Index:  436
+
+Example time cost:  0.0 min
+ALL examples time cost:  54.48 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 687
+All Query times:  178658
+Success rate:  0.4642857142857143
+Successful items count:  130
+Total count:  280
+Index:  437
+
+Example time cost:  0.06 min
+ALL examples time cost:  54.54 min
+Query times in this attack:  249
+Greedy query times: 1
+Ga query times: 248
+All Query times:  178907
+Success rate:  0.4626334519572954
+Successful items count:  130
+Total count:  281
+Index:  438
+
+Example time cost:  0.9 min
+ALL examples time cost:  55.45 min
+Query times in this attack:  1972
+Greedy query times: 1
+Ga query times: 1971
+All Query times:  180879
+Success rate:  0.46099290780141844
+Successful items count:  130
+Total count:  282
+Index:  439
+
+Example time cost:  0.0 min
+ALL examples time cost:  55.45 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1971
+All Query times:  180880
+Success rate:  0.46099290780141844
+Successful items count:  130
+Total count:  282
+Index:  440
+
+Example time cost:  0.0 min
+ALL examples time cost:  55.45 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1971
+All Query times:  180881
+Success rate:  0.46099290780141844
+Successful items count:  130
+Total count:  282
+Index:  441
+
+Example time cost:  0.0 min
+ALL examples time cost:  55.45 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1971
+All Query times:  180882
+Success rate:  0.46099290780141844
+Successful items count:  130
+Total count:  282
+Index:  442
+
+GA SUC!
+Example time cost:  0.03 min
+ALL examples time cost:  55.47 min
+Query times in this attack:  104
+Greedy query times: 1
+Ga query times: 103
+All Query times:  180986
+Success rate:  0.4628975265017668
+Successful items count:  131
+Total count:  283
+Index:  443
+
+Example time cost:  0.31 min
+ALL examples time cost:  55.78 min
+Query times in this attack:  1153
+Greedy query times: 1
+Ga query times: 1152
+All Query times:  182139
+Success rate:  0.4612676056338028
+Successful items count:  131
+Total count:  284
+Index:  444
+
+Example time cost:  0.0 min
+ALL examples time cost:  55.78 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1152
+All Query times:  182140
+Success rate:  0.4612676056338028
+Successful items count:  131
+Total count:  284
+Index:  445
+
+Example time cost:  0.0 min
+ALL examples time cost:  55.78 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1152
+All Query times:  182141
+Success rate:  0.4612676056338028
+Successful items count:  131
+Total count:  284
+Index:  446
+
+Example time cost:  0.0 min
+ALL examples time cost:  55.78 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1152
+All Query times:  182142
+Success rate:  0.4612676056338028
+Successful items count:  131
+Total count:  284
+Index:  447
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  55.98 min
+Query times in this attack:  683
+Greedy query times: 1
+Ga query times: 682
+All Query times:  182825
+Success rate:  0.4631578947368421
+Successful items count:  132
+Total count:  285
+Index:  448
+
+GA SUC!
+Example time cost:  0.1 min
+ALL examples time cost:  56.08 min
+Query times in this attack:  353
+Greedy query times: 1
+Ga query times: 352
+All Query times:  183178
+Success rate:  0.46503496503496505
+Successful items count:  133
+Total count:  286
+Index:  449
+
+Example time cost:  0.09 min
+ALL examples time cost:  56.17 min
+Query times in this attack:  428
+Greedy query times: 1
+Ga query times: 427
+All Query times:  183606
+Success rate:  0.4634146341463415
+Successful items count:  133
+Total count:  287
+Index:  450
+
+Example time cost:  0.18 min
+ALL examples time cost:  56.35 min
+Query times in this attack:  673
+Greedy query times: 1
+Ga query times: 672
+All Query times:  184279
+Success rate:  0.4618055555555556
+Successful items count:  133
+Total count:  288
+Index:  451
+
+Example time cost:  0.26 min
+ALL examples time cost:  56.61 min
+Query times in this attack:  1041
+Greedy query times: 1
+Ga query times: 1040
+All Query times:  185320
+Success rate:  0.4602076124567474
+Successful items count:  133
+Total count:  289
+Index:  452
+
+Example time cost:  0.09 min
+ALL examples time cost:  56.7 min
+Query times in this attack:  362
+Greedy query times: 1
+Ga query times: 361
+All Query times:  185682
+Success rate:  0.4586206896551724
+Successful items count:  133
+Total count:  290
+Index:  453
+
+GA SUC!
+Example time cost:  0.21 min
+ALL examples time cost:  56.91 min
+Query times in this attack:  495
+Greedy query times: 1
+Ga query times: 494
+All Query times:  186177
+Success rate:  0.46048109965635736
+Successful items count:  134
+Total count:  291
+Index:  454
+
+GA SUC!
+Example time cost:  0.29 min
+ALL examples time cost:  57.2 min
+Query times in this attack:  907
+Greedy query times: 1
+Ga query times: 906
+All Query times:  187084
+Success rate:  0.4623287671232877
+Successful items count:  135
+Total count:  292
+Index:  455
+
+Example time cost:  0.0 min
+ALL examples time cost:  57.2 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 906
+All Query times:  187085
+Success rate:  0.4623287671232877
+Successful items count:  135
+Total count:  292
+Index:  456
+
+Example time cost:  0.25 min
+ALL examples time cost:  57.45 min
+Query times in this attack:  747
+Greedy query times: 1
+Ga query times: 746
+All Query times:  187832
+Success rate:  0.46075085324232085
+Successful items count:  135
+Total count:  293
+Index:  457
+
+Example time cost:  0.0 min
+ALL examples time cost:  57.45 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 746
+All Query times:  187833
+Success rate:  0.46075085324232085
+Successful items count:  135
+Total count:  293
+Index:  458
+
+Example time cost:  0.0 min
+ALL examples time cost:  57.45 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 746
+All Query times:  187834
+Success rate:  0.46075085324232085
+Successful items count:  135
+Total count:  293
+Index:  459
+
+Example time cost:  0.07 min
+ALL examples time cost:  57.52 min
+Query times in this attack:  215
+Greedy query times: 1
+Ga query times: 214
+All Query times:  188049
+Success rate:  0.45918367346938777
+Successful items count:  135
+Total count:  294
+Index:  460
+
+Example time cost:  0.0 min
+ALL examples time cost:  57.52 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 214
+All Query times:  188050
+Success rate:  0.45918367346938777
+Successful items count:  135
+Total count:  294
+Index:  461
+
+GA SUC!
+Example time cost:  0.18 min
+ALL examples time cost:  57.69 min
+Query times in this attack:  538
+Greedy query times: 1
+Ga query times: 537
+All Query times:  188588
+Success rate:  0.4610169491525424
+Successful items count:  136
+Total count:  295
+Index:  462
+
+Example time cost:  0.0 min
+ALL examples time cost:  57.7 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 537
+All Query times:  188589
+Success rate:  0.4610169491525424
+Successful items count:  136
+Total count:  295
+Index:  463
+
+Example time cost:  0.22 min
+ALL examples time cost:  57.92 min
+Query times in this attack:  865
+Greedy query times: 1
+Ga query times: 864
+All Query times:  189454
+Success rate:  0.4594594594594595
+Successful items count:  136
+Total count:  296
+Index:  464
+
+Example time cost:  0.0 min
+ALL examples time cost:  57.92 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 864
+All Query times:  189455
+Success rate:  0.4594594594594595
+Successful items count:  136
+Total count:  296
+Index:  465
+
+Example time cost:  2.01 min
+ALL examples time cost:  59.92 min
+Query times in this attack:  3965
+Greedy query times: 1
+Ga query times: 3964
+All Query times:  193420
+Success rate:  0.45791245791245794
+Successful items count:  136
+Total count:  297
+Index:  466
+
+Example time cost:  1.47 min
+ALL examples time cost:  61.39 min
+Query times in this attack:  2060
+Greedy query times: 1
+Ga query times: 2059
+All Query times:  195480
+Success rate:  0.4563758389261745
+Successful items count:  136
+Total count:  298
+Index:  467
+
+Example time cost:  0.0 min
+ALL examples time cost:  61.39 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 2059
+All Query times:  195481
+Success rate:  0.4563758389261745
+Successful items count:  136
+Total count:  298
+Index:  468
+
+GA SUC!
+Example time cost:  0.23 min
+ALL examples time cost:  61.62 min
+Query times in this attack:  668
+Greedy query times: 1
+Ga query times: 667
+All Query times:  196149
+Success rate:  0.45819397993311034
+Successful items count:  137
+Total count:  299
+Index:  469
+
+Example time cost:  0.0 min
+ALL examples time cost:  61.62 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 667
+All Query times:  196150
+Success rate:  0.45819397993311034
+Successful items count:  137
+Total count:  299
+Index:  470
+
+Example time cost:  0.0 min
+ALL examples time cost:  61.62 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 667
+All Query times:  196151
+Success rate:  0.45819397993311034
+Successful items count:  137
+Total count:  299
+Index:  471
+
+GA SUC!
+Example time cost:  0.07 min
+ALL examples time cost:  61.69 min
+Query times in this attack:  284
+Greedy query times: 1
+Ga query times: 283
+All Query times:  196435
+Success rate:  0.46
+Successful items count:  138
+Total count:  300
+Index:  472
+
+Example time cost:  0.08 min
+ALL examples time cost:  61.77 min
+Query times in this attack:  333
+Greedy query times: 1
+Ga query times: 332
+All Query times:  196768
+Success rate:  0.4584717607973422
+Successful items count:  138
+Total count:  301
+Index:  473
+
+GA SUC!
+Example time cost:  0.12 min
+ALL examples time cost:  61.9 min
+Query times in this attack:  414
+Greedy query times: 1
+Ga query times: 413
+All Query times:  197182
+Success rate:  0.4602649006622517
+Successful items count:  139
+Total count:  302
+Index:  474
+
+Example time cost:  0.0 min
+ALL examples time cost:  61.9 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 413
+All Query times:  197183
+Success rate:  0.4602649006622517
+Successful items count:  139
+Total count:  302
+Index:  475
+
+Example time cost:  0.0 min
+ALL examples time cost:  61.9 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 413
+All Query times:  197184
+Success rate:  0.4602649006622517
+Successful items count:  139
+Total count:  302
+Index:  476
+
+Example time cost:  0.19 min
+ALL examples time cost:  62.08 min
+Query times in this attack:  801
+Greedy query times: 1
+Ga query times: 800
+All Query times:  197985
+Success rate:  0.45874587458745875
+Successful items count:  139
+Total count:  303
+Index:  477
+
+GA SUC!
+Example time cost:  0.44 min
+ALL examples time cost:  62.52 min
+Query times in this attack:  460
+Greedy query times: 1
+Ga query times: 459
+All Query times:  198445
+Success rate:  0.4605263157894737
+Successful items count:  140
+Total count:  304
+Index:  478
+
+Example time cost:  0.0 min
+ALL examples time cost:  62.52 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 459
+All Query times:  198446
+Success rate:  0.4605263157894737
+Successful items count:  140
+Total count:  304
+Index:  479
+
+GA SUC!
+Example time cost:  0.18 min
+ALL examples time cost:  62.7 min
+Query times in this attack:  632
+Greedy query times: 1
+Ga query times: 631
+All Query times:  199078
+Success rate:  0.46229508196721314
+Successful items count:  141
+Total count:  305
+Index:  480
+
+Example time cost:  0.08 min
+ALL examples time cost:  62.78 min
+Query times in this attack:  287
+Greedy query times: 1
+Ga query times: 286
+All Query times:  199365
+Success rate:  0.46078431372549017
+Successful items count:  141
+Total count:  306
+Index:  481
+
+Example time cost:  0.12 min
+ALL examples time cost:  62.9 min
+Query times in this attack:  516
+Greedy query times: 1
+Ga query times: 515
+All Query times:  199881
+Success rate:  0.4592833876221498
+Successful items count:  141
+Total count:  307
+Index:  482
+
+Example time cost:  0.0 min
+ALL examples time cost:  62.91 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 515
+All Query times:  199882
+Success rate:  0.4592833876221498
+Successful items count:  141
+Total count:  307
+Index:  483
+
+GA SUC!
+Example time cost:  0.03 min
+ALL examples time cost:  62.94 min
+Query times in this attack:  143
+Greedy query times: 1
+Ga query times: 142
+All Query times:  200025
+Success rate:  0.461038961038961
+Successful items count:  142
+Total count:  308
+Index:  484
+
+Example time cost:  0.07 min
+ALL examples time cost:  63.01 min
+Query times in this attack:  285
+Greedy query times: 1
+Ga query times: 284
+All Query times:  200310
+Success rate:  0.459546925566343
+Successful items count:  142
+Total count:  309
+Index:  485
+
+GA SUC!
+Example time cost:  0.19 min
+ALL examples time cost:  63.2 min
+Query times in this attack:  578
+Greedy query times: 1
+Ga query times: 577
+All Query times:  200888
+Success rate:  0.4612903225806452
+Successful items count:  143
+Total count:  310
+Index:  486
+
+GA SUC!
+Example time cost:  0.43 min
+ALL examples time cost:  63.63 min
+Query times in this attack:  960
+Greedy query times: 1
+Ga query times: 959
+All Query times:  201848
+Success rate:  0.4630225080385852
+Successful items count:  144
+Total count:  311
+Index:  487
+
+Example time cost:  0.0 min
+ALL examples time cost:  63.63 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 959
+All Query times:  201849
+Success rate:  0.4630225080385852
+Successful items count:  144
+Total count:  311
+Index:  488
+
+Example time cost:  0.0 min
+ALL examples time cost:  63.63 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 959
+All Query times:  201850
+Success rate:  0.4630225080385852
+Successful items count:  144
+Total count:  311
+Index:  489
+
+GA SUC!
+Example time cost:  0.07 min
+ALL examples time cost:  63.7 min
+Query times in this attack:  277
+Greedy query times: 1
+Ga query times: 276
+All Query times:  202127
+Success rate:  0.46474358974358976
+Successful items count:  145
+Total count:  312
+Index:  490
+
+Example time cost:  0.13 min
+ALL examples time cost:  63.83 min
+Query times in this attack:  487
+Greedy query times: 1
+Ga query times: 486
+All Query times:  202614
+Success rate:  0.46325878594249204
+Successful items count:  145
+Total count:  313
+Index:  491
+
+Example time cost:  0.49 min
+ALL examples time cost:  64.32 min
+Query times in this attack:  1749
+Greedy query times: 1
+Ga query times: 1748
+All Query times:  204363
+Success rate:  0.46178343949044587
+Successful items count:  145
+Total count:  314
+Index:  492
+
+Example time cost:  0.0 min
+ALL examples time cost:  64.32 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 1748
+All Query times:  204364
+Success rate:  0.46178343949044587
+Successful items count:  145
+Total count:  314
+Index:  493
+
+Example time cost:  1.27 min
+ALL examples time cost:  65.59 min
+Query times in this attack:  3105
+Greedy query times: 1
+Ga query times: 3104
+All Query times:  207469
+Success rate:  0.4603174603174603
+Successful items count:  145
+Total count:  315
+Index:  494
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  65.71 min
+Query times in this attack:  424
+Greedy query times: 1
+Ga query times: 423
+All Query times:  207893
+Success rate:  0.4620253164556962
+Successful items count:  146
+Total count:  316
+Index:  495
+
+Example time cost:  0.0 min
+ALL examples time cost:  65.71 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 423
+All Query times:  207894
+Success rate:  0.4620253164556962
+Successful items count:  146
+Total count:  316
+Index:  496
+
+GA SUC!
+Example time cost:  0.13 min
+ALL examples time cost:  65.85 min
+Query times in this attack:  434
+Greedy query times: 1
+Ga query times: 433
+All Query times:  208328
+Success rate:  0.4637223974763407
+Successful items count:  147
+Total count:  317
+Index:  497
+
+Example time cost:  0.18 min
+ALL examples time cost:  66.03 min
+Query times in this attack:  812
+Greedy query times: 1
+Ga query times: 811
+All Query times:  209140
+Success rate:  0.46226415094339623
+Successful items count:  147
+Total count:  318
+Index:  498
+
+GA SUC!
+Example time cost:  0.28 min
+ALL examples time cost:  66.31 min
+Query times in this attack:  577
+Greedy query times: 1
+Ga query times: 576
+All Query times:  209717
+Success rate:  0.46394984326018807
+Successful items count:  148
+Total count:  319
+Index:  499
+

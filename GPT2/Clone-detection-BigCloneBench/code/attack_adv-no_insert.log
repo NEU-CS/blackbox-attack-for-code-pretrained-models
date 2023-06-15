@@ -1,0 +1,608 @@
+>> NOACC! inputStream => inputstream (0.97896 => 0.98509)
+>> NOSNT!
+>> NOACC! contentType => Contenttype (0.97897 => 0.98509)
+>> NOSNT!
+>> NOACC! bufferedImage => BufferedImage (0.97896 => 0.98509)
+>> NOSNT!
+>> NOACC! out => in (0.97957 => 0.98509)
+>> NOSNT!
+>> NOACC! isImage => asimage (0.97907 => 0.98509)
+>> NOSNT!
+>> NOACC! index => page (0.97938 => 0.98509)
+>> NOSNT!
+>> NOACC! extension => variension (0.97897 => 0.98509)
+>> SNT! extension => variension (0.98509 => 0.99122)
+>> ACC! is => ins (0.99122 => 0.99078)
+>> ACC! name => url (0.99078 => 0.98030)
+>> ACC! isAux => isHaUX (0.98030 => 0.97949)
+GA ATTACK
+Example time cost:  1.25 min
+ALL examples time cost:  1.25 min
+Query times in this attack:  3493
+Greedy query times: 411
+Ga query times: 3082
+All Query times:  3493
+Success rate:  0.0
+Successful items count:  0
+Total count:  1
+Index:  0
+
+Example time cost:  0.0 min
+ALL examples time cost:  1.25 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 3082
+All Query times:  3494
+Success rate:  0.0
+Successful items count:  0
+Total count:  1
+Index:  1
+
+>> ACC! copyFile => transferChannel (0.99999 => 0.99999)
+>> ACC! in => url (0.99999 => 0.92185)
+>> ACC! inChannel =>  inchannel (0.92185 => 0.80346)
+>> ACC! outChannel => nManager (0.80346 => 0.70844)
+>> SUC! out => p (0.70844 => 0.51210)
+Example time cost:  0.07 min
+ALL examples time cost:  1.32 min
+Query times in this attack:  182
+Greedy query times: 182
+Ga query times: 3082
+All Query times:  3676
+Success rate:  0.5
+Successful items count:  1
+Total count:  2
+Index:  2
+
+>> ACC! data => name (0.99992 => 0.99984)
+>> ACC! hash => copy (0.99984 => 0.99984)
+>> ACC! digest => generit (0.99984 => 0.99972)
+GA ATTACK
+Example time cost:  0.41 min
+ALL examples time cost:  1.73 min
+Query times in this attack:  1166
+Greedy query times: 131
+Ga query times: 1035
+All Query times:  4842
+Success rate:  0.3333333333333333
+Successful items count:  1
+Total count:  3
+Index:  3
+
+>> ACC! decodeFileToFile => decodeFile2Files (0.99981 => 0.99972)
+>> ACC! infile => infilename (0.99972 => 0.99971)
+>> ACC! outfile => outFile (0.99971 => 0.99971)
+>> ACC! out => image (0.99971 => 0.99966)
+>> ACC! buffer => layer (0.99966 => 0.99963)
+>> ACC! in => reader (0.99963 => 0.99961)
+>> ACC! read => feed (0.99961 => 0.99957)
+>> ACC! success => response (0.99957 => 0.99954)
+GA ATTACK
+Example time cost:  1.02 min
+ALL examples time cost:  2.75 min
+Query times in this attack:  2830
+Greedy query times: 358
+Ga query times: 2472
+All Query times:  7672
+Success rate:  0.25
+Successful items count:  1
+Total count:  4
+Index:  4
+
+>> ACC! in => connection (0.99993 => 0.95725)
+>> ACC! out => conn (0.95725 => 0.90766)
+>> ACC! dest => tmp (0.90766 => 0.87835)
+>> ACC! resourcePath => sourceId (0.87835 => 0.85498)
+>> ACC! extractResourceToFile => extractResourceAndFiles (0.85498 => 0.84372)
+GA ATTACK
+Example time cost:  0.66 min
+ALL examples time cost:  3.41 min
+Query times in this attack:  1865
+Greedy query times: 211
+Ga query times: 1654
+All Query times:  9537
+Success rate:  0.2
+Successful items count:  1
+Total count:  5
+Index:  5
+
+>> ACC! in => url (0.99999 => 0.90115)
+>> ACC! out => copy (0.90115 => 0.79095)
+>> ACC! dest => target (0.79095 => 0.72911)
+>> ACC! resourcePath => ResourceId (0.72911 => 0.64305)
+>> ACC! extractResourceToFile => extractResourcesToResource (0.64305 => 0.59123)
+GA ATTACK
+Example time cost:  0.68 min
+ALL examples time cost:  4.09 min
+Query times in this attack:  1914
+Greedy query times: 211
+Ga query times: 1703
+All Query times:  11451
+Success rate:  0.16666666666666666
+Successful items count:  1
+Total count:  6
+Index:  6
+
+>> ACC! stmt => Stur (0.77493 => 0.63188)
+>> ACC! conn => session (0.63188 => 0.61206)
+>> ACC! load => write (0.61206 => 0.59412)
+GA ATTACK
+Example time cost:  1.03 min
+ALL examples time cost:  5.12 min
+Query times in this attack:  1405
+Greedy query times: 480
+Ga query times: 925
+All Query times:  12856
+Success rate:  0.14285714285714285
+Successful items count:  1
+Total count:  7
+Index:  7
+
+>> SUC! source => url (0.99479 => 0.99209)
+Example time cost:  0.02 min
+ALL examples time cost:  5.14 min
+Query times in this attack:  61
+Greedy query times: 61
+Ga query times: 925
+All Query times:  12917
+Success rate:  0.25
+Successful items count:  2
+Total count:  8
+Index:  8
+
+>> ACC! connection => connect (0.99919 => 0.99881)
+>> ACC! stmt2 => stbmTwo (0.99881 => 0.99851)
+>> ACC! rs => eers (0.99851 => 0.99826)
+>> ACC! retorno => retro (0.99826 => 0.99824)
+>> ACC! sql => url (0.99824 => 0.99757)
+>> ACC! igreja =>  iggrej (0.99757 => 0.99706)
+>> ACC! sql2 => urltwo (0.99706 => 0.99609)
+>> ACC! stmt => frmt (0.99609 => 0.99569)
+>> ACC! incluir => inclUiro (0.99569 => 0.99537)
+GA ATTACK
+Example time cost:  1.15 min
+ALL examples time cost:  6.29 min
+Query times in this attack:  3218
+Greedy query times: 408
+Ga query times: 2810
+All Query times:  16135
+Success rate:  0.2222222222222222
+Successful items count:  2
+Total count:  9
+Index:  9
+
+>> ACC! outFile => exFilename (0.99987 => 0.99980)
+>> ACC! readAndRewrite => readAndrewrap (0.99980 => 0.99972)
+>> ACC! inFile => oldFilename (0.99972 => 0.99956)
+>> ACC! iis => ciIS (0.99956 => 0.99948)
+>> ACC! dcmEncParam => dcmSecPart (0.99948 => 0.99940)
+>> ACC! dcmParser => dmissionPlugin (0.99940 => 0.99857)
+>> SUC! out => url (0.99857 => 0.93584)
+Example time cost:  0.14 min
+ALL examples time cost:  6.44 min
+Query times in this attack:  396
+Greedy query times: 396
+Ga query times: 2810
+All Query times:  16531
+Success rate:  0.3
+Successful items count:  3
+Total count:  10
+Index:  10
+
+>> NOACC! pxlen => txln (0.66527 => 0.81971)
+>> SNT! pxlen => txln (0.81971 => 0.97415)
+>> ACC! hasPixelData => haspixelData (0.97415 => 0.96221)
+>> NOACC! dest =>  destination (0.96209 => 0.96221)
+>> NOSNT!
+>> ACC! inflate => inflation (0.96221 => 0.90887)
+>> ACC! in => login (0.90887 => 0.88955)
+>> ACC! convert => oconversion (0.88955 => 0.88007)
+>> SUC! format => url (0.88007 => 0.77964)
+Example time cost:  0.15 min
+ALL examples time cost:  6.59 min
+Query times in this attack:  367
+Greedy query times: 367
+Ga query times: 2810
+All Query times:  16898
+Success rate:  0.36363636363636365
+Successful items count:  4
+Total count:  11
+Index:  11
+
+>> ACC! out => connection (0.99997 => 0.99946)
+>> ACC! in => conn (0.99946 => 0.99794)
+>> ACC! copyFile => CopyStream (0.99794 => 0.99697)
+>> ACC! source => ources (0.99697 => 0.99572)
+>> ACC! dest => tmp (0.99572 => 0.99522)
+GA ATTACK
+Example time cost:  0.68 min
+ALL examples time cost:  7.27 min
+Query times in this attack:  1926
+Greedy query times: 220
+Ga query times: 1706
+All Query times:  18824
+Success rate:  0.3333333333333333
+Successful items count:  4
+Total count:  12
+Index:  12
+
+>> ACC! copy => link (0.99986 => 0.99980)
+>> ACC! from_file => remote_lane (0.99980 => 0.99976)
+>> ACC! buffer => url (0.99976 => 0.99741)
+>> ACC! to_file => intojfunction (0.99741 => 0.99624)
+>> ACC! bytes_read => bytesXbefore (0.99624 => 0.99591)
+>> ACC! from_name => source_memory (0.99591 => 0.99557)
+>> ACC! to_name => toamhome (0.99557 => 0.99517)
+>> ACC! parent => url (0.99517 => 0.97613)
+>> ACC! dir => url (0.97613 => 0.94258)
+>> ACC! to => connection (0.94258 => 0.85498)
+>> ACC! from => url (0.85498 => 0.62497)
+GA ATTACK
+GA SUC!
+Example time cost:  0.5 min
+ALL examples time cost:  7.77 min
+Query times in this attack:  1312
+Greedy query times: 598
+Ga query times: 714
+All Query times:  20136
+Success rate:  0.38461538461538464
+Successful items count:  5
+Total count:  13
+Index:  13
+
+>> NOACC! intent => advert (0.99984 => 0.99991)
+>> NOSNT!
+>> NOACC! attachmentId => ttociationid (0.99985 => 0.99991)
+>> NOSNT!
+>> NOACC! contentUri => contentFileuri (0.99984 => 0.99991)
+>> SNT! contentUri => contentFileuri (0.99991 => 0.99997)
+>> ACC! file => url (0.99997 => 0.98992)
+>> ACC! attachment => attachached (0.98992 => 0.98813)
+>> ACC! attachmentUri => attachmentSuri (0.98813 => 0.98332)
+>> ACC! doFinishLoadAttachment => doFinishLoadAssortion (0.98332 => 0.98215)
+>> ACC! out => resource (0.98215 => 0.97468)
+>> ACC! in => url (0.97468 => 0.95553)
+GA ATTACK
+Example time cost:  1.23 min
+ALL examples time cost:  9.0 min
+Query times in this attack:  3350
+Greedy query times: 429
+Ga query times: 2921
+All Query times:  23486
+Success rate:  0.35714285714285715
+Successful items count:  5
+Total count:  14
+Index:  14
+
+>> ACC! outFile => processPlace (0.99997 => 0.99995)
+>> ACC! readAndRewrite => readAndrewrap (0.99995 => 0.99994)
+>> ACC! inFile => loginFilename (0.99994 => 0.99990)
+>> ACC! iis => ciIS (0.99990 => 0.99989)
+>> ACC! dcmEncParam => dcmSecPart (0.99989 => 0.99988)
+>> ACC! dcmParser => dmissionPlugin (0.99988 => 0.99979)
+>> SUC! out => url (0.99979 => 0.81605)
+Example time cost:  0.14 min
+ALL examples time cost:  9.14 min
+Query times in this attack:  396
+Greedy query times: 396
+Ga query times: 2921
+All Query times:  23882
+Success rate:  0.4
+Successful items count:  6
+Total count:  15
+Index:  15
+
+>> ACC! copyFile =>  copyfile (0.99970 => 0.99624)
+>> ACC! in => source (0.99624 => 0.99591)
+>> ACC! out => plain (0.99591 => 0.99549)
+>> ACC! inChannel => inputchannel (0.99549 => 0.99493)
+>> ACC! outChannel => outputChannel (0.99493 => 0.99449)
+>> ACC! inFile => INfile (0.99449 => 0.99387)
+>> ACC! outFile => outputFiles (0.99387 => 0.99350)
+GA ATTACK
+Example time cost:  0.84 min
+ALL examples time cost:  9.98 min
+Query times in this attack:  2384
+Greedy query times: 238
+Ga query times: 2146
+All Query times:  26266
+Success rate:  0.375
+Successful items count:  6
+Total count:  16
+Index:  16
+
+>> ACC! copyFile => moveFolder (0.99998 => 0.99996)
+>> ACC! fos => loes (0.99996 => 0.99995)
+>> NOACC! fis => Fis (0.99995 => 0.99995)
+>> NOSNT!
+>> ACC! _file1 => _File01 (0.99995 => 0.99995)
+>> ACC! canalFuente => canalFuencia (0.99995 => 0.99994)
+>> ACC! _file2 => jmodel5 (0.99994 => 0.99993)
+GA ATTACK
+Example time cost:  0.79 min
+ALL examples time cost:  10.77 min
+Query times in this attack:  2241
+Greedy query times: 242
+Ga query times: 1999
+All Query times:  28507
+Success rate:  0.35294117647058826
+Successful items count:  6
+Total count:  17
+Index:  17
+
+>> NOACC! inputLine => inFile (0.99436 => 0.99658)
+>> SNT! inputLine => inFile (0.99658 => 0.99880)
+>> ACC! runITQLQuery => runITQRequest (0.99880 => 0.99866)
+>> ACC! escapedItqlQuery => escapedITsqlRequest (0.99866 => 0.99843)
+>> ACC! itqlQuery => itqlQu (0.99843 => 0.99823)
+>> ACC! counter => nr (0.99823 => 0.99807)
+>> ACC! url => file (0.99807 => 0.99620)
+>> ACC! con => core (0.99620 => 0.99554)
+>> ACC! br => output (0.99554 => 0.99094)
+>> ACC! urlObject => Urlobject (0.99094 => 0.97615)
+>> ACC! arrayList => inputArray (0.97615 => 0.97432)
+GA ATTACK
+Example time cost:  1.41 min
+ALL examples time cost:  12.19 min
+Query times in this attack:  3798
+Greedy query times: 500
+Ga query times: 3298
+All Query times:  32305
+Success rate:  0.3333333333333333
+Successful items count:  6
+Total count:  18
+Index:  18
+
+>> NOACC! out => prefix (0.99989 => 0.99993)
+>> NOSNT!
+>> NOACC! in => connection (0.99990 => 0.99993)
+>> NOSNT!
+>> ACC! cmp => sort (0.99993 => 0.99985)
+>> ACC! stream => model (0.99985 => 0.99972)
+>> ACC! all => coll (0.99972 => 0.99956)
+>> ACC! i => j (0.99956 => 0.99940)
+>> NOACC! checkInputStream =>  checkOutputSteam (0.99940 => 0.99940)
+>> SNT! checkInputStream =>  checkOutputSteam (0.99940 => 0.99941)
+GA ATTACK
+Example time cost:  0.89 min
+ALL examples time cost:  13.08 min
+Query times in this attack:  2515
+Greedy query times: 318
+Ga query times: 2197
+All Query times:  34820
+Success rate:  0.3157894736842105
+Successful items count:  6
+Total count:  19
+Index:  19
+
+Example time cost:  0.0 min
+ALL examples time cost:  13.08 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 2197
+All Query times:  34821
+Success rate:  0.3157894736842105
+Successful items count:  6
+Total count:  19
+Index:  20
+
+>> ACC! sp => arp (0.67746 => 0.63212)
+>> ACC! chartavailupdsql => chartavailupdatessql (0.63212 => 0.57400)
+>> ACC! userbooksql => otherbookssql (0.57400 => 0.50743)
+>> SUC! currentcoach => currentpoaching (0.50743 => 0.50034)
+Example time cost:  0.12 min
+ALL examples time cost:  13.2 min
+Query times in this attack:  259
+Greedy query times: 259
+Ga query times: 2197
+All Query times:  35080
+Success rate:  0.35
+Successful items count:  7
+Total count:  20
+Index:  21
+
+>> NOACC! sw => wp (0.99984 => 0.99991)
+>> NOSNT!
+>> NOACC! getFileContentAsString => getFilecontentInString (0.99984 => 0.99991)
+>> NOSNT!
+>> NOACC! filePath => basepath (0.99985 => 0.99991)
+>> NOSNT!
+>> NOACC! encoding => languagelocking (0.99984 => 0.99991)
+>> NOSNT!
+>> ACC! testURL => appurl (0.99991 => 0.99959)
+>> ACC! input => ssl (0.99959 => 0.99918)
+GA ATTACK
+Example time cost:  0.8 min
+ALL examples time cost:  13.99 min
+Query times in this attack:  2244
+Greedy query times: 247
+Ga query times: 1997
+All Query times:  37324
+Success rate:  0.3333333333333333
+Successful items count:  7
+Total count:  21
+Index:  22
+
+>> ACC! raw => buffer (0.99986 => 0.99963)
+>> ACC! hash => url (0.99963 => 0.99113)
+>> ACC! plaintext => plaincontent (0.99113 => 0.99091)
+>> ACC! encrypt => decipher (0.99091 => 0.99055)
+>> ACC! md => metadata (0.99055 => 0.98164)
+>> ACC! UnsupportedEncodingException => UnsupportedCodingEx (0.98164 => 0.98067)
+GA ATTACK
+Example time cost:  0.77 min
+ALL examples time cost:  14.76 min
+Query times in this attack:  2205
+Greedy query times: 199
+Ga query times: 2006
+All Query times:  39529
+Success rate:  0.3181818181818182
+Successful items count:  7
+Total count:  22
+Index:  23
+
+Example time cost:  0.0 min
+ALL examples time cost:  14.77 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 2006
+All Query times:  39530
+Success rate:  0.3181818181818182
+Successful items count:  7
+Total count:  22
+Index:  24
+
+Example time cost:  0.0 min
+ALL examples time cost:  14.77 min
+Query times in this attack:  1
+Greedy query times: 1
+Ga query times: 2006
+All Query times:  39531
+Success rate:  0.3181818181818182
+Successful items count:  7
+Total count:  22
+Index:  25
+
+>> NOACC! list => ml (0.76579 => 0.83364)
+>> NOSNT!
+>> NOACC! result => card (0.76404 => 0.83364)
+>> NOSNT!
+>> NOACC! s => ssl (0.77327 => 0.83364)
+>> NOSNT!
+>> NOACC! getDatasetsList => getDatasuresSearch (0.76364 => 0.83364)
+>> NOSNT!
+>> NOACC! url => URL (0.77099 => 0.83364)
+>> SNT! url => URL (0.83364 => 0.89629)
+>> ACC! reader => file (0.89629 => 0.84833)
+>> ACC! surl => ssfile (0.84833 => 0.78424)
+>> ACC! datasetsList => datasencesCollection (0.78424 => 0.76542)
+GA ATTACK
+Example time cost:  0.99 min
+ALL examples time cost:  15.76 min
+Query times in this attack:  2717
+Greedy query times: 429
+Ga query times: 2288
+All Query times:  42248
+Success rate:  0.30434782608695654
+Successful items count:  7
+Total count:  23
+Index:  26
+
+>> ACC! out => user (0.99996 => 0.99968)
+>> ACC! copy => clip (0.99968 => 0.99935)
+>> SUC! in => url (0.99935 => 0.56147)
+Example time cost:  0.04 min
+ALL examples time cost:  15.81 min
+Query times in this attack:  127
+Greedy query times: 127
+Ga query times: 2288
+All Query times:  42375
+Success rate:  0.3333333333333333
+Successful items count:  8
+Total count:  24
+Index:  27
+
+>> NOACC! proxyHost => proxyDomain (0.47085 => 0.72509)
+>> NOSNT!
+>> NOACC! fetchURLData => frieveURLdata (0.47351 => 0.72509)
+>> SNT! fetchURLData => frieveURLdata (0.72509 => 0.97667)
+>> ACC! proxyPort => ProxyPort (0.97667 => 0.97603)
+>> ACC! proxy => uri (0.97603 => 0.97085)
+>> ACC! u => l (0.97085 => 0.96516)
+>> NOACC! url => uri (0.95437 => 0.96516)
+>> SNT! url => uri (0.96516 => 0.97596)
+>> ACC! baos => boOS (0.97596 => 0.96594)
+>> ACC! is => conn (0.96594 => 0.95852)
+>> ACC! con => func (0.95852 => 0.94139)
+GA ATTACK
+Example time cost:  1.24 min
+ALL examples time cost:  17.04 min
+Query times in this attack:  3418
+Greedy query times: 435
+Ga query times: 2983
+All Query times:  45793
+Success rate:  0.32
+Successful items count:  8
+Total count:  25
+Index:  28
+
+>> NOACC! crear => genera (0.99566 => 0.99769)
+>> NOSNT!
+>> NOACC! sql => url (0.99581 => 0.99769)
+>> NOSNT!
+>> NOACC! connection => writer (0.99589 => 0.99769)
+>> SNT! connection => writer (0.99769 => 0.99950)
+>> ACC! ps => os (0.99950 => 0.99926)
+>> ACC! result => out (0.99926 => 0.99918)
+GA ATTACK
+Example time cost:  0.59 min
+ALL examples time cost:  17.63 min
+Query times in this attack:  1597
+Greedy query times: 223
+Ga query times: 1374
+All Query times:  47390
+Success rate:  0.3076923076923077
+Successful items count:  8
+Total count:  26
+Index:  29
+
+>> NOACC! url => path (0.94999 => 0.96548)
+>> NOSNT!
+>> NOACC! props => propr (0.94827 => 0.96548)
+>> NOSNT!
+>> NOACC! propsName => comppertiesPath (0.95014 => 0.96548)
+>> NOSNT!
+>> NOACC! load => path (0.94956 => 0.96548)
+>> SNT! load => path (0.96548 => 0.98140)
+GA ATTACK
+Example time cost:  0.55 min
+ALL examples time cost:  18.18 min
+Query times in this attack:  1509
+Greedy query times: 174
+Ga query times: 1335
+All Query times:  48899
+Success rate:  0.2962962962962963
+Successful items count:  8
+Total count:  27
+Index:  30
+
+>> NOACC! ftpClient => fttStream (0.45798 => 0.72808)
+>> NOSNT!
+>> NOACC! element => output (0.45947 => 0.72808)
+>> SNT! element => output (0.72808 => 0.99670)
+>> ACC! from => back (0.99670 => 0.99627)
+>> ACC! iter => file (0.99627 => 0.99231)
+>> ACC! ftpHolder => ftpWholder (0.99231 => 0.99080)
+>> ACC! polishOff =>  synchronipeOffline (0.99080 => 0.98869)
+>> ACC! to => source (0.98869 => 0.98576)
+>> ACC! renameTo => renalTarget (0.98576 => 0.97971)
+>> ACC! monitor => directory (0.97971 => 0.96114)
+GA ATTACK
+Example time cost:  1.35 min
+ALL examples time cost:  19.53 min
+Query times in this attack:  3652
+Greedy query times: 677
+Ga query times: 2975
+All Query times:  52551
+Success rate:  0.2857142857142857
+Successful items count:  8
+Total count:  28
+Index:  31
+
+>> NOACC! fic => pis (0.99261 => 0.99624)
+>> NOSNT!
+>> NOACC! encdata => installdatabase (0.99263 => 0.99624)
+>> NOSNT!
+>> NOACC! pigdata => pagresults (0.99272 => 0.99624)
+>> NOSNT!
+>> NOACC! tmpf => zipf (0.99272 => 0.99624)
+>> NOSNT!
+>> NOACC! foc =>  fec (0.99261 => 0.99624)
+>> SNT! foc =>  fec (0.99624 => 0.99987)
+>> ACC! fis => cig (0.99987 => 0.99979)
+>> ACC! c => cp (0.99979 => 0.99977)
+>> ACC! IOException => DownloadException (0.99977 => 0.99974)
+>> ACC! cw => lcwe (0.99974 => 0.99972)
+>> ACC! pigroute => pirmroute (0.99972 => 0.99967)
+>> ACC! EncodeReturn => EnodedResult (0.99967 => 0.99964)
+>> ACC! fos => toes (0.99964 => 0.99955)
