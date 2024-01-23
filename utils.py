@@ -287,12 +287,18 @@ def get_masked_code_by_position(tokens: list, positions: dict):
             [<mask>, b, c]
             [a, b, <mask>]
     '''
-    masked_token_list = []
-    replace_token_positions = []
+    masked_token_list = {}
+    replace_token_positions = {}
     for variable_name in positions.keys():
         for pos in positions[variable_name]:
-            masked_token_list.append(tokens[0:pos] + ['<unk>'] + tokens[pos + 1:])
-            replace_token_positions.append(pos)
+            #这里需要变一下
+            try :
+                masked_token_list[variable_name] = masked_token_list[variable_name][0:pos] + ['<unk>'] + masked_token_list[variable_name][pos+1 : ]
+                replace_token_positions[variable_name].append(pos)
+            except:
+                masked_token_list[variable_name] = tokens[0:pos] + ['<unk>'] + tokens[pos + 1:]
+                replace_token_positions[variable_name] = [pos]
+
     
     return masked_token_list, replace_token_positions
 
